@@ -1,11 +1,8 @@
 
-
 .container {
-    box-sizing: border-box;
     width: 100%;
-    margin: auto;
   }
-  
+ 
   .navbar {
     width: 100%;
     box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
@@ -20,6 +17,7 @@
   
   .navbar .menu-items {
     display: flex;
+    z-index: 2;
   }
   
   .navbar .nav-container li {
@@ -28,7 +26,7 @@
   
   .navbar .nav-container a {
     text-decoration: none;
-    color: #0e2431;
+    color: #fff;
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0.5rem;
@@ -67,6 +65,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 3;
   }
   
   .nav-container .hamburger-lines .line {
@@ -74,7 +73,7 @@
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background: #fff;
   }
   
   .nav-container .hamburger-lines .line1 {
@@ -98,11 +97,9 @@
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-align: center;
-    background-color: grey;
+    backdrop-filter: blur(20px);
   }
   
   .navbar .menu-items li {
@@ -117,7 +114,7 @@
     left: 35px;
     font-size: 1.2rem;
     color: #0e2431;
-    z-index: 2;
+    z-index: 3;
   }
   .logo img{
     width : 80px;

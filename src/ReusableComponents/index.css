@@ -1,0 +1,8 @@
+.app-button{
+    padding : 12px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    background-color: var(--blue);
+    color : var(--primary)
+}

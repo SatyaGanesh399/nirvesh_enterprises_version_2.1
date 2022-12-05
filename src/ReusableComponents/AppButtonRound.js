@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './index.css'
-import colors from '../DefaultColors'
 
 function AppButtonRound({text, bgColor, border, width}) {
     const [toggle, setToggle] = useState(false);

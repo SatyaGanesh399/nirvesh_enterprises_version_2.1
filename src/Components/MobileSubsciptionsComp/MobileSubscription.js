@@ -8,7 +8,6 @@ import AppTitle from "../../ReusableComponents/AppTitle";
 import iphone from "../../Assets/iphone.png";
 import colors from "../../DefaultColors";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
-import { green, grey } from "@mui/material/colors";
 
 const benefitCard = (item) => {
   return (

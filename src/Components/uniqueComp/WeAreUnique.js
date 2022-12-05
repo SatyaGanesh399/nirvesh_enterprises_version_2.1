@@ -150,7 +150,7 @@ function Unique() {
         initial="hidden"
         animate={controls}
       >
-        <img src={image} width="100%" height="100%" />
+        <img src={image} alt="uniqueImage" width="100%" height="100%" />
       </Box>
     </Box>
   );

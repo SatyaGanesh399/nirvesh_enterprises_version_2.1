@@ -28,16 +28,19 @@ function Navbar() {
                   <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#">about</a>
+                  <a href="#">About Us</a>
                 </li>
                 <li>
-                  <a href="#">blogs</a>
+                  <a href="#">Milestones</a>
                 </li>
                 <li>
-                  <a href="#">portfolio</a>
+                  <a href="#">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#">contact</a>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
                 </li>
               </div>
             </div>

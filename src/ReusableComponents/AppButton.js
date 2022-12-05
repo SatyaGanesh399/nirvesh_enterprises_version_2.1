@@ -2,9 +2,9 @@ import React from 'react'
 import './index.css'
 import colors from '../DefaultColors'
 
-function AppButton({text, bgColor = colors.blue}) {
+function AppButton({text, bgColor, border}) {
   return (
-    <button className="app-button" style={{backgroundColor : bgColor}}>{text}</button>
+    <button className="app-button" style={{backgroundColor : bgColor, border: border}}>{text}</button>
   )
 }
 

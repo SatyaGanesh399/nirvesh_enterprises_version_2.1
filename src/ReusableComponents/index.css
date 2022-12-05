@@ -4,5 +4,89 @@
     border: 0;
     outline: 0;
     background-color: var(--blue);
+    color : var(--primary);
+    transition: 0.2s ease-in-out;
+}
+.app-button:hover{
+  outline : var(--blue);
+  background-color: transparent;
+  border :2px solid var(--blue);
+  color : var(--blue);
+  font-weight : bold;
+}
+.container-header {
+  font-size: 2rem;
+  color: var(--navy);
+  font-weight: 600;
+  text-align: center;
+  margin: 20px;
+}
+.blob1 { 
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M773.5%2C611.5Q678%2C723%2C542.5%2C815.5Q407%2C908%2C302%2C777Q197%2C646%2C153.5%2C479Q110%2C312%2C259.5%2C206.5Q409%2C101%2C597.5%2C121.5Q786%2C142%2C827.5%2C321Q869%2C500%2C773.5%2C611.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23cee1e0%22 d=%22M773.5%2C611.5Q678%2C723%2C542.5%2C815.5Q407%2C908%2C302%2C777Q197%2C646%2C153.5%2C479Q110%2C312%2C259.5%2C206.5Q409%2C101%2C597.5%2C121.5Q786%2C142%2C827.5%2C321Q869%2C500%2C773.5%2C611.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+  }
+  .blob2 { 
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M765%2C658.5Q603%2C817%2C408.5%2C762.5Q214%2C708%2C207%2C495Q200%2C282%2C406%2C218.5Q612%2C155%2C769.5%2C327.5Q927%2C500%2C765%2C658.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23cee1e0%22 d=%22M765%2C658.5Q603%2C817%2C408.5%2C762.5Q214%2C708%2C207%2C495Q200%2C282%2C406%2C218.5Q612%2C155%2C769.5%2C327.5Q927%2C500%2C765%2C658.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+
+    position: relative;
+    top : -150px;
+    right : -150px;
+  }
+  .blob3 { 
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M913%2C633.5Q868%2C767%2C751.5%2C841Q635%2C915%2C502%2C909.5Q369%2C904%2C268%2C823Q167%2C742%2C117.5%2C621Q68%2C500%2C106.5%2C371Q145%2C242%2C254%2C160.5Q363%2C79%2C498.5%2C83Q634%2C87%2C742.5%2C166Q851%2C245%2C904.5%2C372.5Q958%2C500%2C913%2C633.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23cee1e0%22 d=%22M913%2C633.5Q868%2C767%2C751.5%2C841Q635%2C915%2C502%2C909.5Q369%2C904%2C268%2C823Q167%2C742%2C117.5%2C621Q68%2C500%2C106.5%2C371Q145%2C242%2C254%2C160.5Q363%2C79%2C498.5%2C83Q634%2C87%2C742.5%2C166Q851%2C245%2C904.5%2C372.5Q958%2C500%2C913%2C633.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+
+    position: relative;
+    top : -90px;
+    right : -130px;
+  }
+  .card-container{
+    max-width : 350px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    min-height: 200px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: var(--primary);
+    color : var(--navy);
+}
+.card-container:hover{
+    scale : 1.05;
+    background-color: var(--navy);
     color : var(--primary)
 }
+
+.card-number{
+    font-size: 40px;
+    padding : 10px;
+    font-weight: 700;
+    padding-left: 20px;;
+}
+.card-title{
+    font-size: 24px;
+    font-weight: 500;
+    padding : 5px;
+    padding-left: 20px;
+}
+.chevron-down{
+  text-align: center;
+  color : var(--navy);
+  font-weight: 600;
+  width : 100%;
+  transition : 0.2s ease-in-out;
+}
+.card-container:hover .chevron-down{
+  color : var(--primary)
+}
+  
+  
+  

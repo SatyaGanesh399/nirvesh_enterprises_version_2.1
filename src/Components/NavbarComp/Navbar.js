@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 
 import logo from "./Assets/logo.png";
+import BlobComp from '../../ReusableComponents/BlobComp';
 
 function Navbar() {
   return (
@@ -13,6 +14,9 @@ function Navbar() {
               <div className="logo">
                 <img src={logo} alt="logo" />
               </div>
+              <div className='blob-comp'>
+                <BlobComp />
+                </div>
               <input className="checkbox" type="checkbox" name="" id="" />
               <div className="hamburger-lines">
                 <span className="line line1"></span>

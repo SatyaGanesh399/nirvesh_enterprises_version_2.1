@@ -1,0 +1,108 @@
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--backgroundColor);
+}
+.newsletter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter-divider {
+  height: 2px;
+  width: 90%;
+  background-color: var(--lightGrey);
+  margin: 20px;
+  border-radius: 1px;
+}
+.newsletter-subheading {
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+.newsletter-subscription {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter-subscription .newsletter-input {
+  padding: 15px;
+  min-width: 300px;
+  width: 40%;
+  border: none;
+  outline: none;
+  background-color: var(--lightGrey);
+  opacity: 0.5;
+  border-radius: 20px;
+  text-indent: 10px;
+  margin-left: 60px;
+}
+.newsletter-subscription .newsletter-input::placeholder {
+  color: var(--primary);
+}
+.newsletter-button {
+  padding: 8px;
+  border-radius: 20px;
+  outline: 0;
+  border: none;
+  background-color: var(--navy);
+  color: var(--primary);
+  position: relative;
+  right: 100px;
+}
+.footer-menu {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.footer-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+.footer-item {
+  color: var(--lightGrey);
+}
+.item-container {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.list-item {
+  margin: 0;
+}
+.playstore-comp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.iphone-footer {
+  width: 120px;
+  height: 200px;
+}
+.footer-qr {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+.playstore-message {
+  font-size: 0.8rem;
+  padding: 3px;
+  margin: 0;
+  color: var(--blue);
+}
+.social-media-icon {
+  background-color: var(--navy);
+  padding: 6px;
+  border-radius: 20px;
+  margin: 5px;
+}

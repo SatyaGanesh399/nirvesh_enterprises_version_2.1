@@ -1,6 +1,6 @@
 import "./index.css";
 import Carousel from "react-bootstrap/Carousel";
-import DefaultColors from '../../DefaultColors'
+import colors from '../../DefaultColors'
 import innovation from './Assets/innovation.png';
 import dataTracking from './Assets/dataTracking.png';
 import costEffective from './Assets/costEffective.png';
@@ -11,7 +11,7 @@ function CarouselHeader() {
     <Carousel slide={false} className="carousel-component">
       <Carousel.Item>
         <div 
-        style={{backgroundColor : DefaultColors.orange, width : '100%', height : '80vh'}}>
+        style={{backgroundColor : '#7895B2', width : '100%', height : '80vh'}}>
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Cost Effective Treatment</p>
@@ -25,7 +25,7 @@ function CarouselHeader() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-        style={{backgroundColor : DefaultColors.navy, width : '100%', height : '80vh'}}>
+        style={{backgroundColor : colors.synpasilDark, width : '100%', height : '80vh'}}>
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Precise Data Tracking</p>
@@ -39,7 +39,7 @@ function CarouselHeader() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-        style={{backgroundColor : DefaultColors.blue, width : '100%', height : '80vh'}}>
+        style={{backgroundColor : colors.blue, width : '100%', height : '80vh'}}>
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Innovative solution</p>

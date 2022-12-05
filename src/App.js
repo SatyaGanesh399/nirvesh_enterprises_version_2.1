@@ -2,8 +2,11 @@
 import './App.css';
 import AboutUs from './Components/AboutUsComp/AboutUs';
 import CarouselHeader from './Components/CarouselComp/CarouselHeader';
-import Cubes from './Components/CubesComp/Cubes';
 import Navbar from './Components/NavbarComp/Navbar';
+import WeAreUnique from './Components/uniqueComp/WeAreUnique';
+import CurrentStatus from './Components/CurrentStatusComp/CurrentStatus';
+import Footer from './Components/FooterComp/Footer';
+import MobileSubscription from './Components/MobileSubsciptionsComp/MobileSubscription';
 
 
 function App() {
@@ -12,7 +15,10 @@ function App() {
       <Navbar />
       <CarouselHeader />
       <AboutUs />
-      <Cubes />
+      <WeAreUnique />
+      <CurrentStatus />
+      <MobileSubscription />
+      <Footer />
     </div>
   );
 }

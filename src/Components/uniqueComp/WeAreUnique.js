@@ -1,0 +1,159 @@
+import React, {useEffect} from "react";
+import {
+  Box,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import './index.css';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
+import image from "./Assets/why-us.png";
+import colors from "../../DefaultColors";
+
+const data = [
+  {
+    id: "01",
+    title: "Integrated intelligent sensors",
+    descrption:
+      "Has EEG, PPG and fNIRS sensors which work in tandem to sense brain waves, bio-potentials and cerebral blood flow representing current brain health of patients in affordable price than standard brain health diagnosis",
+  },
+  {
+    id: "02",
+    title: "Real-time data driven personalized cognitive management",
+    descrption:
+      "Seamless integration of hardware hearables and software platform",
+  },
+  {
+    id: "03",
+    title: "Improving patient-doctor relationship",
+    descrption:
+      "Follow-up routine consultations doctors and other healthcare professional Generate actionable RWE for precision medicine and innovative study.",
+  },
+];
+
+const imageContainer = {
+  hidden: {
+    x: "100vw",
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type : 'spring',
+        stiffness: 40,
+        ease : 'easeInOut'
+    },
+  },
+};
+const contentContainer = {
+  hidden: {
+    x: "-100vw",
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type : 'spring',
+        stiffness: 40,
+        ease : 'easeInOut'
+    },
+  },
+};
+
+function Accordin({ id, title, descrption }) {
+
+  return (
+    <Box sx={{ width: "80%"}}>
+      <Accordion sx={{ margin: "20px" }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              sx={{
+                color: colors.light,
+                fontSize: "20px",
+                fontWeight: "bold",
+                marginRight: "20px",
+              }}
+            >
+              {id}
+            </Typography>
+            <Typography>{title}</Typography>
+          </Box>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>{descrption}</Typography>
+        </AccordionDetails>
+      </Accordion>
+    </Box>
+  );
+}
+
+function Unique() {
+
+  const controls = useAnimation();
+  const {ref, inView} = useInView({
+    threshold : 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else{
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  return (
+    <Box
+    ref={ref}
+      className="unique-container"
+    >
+      <Box
+      component={motion.div}
+      variants={contentContainer}
+      initial="hidden"
+      animate={controls}
+      >
+        <Typography
+          gutterBottom
+          sx={{
+            fontSize: "30px",
+            fontWeight: "bold",
+            color: colors.dark,
+            margin: "20px",
+            padding: "20px",
+          }}
+        >
+          We are unique...
+        </Typography>
+        {data.map((item) => Accordin(item))}
+      </Box>
+      <Box
+        component={motion.div}
+        variants={imageContainer}
+        initial="hidden"
+        animate={controls}
+      >
+        <img src={image} width="100%" height="100%" />
+      </Box>
+    </Box>
+  );
+}
+
+export default Unique;

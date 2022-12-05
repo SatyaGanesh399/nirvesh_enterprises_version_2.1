@@ -8,9 +8,17 @@
 :root{
   --navy : #25316D;
   --red : #E14D2A;
-  --orange : #FD841F;
+  --orange : #EC994B;
+  --lightGrey : #7895B2;
   --blue : #277BC0;
+  --red : #FBA1A1;
   --primary : #EAF6F6;
   --secondary : #fff;
   --dark : #2B3A55;
+  --synapsilColor : #20dcc4;
+  --synapsilDark : #384d4f;
+  --backgroundColor : #f5f4f4;
 }
+
+
+

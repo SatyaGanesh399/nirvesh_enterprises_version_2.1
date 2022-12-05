@@ -14,7 +14,7 @@ const provide = [
   },
   {
     id: '2',
-    bgColor : colors.navy,
+    bgColor : colors.synpasilColor,
     text : "Targeted cognitive status classification algorithm > 80% accuracy",
   },
   {
@@ -24,7 +24,7 @@ const provide = [
   },
   {
     id: '4',
-    bgColor : colors.red,
+    bgColor : colors.navy,
     text : "Multimodal data collection and continuous analysis",
   },
 ];

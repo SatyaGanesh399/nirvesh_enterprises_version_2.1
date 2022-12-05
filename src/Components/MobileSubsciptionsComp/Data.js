@@ -46,6 +46,7 @@ const subscriptionData =[
         title : 'BASIC',
         cost: '666/month',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
+        accesable : [1, 0, 0, 0]
     },
     {
         id:'3',
@@ -53,6 +54,7 @@ const subscriptionData =[
         cost: '1222/month',
         description : 'Basic plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
+        accesable : [1, 1, 1, 1]
     },
     {
         id:'2',
@@ -60,6 +62,7 @@ const subscriptionData =[
         cost: '888/month',
         description : ' plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
+        accesable : [1, 1, 0, 0]
     },
    
 ]

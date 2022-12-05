@@ -1,10 +1,14 @@
 import React from "react";
 import { BsClipboardData } from "react-icons/bs";
+import {TiTick} from 'react-icons/ti';
+import {TiDelete} from 'react-icons/ti';
 import "./MobileSubscription.css";
 import { leftData, rightData, subscriptionData } from "./Data";
 import AppTitle from "../../ReusableComponents/AppTitle";
 import iphone from "../../Assets/iphone.png";
 import colors from "../../DefaultColors";
+import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import { green, grey } from "@mui/material/colors";
 
 const benefitCard = (item) => {
   return (
@@ -25,24 +29,57 @@ const benefitCard = (item) => {
 };
 const subscriptionCard = (item) => {
   return (
-    <div 
-    style={{
-        
-        marginTop : item.id==='3' ? '0' :  '100px',
-        }} className="subscription-card-container">
-      <div 
-      style={{backgroundColor : item.id==='3' ? '#FFD700' :  colors.blue}}
-      className="subscription-title-header">
-      <p 
-      className="subscription-title"
-      >{item.title}</p>
-      <p className="subscription-cost">{item.cost}</p>
+    <div
+      style={{
+        marginTop: item.id === "3" ? "0" : "100px",
+      }}
+      className="subscription-card-container"
+    >
+      <div
+        style={{
+          backgroundColor:
+            item.id === "3"
+              ? "#FFD700"
+              : item.id === "1"
+              ? "grey"
+              : colors.blue,
+        }}
+        className="subscription-title-header"
+      >
+        <p className="subscription-title">{item.title}</p>
+        <p className="subscription-cost">{item.cost}</p>
       </div>
-      <div style={{paddingTop : '30px'}}>
-      {item.advantages.map((item) => (
-          <p className="subscription-benefits">{item}</p>
-          ))}
-          </div>
+      <div style={{ paddingTop: "30px" }}>
+        <table>
+            <tr>
+            <th>Service</th>
+            <th>Available</th>
+            </tr>
+            {item.advantages.map((listItem, index) =>
+            <tr>
+                <td>{listItem}</td>
+                <td>{item.accesable[index] === 1 ? <TiTick size={24} color='green' /> : <TiDelete size={24} color='red' />}</td>
+            </tr>)}
+        
+            </table>
+        {item.id === "2" && <AppButtonRound text="Subscribe" width="80%" />}
+        {item.id === "3" && (
+          <AppButtonRound
+            text="Subscribe"
+            width="80%"
+            bgColor="#FFD700"
+            border="#FFD700"
+          />
+        )}
+        {item.id === "1" && (
+          <AppButtonRound
+            text="Subscribe"
+            width="80%"
+            bgColor='grey'
+            border='grey'
+          />
+        )}
+      </div>
     </div>
   );
 };
@@ -63,6 +100,7 @@ function MobileSubscription() {
           </div>
         </div>
       </div>
+      <p className="subscription-maintitle">Offers & Subscriptions</p>
       <div className="mobile-subscription-benefits">
         {subscriptionData.map((item) => subscriptionCard(item))}
       </div>

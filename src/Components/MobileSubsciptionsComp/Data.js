@@ -4,19 +4,19 @@ const leftData= [
         id : "1",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
-        bgColor : colors.red,
+        bgColor : colors.navy,
     },
     {
         id : "2",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
-        bgColor : colors.navy,
+        bgColor : 'grey',
     },
     {
         id : "3",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
-        bgColor : colors.dark,
+        bgColor : colors.orange,
     }
 ];
 const rightData= [
@@ -24,7 +24,7 @@ const rightData= [
         id : "4",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
-        bgColor : colors.orange,
+        bgColor : colors.dark,
     },
     {
         id : "5",

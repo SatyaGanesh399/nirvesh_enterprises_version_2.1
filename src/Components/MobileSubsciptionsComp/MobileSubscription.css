@@ -10,7 +10,7 @@
   padding: 30px;
 }
 .subscription-top{
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
     padding-top : 30px;
 }
 .benefit-card {
@@ -51,12 +51,15 @@
     text-align: center;
     padding-top : 20px;
 }
+.offers-subscription-content{
+  width: 100%;
+  background-color: var(--backgroundColor);
+}
 .mobile-subscription-benefits{
     display: flex;
     align-items: center;
     justify-content: center;
     gap : 20px;
-    
 }
 .subscription-card-container{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

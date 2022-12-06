@@ -61,7 +61,14 @@ const subscriptionCard = (item) => {
             </tr>)}
         
             </table>
-        {item.id === "2" && <AppButtonRound text="Subscribe" width="80%" />}
+            {item.id === "2" && (
+          <AppButtonRound
+            text="Subscribe"
+            width="80%"
+            bgColor={colors.blue}
+            border={colors.blue}
+          />
+        )}
         {item.id === "3" && (
           <AppButtonRound
             text="Subscribe"
@@ -75,7 +82,7 @@ const subscriptionCard = (item) => {
             text="Subscribe"
             width="80%"
             bgColor='grey'
-            border='grey'
+            border="grey"
           />
         )}
       </div>
@@ -99,9 +106,11 @@ function MobileSubscription() {
           </div>
         </div>
       </div>
+      <div className="offers-subscription-content">
       <p className="subscription-maintitle">Offers & Subscriptions</p>
       <div className="mobile-subscription-benefits">
         {subscriptionData.map((item) => subscriptionCard(item))}
+      </div>
       </div>
     </div>
   );

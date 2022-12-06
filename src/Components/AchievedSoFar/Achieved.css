@@ -1,0 +1,14 @@
+.achieved-container{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    background-color: var(--backgroundColor);
+    min-height: 250px;
+
+}
+.achieved-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--navy);
+}

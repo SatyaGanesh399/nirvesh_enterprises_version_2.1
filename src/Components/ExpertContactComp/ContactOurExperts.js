@@ -1,4 +1,6 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { useInView  } from "react-intersection-observer";
+import {motion, useAnimation} from 'framer-motion'
 import "./ContactOurExpert.css";
 import colors from "../../DefaultColors";
 import AppTitle from "../../ReusableComponents/AppTitle";
@@ -9,12 +11,52 @@ import { TiLocation } from "react-icons/ti";
 import { TfiEmail } from "react-icons/tfi";
 import { RiContactsFill } from "react-icons/ri";
 
+
+// Animation 
+
+const cardComponent = {
+  hidden : {
+    opacity : 0,
+  },
+  visible : {
+    opacity : 1,
+    transition : {
+      type : 'tween',
+      duration : 0.5,
+      ease :'easeIn'
+    },
+  }
+
+};
+
 function ContactOurExperts() {
+  const controls = useAnimation();
+  const {ref, inView} = useInView({
+    threshold : 0.1
+  });
+
+  useEffect(() => {
+
+    if (inView) {
+      controls.start('visible');
+    } else{
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+
   return (
     <div className="expert-container">
       <AppTitle title="Contact Our Experts" />
-      <div className="expert-contact">
-        <div className="expert-contact-details">
+      <div 
+      className="expert-contact">
+        <motion.div 
+        className="expert-contact-details"
+        ref={ref}
+      variants={cardComponent}
+      initial = 'hidden'
+      animate={controls}
+        >
           <div className="contact-details-content">
             <div className="contact-details-icons">
               <TiLocation size={30} color="white" />
@@ -47,8 +89,13 @@ function ContactOurExperts() {
           </div>
 
           <img src={mapImage} alt="googleImage" className="google-map-image" />
-        </div>
-        <div className="expert-contact-form">
+        </motion.div>
+        <motion.div 
+        className="expert-contact-form"
+        variants={cardComponent}
+        initial="hidden"
+        animate={controls}
+        >
           <p className="contact-form-heading">
             Submit Your queries or suggestions
           </p>
@@ -69,7 +116,7 @@ function ContactOurExperts() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

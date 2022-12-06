@@ -13,31 +13,35 @@ import Statusbar from './Statusbar';
 
   const imageContainer = {
     hidden: {
-      x: "-100vw",
+      x: "-100",
       opacity: 0,
+      scale : 0,
     },
     visible: {
       x: 0,
       opacity: 1,
+      scale : 1,
       transition: {
-        type : 'spring',
-        stiffness: 40,
-        ease : 'easeInOut'
+        type : 'tween',
+          ease : 'easeOut',
+          duration : 1,
       },
     },
   };
   const contentContainer = {
     hidden: {
-      x: "100vw",
+      x: "100",
       opacity: 0,
+      scale:0,
     },
     visible: {
       x: 0,
       opacity: 1,
+      scale : 1,
       transition: {
-        type : 'spring',
-        stiffness: 40,
-        ease : 'easeInOut'
+        type : 'tween',
+        ease : 'easeOut',
+        duration : 1,
       },
     },
   };

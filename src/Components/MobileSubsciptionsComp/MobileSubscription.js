@@ -9,6 +9,7 @@ import iphone from "../../Assets/iphone.png";
 import colors from "../../DefaultColors";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 
+// Card component side to the mobile Phone
 const benefitCard = (item) => {
   return (
     <div
@@ -26,6 +27,8 @@ const benefitCard = (item) => {
     </div>
   );
 };
+
+// Subscription card component for prices
 const subscriptionCard = (item) => {
   return (
     <div
@@ -90,13 +93,19 @@ const subscriptionCard = (item) => {
   );
 };
 
+
+
 function MobileSubscription() {
+
+
   return (
     <div className="mobile-subscription-container">
-      <div className="subscription-top">
+      <div 
+      className="subscription-top">
         <AppTitle title="Mobile Application Subscription(s)" />
 
-        <div className="mobile-application-benefits">
+        <div 
+        className="mobile-application-benefits">
           <div className="mobile-left">
             {leftData.map((item) => benefitCard(item))}
           </div>
@@ -108,7 +117,8 @@ function MobileSubscription() {
       </div>
       <div className="offers-subscription-content">
       <p className="subscription-maintitle">Offers & Subscriptions</p>
-      <div className="mobile-subscription-benefits">
+      <div 
+      className="mobile-subscription-benefits">
         {subscriptionData.map((item) => subscriptionCard(item))}
       </div>
       </div>

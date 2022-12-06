@@ -1,46 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
+import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 import logo from "./Assets/logo.png";
 import BlobComp from '../../ReusableComponents/BlobComp';
+import colors from '../../DefaultColors';
+import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import AppButton from "../../ReusableComponents/AppButton";
 
 function Navbar() {
+  const [checked, setChecked] = useState(true);
+
+  const handleCheckBox = () =>{
+    setChecked(!checked);
+  }
+  console.log(checked);
+  const navigate = useNavigate();
+  const handleLoginRoute =() =>{
+    navigate("/login");
+  }
+  const handleHomeRoute =() =>{
+    navigate("/");
+  }
+
+
   return (
     <div>
       <div>
         <nav>
           <div className="navbar">
             <div className="container nav-container">
-              <div className="logo">
+              <div className="logo"
+              onClick={handleHomeRoute}
+              >
                 <img src={logo} alt="logo" />
               </div>
               <div className='blob-comp'>
                 <BlobComp />
                 </div>
-              <input className="checkbox" type="checkbox" name="" id="" />
+                <div className="navbar-login-button">
+                <AppButtonRound 
+                text="Login" 
+                bgColor={colors.orange}
+                border={colors.orange}
+                textColor = {colors.primaryWhite}
+                width= '100px'
+                afterClick={handleLoginRoute}/>
+                </div>
+              <input className="checkbox" type="checkbox" name="" id="" checked={checked} onChange={handleCheckBox} />
               <div className="hamburger-lines">
                 <span className="line line1"></span>
                 <span className="line line2"></span>
                 <span className="line line3"></span>
               </div>
               <div className="menu-items">
-                <li>
-                  <a href="#">Home</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/">Home</Link>
                 </li>
-                <li>
-                  <a href="#">About Us</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/">About Us</Link>
                 </li>
-                <li>
-                  <a href="#">Milestones</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/milestones">Milestones</Link>
                 </li>
-                <li>
-                  <a href="#">Portfolio</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/portfolio">Portfolio</Link>
                 </li>
-                <li>
-                  <a href="#">Team</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/team">Team</Link>
                 </li>
-                <li>
-                  <a href="#">Contact Us</a>
+                <li
+                onClick={handleCheckBox}>
+                  <Link to="/">Contact Us</Link>
                 </li>
               </div>
             </div>

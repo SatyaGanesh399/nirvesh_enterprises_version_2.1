@@ -1,0 +1,110 @@
+import React, { useEffect } from "react";
+import { Box, Typography } from "@mui/material";
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+import "./index.css";
+import colors from "../../DefaultColors";
+import CardItem from "./CardItem";
+import AppTitle from "../../ReusableComponents/AppTitle";
+
+const cardData = [
+  {
+    id: "1",
+    icon: "golf_course",
+    subHeading: "Profitable Business Model",
+    description:
+      "We partner with leading rehabilitation centers to increase the standard of care with sole goal of improving patient outcomes",
+  },
+  {
+    id: "2",
+    icon: "description",
+    subHeading: "Realistic, Scalable Marketing Strategy",
+    description:
+      "Our Marketing Strategies is through direct sales, channel partners, Licensing of our technology",
+  },
+  {
+    id: "3",
+    icon: "speed",
+    subHeading: "Hire and Train a Solid Team",
+    description: "Our strength is Our team",
+  },
+  {
+    id: "4",
+    icon: "layers",
+    subHeading: "Gain Authority in Your Industry",
+    description:
+      "We would like to Capture indian market by 2025. US and Europe markets by 2027",
+  },
+];
+
+const cardVarient = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      delay: 0.5,
+      duration: 2,
+      type: "spring",
+      stiffness: 40,
+    },
+  },
+};
+
+function OurMilestones() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        padding: "30px",
+        boxSizing: "border-box",
+      }}
+    >
+      <AppTitle title="Our Milestones" />
+      <Typography
+        sx={{
+          fontSize: "16px",
+          color: colors.grey,
+          textAlign: "center",
+          margin: "20px",
+        }}
+      >
+        Our company milestones are the significant moments of accomplishment
+        that mark our companys' development and growth.
+      </Typography>
+      <Box
+        ref={ref}
+        component={motion.div}
+        variants={cardVarient}
+        initial="hidden"
+        animate={controls}
+        className="cardComponent"
+      >
+        {cardData.map((item) => (
+          <CardItem item={item} />
+        ))}
+      </Box>
+    </Box>
+  );
+}
+
+export default OurMilestones;

@@ -62,7 +62,7 @@
 .message-label {
     font-size: 1.1rem;
     font-weight: 500;
-    color : var(--navy);
+    color : var(--dark);
     margin : 5px;
 }
 .message-text-area{

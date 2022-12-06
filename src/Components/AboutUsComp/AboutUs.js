@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useInView  } from "react-intersection-observer";
+import {motion, useAnimation} from 'framer-motion'
 
 import colors from "../../DefaultColors";
 import AppButton from '../../ReusableComponents/AppButton';
@@ -29,12 +31,51 @@ const provide = [
   },
 ];
 
+// Animation 
+
+const cardComponent = {
+  hidden : {
+    opacity : 0,
+  },
+  visible : {
+    opacity : 1,
+    transition : {
+      type : 'tween',
+      duration : 0.5,
+      ease :'easeIn'
+    },
+  }
+
+};
+
 function AboutUs() {
+
+  const controls = useAnimation();
+  const {ref, inView} = useInView({
+    threshold : 0.2,
+  });
+
+  useEffect(() => {
+
+    if (inView) {
+      controls.start('visible');
+    } else{
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+
   return (
     <div className="container">
       <p className="container-header">About Us</p>
       <div className="about-us">
-        <div className="main-content">
+        <motion.div 
+        className="main-content"
+        ref={ref}
+        variants={cardComponent}
+        initial = "hidden"
+        animate = {controls}
+        >
             <p
               className="sub-heading">
               We are a team of 45 persons' years with good combination of
@@ -85,7 +126,7 @@ function AboutUs() {
           >
             <AppButton text='Know More' />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

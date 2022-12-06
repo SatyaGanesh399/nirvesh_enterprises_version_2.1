@@ -188,7 +188,7 @@ function LoginPage() {
                     height : '100%',
                 }}>
                 <AppInputWithLabel text = 'Username'
-                placeHolder='User Name' />
+                labelText='User Name' />
                 </Box>
                 <Box
                 sx={{
@@ -196,7 +196,7 @@ function LoginPage() {
                     height : '100%',
                 }}>
                 <AppInputWithLabel text = 'Password'
-                placeHolder='Password' />
+                labelText='Password' />
                 </Box>
                 <Box 
                 sx={{
@@ -233,7 +233,7 @@ function LoginPage() {
             }}>
                 <Box
                 sx={{
-                    marginTop : '-80px',
+                    marginTop : '-30px',
                     width : '100%'
                 }}
                 >
@@ -254,7 +254,7 @@ function LoginPage() {
                     width : '100%',
                     height : '100%',
                 }}>
-                <AppInputWithLabel text = 'Username' placeHolder='User Name' />
+                <AppInputWithLabel text = 'Username' labelText='User Name' />
                 </Box>
                 <Box
                 sx={{
@@ -262,7 +262,7 @@ function LoginPage() {
                     height : '100%',
                 }}>
                 <AppInputWithLabel text = 'Password'
-                placeHolder='Password' />
+                labelText='Password' />
                 </Box>
                 <Box 
                 sx={{

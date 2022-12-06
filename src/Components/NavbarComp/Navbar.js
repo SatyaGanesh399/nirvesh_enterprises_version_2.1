@@ -10,7 +10,7 @@ import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 import AppButton from "../../ReusableComponents/AppButton";
 
 function Navbar() {
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
 
   const handleCheckBox = () =>{
     setChecked(!checked);

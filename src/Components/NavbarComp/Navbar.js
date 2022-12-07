@@ -15,7 +15,6 @@ function Navbar() {
   const handleCheckBox = () =>{
     setChecked(!checked);
   }
-  console.log(checked);
   const navigate = useNavigate();
   const handleLoginRoute =() =>{
     navigate("/login");

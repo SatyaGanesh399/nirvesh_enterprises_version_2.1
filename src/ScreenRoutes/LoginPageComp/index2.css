@@ -1,0 +1,154 @@
+.login-container-new{
+    width: 100%;
+    box-sizing: border-box;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    width : 85%;
+    min-height: 400px;
+    border-radius: 20px;
+    margin : 20px auto;
+    margin-bottom: 50px;
+    background-color: var(--secondary);
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.main-container-left{
+    width : 60%;
+    height : 400px;
+    margin: 20px;
+}
+.login-title{
+    max-width: 250px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: var(--navy);
+    margin-left: -60px;
+    margin-top: 10px;
+    border-radius: 20px;;
+}
+.login-welcome-message{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px;
+    color: var(--navy);
+    padding : 5px;
+    margin: 5px;
+    margin-left: 40px;
+}
+.guidance-message{
+    flex-grow: 1;
+    color: var(--navy);
+    padding : 15px;
+}
+.left-button{
+    min-width: 100px;
+    border: 0;
+    outline: 0;
+    padding : 5px 10px;
+    color : var(--primary);
+    background-color: var(--navy);
+    font-weight : 500;
+    transition: 0.2s all ease-in;
+    margin:auto 0 auto auto;
+}
+.left-button:hover{
+    color: var(--navy);
+    background-color: var(--primary);
+    border : 1px solid var(--navy);
+}
+.login-image-left{
+    max-width: 200px;
+    object-fit: contain;
+}
+.main-container-right{
+    width : 40%;
+    height : 400px;
+    background-color: var(--navy);
+    position: relative;
+    right : 25px;
+}
+.synpasil-image{
+    width : 250px;
+    object-fit: contain;
+    margin: 30px auto;
+}
+.left-container-toggleItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left-container-toggleItem .toggle-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.left-container-toggleItem p{
+    font-weight : 500;
+    font-size: 0.8rem;
+    color : var(--primary);
+    padding : 10px;
+    margin : 10px 5px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.left-container-toggleItem p:hover{
+    background :rgba(255,255,255, 0.2);
+    border-top-left-radius: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.patients-info-text{
+    font-size: 0.9rem;
+    padding : 5px;
+    margin: 5px;
+    text-align: center;
+    color : var(--primary)
+
+}
+.patients-login-content{
+    width : 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+.qr-code{
+    max-width : 200px;
+    object-fit: contain;
+}
+.doctors-login-content{
+    width : 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.synpasil-login-button{
+    min-width: 100px;
+    border: 0;
+    outline: 0;
+    padding : 5px 10px;
+    color : var(--navy);
+    font-weight : 500;
+    transition: 0.2s all ease-in;
+    margin:auto 0 auto auto;
+}
+.synpasil-login-button:hover{
+    color: var(--blue);
+    font-weight: 600;
+}
+

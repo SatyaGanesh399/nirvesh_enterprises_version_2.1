@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Box, Typography } from "@mui/material";
 import AppTitle from '../../ReusableComponents/AppTitle';
 
 import ProfileCard from "./ProfileCard";
@@ -8,7 +7,6 @@ import image1 from "./Assests/team-1.jpg";
 import image2 from "./Assests/team-2.jpg";
 import image3 from "./Assests/team-3.jpg";
 import image4 from "./Assests/team-5.jpg";
-import colors from '../../DefaultColors';
 
 const profileData = [
   {
@@ -50,26 +48,21 @@ const profileData = [
 
 function Team() {
   return (
-    <Box>
-      <AppTitle title="Team" />
-      <Typography
-      sx={{
-        fontSize: "16px",
-        color: colors.grey,
-        textAlign: "center",
-        margin : '20px'
-      }}
+    <div>
+      <AppTitle title="Meet Our Team" />
+      <p
+      className="teams-subtitle"
       >
         We are a team with good combination of experience and skills across
         Information technology, Neuroscience, Biomedical sciences and Trauma /
         Stroke Research.
-      </Typography>
-      <Box sx={{ display: "flex", marginTop: "50px", marginBottom : '50px' }} className='profileCards'>
+      </p>
+      <div className='profileCards'>
         {profileData.map((item) => (
           <ProfileCard item={item} />
         ))}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import AppTitle from '../../ReusableComponents/AppTitle';
 import { Box, Typography, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -58,21 +59,11 @@ function LoginPage() {
   return (
     <Box
     sx={{
-        marginTop: "100px",
         width : '100%',
         marginBottom : '50px'
 
     }}>
-        <Typography
-          sx={{
-            fontSize: "30px",
-            color: '#048cdc',
-            textAlign: "center",
-            fontWeight : '500',
-            margin: "30px",
-            marginBottom : '40px'
-          }}
-        >Welcome to synpasil Login</Typography>
+        <AppTitle title="Welcome to Synpasil login" />
 
     <Box
       sx={{

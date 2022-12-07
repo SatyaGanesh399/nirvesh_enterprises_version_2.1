@@ -41,18 +41,14 @@ const cardData = [
 
 const cardVarient = {
   hidden: {
-    opacity: 0,
-    y: 100,
+    scale : 0
   },
   visible: {
-    opacity: 1,
-    y: 0,
+    scale : 1,
 
     transition: {
-      delay: 0.5,
-      duration: 2,
-      type: "spring",
-      stiffness: 40,
+      delay: 0.2,
+      type: "tween",
     },
   },
 };
@@ -72,28 +68,18 @@ function OurMilestones() {
   }, [controls, inView]);
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        padding: "30px",
-        boxSizing: "border-box",
-      }}
+    <div
+      className="milestones-container"
     >
       <AppTitle title="Our Milestones" />
-      <Typography
-        sx={{
-          fontSize: "16px",
-          color: colors.grey,
-          textAlign: "center",
-          margin: "20px",
-        }}
+      <p
+        className="milestones-subtitle"
       >
         Our company milestones are the significant moments of accomplishment
         that mark our companys' development and growth.
-      </Typography>
-      <Box
+      </p>
+      <motion.div
         ref={ref}
-        component={motion.div}
         variants={cardVarient}
         initial="hidden"
         animate={controls}
@@ -102,8 +88,8 @@ function OurMilestones() {
         {cardData.map((item) => (
           <CardItem item={item} />
         ))}
-      </Box>
-    </Box>
+      </motion.div>
+    </div>
   );
 }
 

@@ -1,24 +1,24 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import {motion, useAnimation} from 'framer-motion';
+
+import {HiMail} from 'react-icons/hi'
+import {AiFillInstagram} from 'react-icons/ai'
+import {BsTwitter} from 'react-icons/bs'
 
 import "./index.css";
 import colors from "../../DefaultColors";
 
 const cardContainer = {
   hidden : {
-    opacity : 0,
-    y : 100
+    scale:0
   },
   visible : {
-    opacity : 1,
-    y : 0,
+    scale : 1,
   transition  : {
-    type : 'spring',
-    stiffness : 60,
+    type : 'tween',
     delay : 0.2,
     ease : 'easeIn'
   },
@@ -40,48 +40,36 @@ export default function ProfileCard({ item }) {
   },[inView, controls]);
 
   return (
-    <Box
+    <motion.div
     ref={ref}
-    component = {motion.div}
     variants = {cardContainer}
     initial = 'hidden'
     animate = {controls}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        width: "300px",
-        height: "400px",
-        boxShadow: "rgba(0, 0, 0, 0.3) 0px 22px 40px 4px",
-        padding: "20px",
-        margin: "20px",
-        alignItems: "center",
-        justifyContent: "flex-start",
-      }}
-      className='profileCardContainer'
+    className='profileCardContainer'
     >
-      <Box sx={{ position: "relative", top: "-70px" }}>
+      <div className="profile-image">
         <img src={item.url} className="cardImage" />
-      </Box>
-      <Box sx={{ textAlign: "center", marginTop: "-40px" }}>
-        <Typography
-          sx={{
-            fontSize: "24px",
-            color: colors.navy,
-            fontWeight: "bold",
-            marginBottom: "10px",
-          }}
+      </div>
+      <div className="profile-main-content">
+        <p
+          className="profile-name"
         >
           {item.profileName}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "16px", color: colors.blue, marginBottom: "10px" }}
+        </p>
+        <p
+          className="profile-subheading"
         >
           {item.profileDesign}
-        </Typography>
-        <Typography sx={{ fontSize: "16px", color: colors.dark }}>
+        </p>
+        <p className="profile-description">
           {item.description}
-        </Typography>
-      </Box>
-    </Box>
+        </p>
+      </div>
+        <div className="social-media-group">
+          <HiMail className="social-media-icons" />
+          <AiFillInstagram className="social-media-icons" />
+          <BsTwitter className="social-media-icons" />
+        </div>
+    </motion.div>
   );
 }

@@ -1,51 +1,14 @@
 import React from "react";
-import AppTitle from "../../ReusableComponents/AppTitle";
+import "./index2.css";
 
 import synapsilLogo from "./Assests/synapsil-logo.png";
 import qr from "./Assests/qrcode.png";
 import login from "./Assests/login.jpg";
 
-import "./index2.css";
 import colors from "../../DefaultColors";
 import AppLoginInput from "../../ReusableComponents/AppLoginInput";
-import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 
-const leftContainer = {
-  hidden: {
-    x: "-100vw",
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      delay: "0.2",
-      stiffness: 40,
-      ease: "easeInOut",
-    },
-  },
-};
-const rightContainer = {
-  hidden: {
-    x: "100vw",
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      delay: "0.2",
-      stiffness: 40,
-      ease: "easeInOut",
-    },
-  },
-};
+
 
 function LoginPageVer2() {
   const [patient, setPatient] = React.useState(false);

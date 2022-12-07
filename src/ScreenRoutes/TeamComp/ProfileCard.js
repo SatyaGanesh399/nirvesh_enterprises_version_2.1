@@ -9,7 +9,6 @@ import {AiFillInstagram} from 'react-icons/ai'
 import {BsTwitter} from 'react-icons/bs'
 
 import "./index.css";
-import colors from "../../DefaultColors";
 
 const cardContainer = {
   hidden : {
@@ -48,7 +47,7 @@ export default function ProfileCard({ item }) {
     className='profileCardContainer'
     >
       <div className="profile-image">
-        <img src={item.url} className="cardImage" />
+        <img src={item.url} alt="profile-face" className="cardImage" />
       </div>
       <div className="profile-main-content">
         <p

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./index.css";
 import { Link } from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import logo from "./Assets/logo.png";
 import BlobComp from '../../ReusableComponents/BlobComp';
 import colors from '../../DefaultColors';
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
-import AppButton from "../../ReusableComponents/AppButton";
 
 function Navbar() {
   const [checked, setChecked] = useState(false);
@@ -23,6 +22,9 @@ function Navbar() {
     navigate("/");
   }
 
+  // location hook
+  const location = useLocation();
+
 
   return (
     <div>
@@ -35,9 +37,10 @@ function Navbar() {
               >
                 <img src={logo} alt="logo" />
               </div>
+              {location.pathname === '/' && 
               <div className='blob-comp'>
                 <BlobComp />
-                </div>
+                </div>}
                 <div className="navbar-login-button">
                 <AppButtonRound 
                 text="Login" 

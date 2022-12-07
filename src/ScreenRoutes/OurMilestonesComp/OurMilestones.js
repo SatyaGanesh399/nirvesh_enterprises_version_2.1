@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import { Box, Typography } from "@mui/material";
+
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import "./index.css";
-import colors from "../../DefaultColors";
 import CardItem from "./CardItem";
 import AppTitle from "../../ReusableComponents/AppTitle";
 

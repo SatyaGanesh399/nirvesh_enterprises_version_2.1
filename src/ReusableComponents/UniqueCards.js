@@ -1,21 +1,22 @@
 import React, {useState} from 'react'
 import './index.css';
-import {BsChevronDown} from 'react-icons/bs';
-import {BsChevronUp} from 'react-icons/bs';
+import colors from '../DefaultColors';
 
-function UniqueCards({number, title, description, bgColor, textColor}) {
-  const [dropDown, setDropDown] = useState(false);
+function UniqueCards({number, title, description, bgColor, textColor, special}) {
 
-  const toggleDropDown = () =>{
-    setDropDown(!dropDown);
-  }
   return (
-    <div className='card-container'>
-        <p className='card-number'>{number}</p>
-        <p className='card-title'>{title}</p>
-        {dropDown &&<p className='card-description'>{description}</p>}
-        { !dropDown && <BsChevronDown size={20} className="chevron-down" onClick={toggleDropDown}/>}
-        { dropDown && <BsChevronUp size={20} className="chevron-down" onClick={toggleDropDown}/>}
+    <div className='card-container'
+    style={{scale : special && "1.08", backgroundColor : special && colors.navy}}
+    key={number}>
+        <p className='card-number'
+        style={{color : special && colors.primaryWhite}}
+        >{number}</p>
+        <p className='card-title'
+        style={{color : special && colors.primaryWhite}}
+        >{title}</p>
+        <p className='card-description'
+        style={{color : special && colors.primaryWhite}}
+        >{description}</p>
     </div>
   )
 }

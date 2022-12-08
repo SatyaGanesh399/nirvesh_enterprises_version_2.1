@@ -1,24 +1,25 @@
-.milestones-container{
+.milestones-container {
   width: 100%;
-        padding: 30px;
-        box-sizing: border-box;
+  margin-top: 70px;
+  padding: 30px;
+  box-sizing: border-box;
 }
-.milestones-subtitle{
+.milestones-subtitle {
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  color : var(--dark);
+  color: var(--dark);
 }
 .cardComponent {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-top : 20px;
+  padding-top: 20px;
 }
-.card-icon{
+.card-icon {
   font-size: 50px;
   margin-top: 40px;
   padding-left: 30px;
-  margin-bottom : 10px;
-  color : var(--navy);
+  margin-bottom: 10px;
+  color: var(--navy);
 }

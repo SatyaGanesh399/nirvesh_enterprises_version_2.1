@@ -1,9 +1,9 @@
 .carousel-component {
-  margin-top: -100px;
+  margin-top: -10px;
 }
 .slide-component {
   width: 100%;
-  height: 90vh;
+  height: 700px;
   background-color: #e14d2a;
 }
 .banner-content {

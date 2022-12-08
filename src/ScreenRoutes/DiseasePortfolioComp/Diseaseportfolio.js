@@ -73,7 +73,8 @@ function Diseaseportfolio() {
   };
   
   return (
-    <Box>
+    <Box
+    sx={{marginTop : '120px'}}>
       <AppTitle title="Our Disease Portfolio" />
 
       <Box 

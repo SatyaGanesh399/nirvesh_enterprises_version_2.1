@@ -71,21 +71,23 @@ font-weight : bold;
   .card-container{
     max-width : 350px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    min-height: 200px;
+    min-height: 250px;
     overflow: hidden;
     transition: 0.3s ease-in-out;
     background-color: var(--primary);
     color : var(--navy);
+    margin: 5px;
 }
-.card-container:hover{
+/* .card-container:hover{
     scale : 1.05;
     background-color: var(--navy);
     color : var(--primary)
-}
+} */
 
 .card-number{
     font-size: 40px;
     padding : 10px;
+    height: 50px;
     font-weight: 700;
     padding-left: 20px;;
 }
@@ -93,14 +95,21 @@ font-weight : bold;
     font-size: 24px;
     font-weight: 500;
     padding : 5px;
+    height : 120px;
     padding-left: 20px;
 }
-.chevron-down{
+/* .chevron-down{
   text-align: center;
   color : var(--navy);
   font-weight: 600;
   width : 100%;
   transition : 0.2s ease-in-out;
+} */
+.card-description{
+
+  text-align: justify;
+  margin : 5px auto;
+  padding : 10px;
 }
 .card-container:hover .chevron-down{
   color : var(--primary)
@@ -158,6 +167,12 @@ cursor: pointer;
 .visibility-icon:hover{
   opacity: 0.7;
 }
+.scroll-to-top{
+  position: fixed;
+  bottom : 60px;
+  right : 30px;
+}
+
   
   
   

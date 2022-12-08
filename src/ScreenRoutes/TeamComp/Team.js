@@ -48,7 +48,7 @@ const profileData = [
 
 function Team() {
   return (
-    <div>
+    <div style={{marginTop : '120px'}}>
       <AppTitle title="Meet Our Team" />
       <p
       className="teams-subtitle"

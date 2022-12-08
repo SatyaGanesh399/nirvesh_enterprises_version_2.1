@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Accordion,
@@ -6,13 +6,15 @@ import {
   AccordionDetails,
   Typography,
 } from "@mui/material";
-import './index.css';
+import "./index.css";
+
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 import image from "./Assets/why-us.png";
 import colors from "../../DefaultColors";
+import UniqueCards from "../../ReusableComponents/UniqueCards";
 
 const data = [
   {
@@ -39,16 +41,16 @@ const imageContainer = {
   hidden: {
     x: "100",
     opacity: 0,
-    scale:0,
+    scale: 0,
   },
   visible: {
     x: 0,
     opacity: 1,
-    scale : 1,
+    scale: 1,
     transition: {
-      type : 'tween',
-      ease : 'easeInOut',
-      duration : 1,
+      type: "tween",
+      ease: "easeInOut",
+      duration: 1,
     },
   },
 };
@@ -56,107 +58,119 @@ const contentContainer = {
   hidden: {
     x: "-100",
     opacity: 0,
-    scale : 0,
+    scale: 0,
   },
   visible: {
     x: 0,
     opacity: 1,
-    scale : 1,
+    scale: 1,
     transition: {
-      type : 'tween',
-        ease : 'easeInOut',
-        duration : 1,
+      type: "tween",
+      ease: "easeInOut",
+      duration: 1,
     },
   },
 };
 
-function Accordin({ id, title, descrption }) {
+// function Accordin({ id, title, descrption }) {
 
-  return (
-    <Box sx={{ width: "80%"}}>
-      <Accordion sx={{ margin: "20px" }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              sx={{
-                color: colors.light,
-                fontSize: "20px",
-                fontWeight: "bold",
-                marginRight: "20px",
-              }}
-            >
-              {id}
-            </Typography>
-            <Typography>{title}</Typography>
-          </Box>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>{descrption}</Typography>
-        </AccordionDetails>
-      </Accordion>
-    </Box>
-  );
-}
+//   return (
+//     <Box sx={{ width: "80%"}}>
+//       <Accordion sx={{ margin: "20px" }}>
+//         <AccordionSummary
+//           expandIcon={<ExpandMoreIcon />}
+//           aria-controls="panel1a-content"
+//           id="panel1a-header"
+//         >
+//           <Box
+//             sx={{
+//               display: "flex",
+//               justifyContent: "center",
+//               alignItems: "center",
+//             }}
+//           >
+//             <Typography
+//               sx={{
+//                 color: colors.light,
+//                 fontSize: "20px",
+//                 fontWeight: "bold",
+//                 marginRight: "20px",
+//               }}
+//             >
+//               {id}
+//             </Typography>
+//             <Typography>{title}</Typography>
+//           </Box>
+//         </AccordionSummary>
+//         <AccordionDetails>
+//           <Typography>{descrption}</Typography>
+//         </AccordionDetails>
+//       </Accordion>
+//     </Box>
+//   );
+// }
 
 function Unique() {
-
   const controls = useAnimation();
-  const {ref, inView} = useInView({
-    threshold : 0.2,
+  const { ref, inView } = useInView({
+    threshold: 0.2,
   });
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
-    } else{
-      controls.start('hidden');
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
   return (
-    <Box
-    ref={ref}
-      className="unique-container"
-    >
-      <Box
-      component={motion.div}
-      variants={contentContainer}
-      initial="hidden"
-      animate={controls}
+    <div ref={ref} className="unique-container">
+      <motion.div
+        variants={contentContainer}
+        initial="hidden"
+        animate={controls}
+        className="unique-content-container"
       >
         <Typography
           gutterBottom
           sx={{
             fontSize: "30px",
             fontWeight: "bold",
-            color: colors.dark,
+            color: colors.navy,
             margin: "20px",
             padding: "20px",
+            textAlign : 'center',
           }}
         >
           We are unique...
         </Typography>
-        {data.map((item) => Accordin(item))}
-      </Box>
-      <Box
-        component={motion.div}
-        variants={imageContainer}
-        initial="hidden"
-        animate={controls}
-      >
+        <div className="unique-main-cards">
+
+            <UniqueCards
+              number={data[0].id}
+              title={data[0].title}
+              description={data[0].descrption}
+            />
+
+            <UniqueCards
+              number={data[1].id}
+              title={data[1].title}
+              description={data[1].descrption}
+              special={true}
+              />
+            <UniqueCards
+              number={data[2].id}
+              title={data[2].title}
+              description={data[2].descrption}
+            />
+
+        </div>
+      </motion.div>
+      {/* <motion.div variants={imageContainer} initial="hidden" animate={controls}>
         <img src={image} alt="uniqueImage" width="100%" height="100%" />
-      </Box>
-    </Box>
+      </motion.div> */}
+    </div>
   );
 }
 

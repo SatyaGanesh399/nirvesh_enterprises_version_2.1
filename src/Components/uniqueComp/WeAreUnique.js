@@ -25,15 +25,17 @@ const data = [
   },
   {
     id: "02",
-    title: "Real-time data driven personalized cognitive management",
+      title: "Improving patient-doctor relationship",
     descrption:
-      "Seamless integration of hardware hearables and software platform",
+      "Follow-up routine consultations doctors and other healthcare professional Generate actionable RWE for precision medicine and innovative study.",
+    
   },
   {
     id: "03",
-    title: "Improving patient-doctor relationship",
+    title: "Real-time data driven personalized cognitive management",
     descrption:
-      "Follow-up routine consultations doctors and other healthcare professional Generate actionable RWE for precision medicine and innovative study.",
+      "Seamless integration of hardware hearables and software platform",
+    
   },
 ];
 

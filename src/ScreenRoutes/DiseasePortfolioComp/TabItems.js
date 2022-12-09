@@ -72,17 +72,15 @@ export default function TabItems({ item }) {
             onMouseLeave={handleRelease}
             onMouse
           />
-          {hovered &&
           <div className="disease-titles">
             <p className="disease-type">{item.type}</p>
             <p className="disease-name">{item.disease}</p>
           </div>
-          }
           <AppButtonRound
             text="Know more"
             bgColor={colors.blue}
             border={colors.blue}
-            width="100%"
+            width="150px"
             afterClick={handleClick}
           />
         </div>
@@ -97,7 +95,7 @@ export default function TabItems({ item }) {
             text="Go back"
             bgColor={colors.blue}
             border={colors.blue}
-            width="100%"
+            width="150px"
             afterClick={handleClick}
           />
         </div>

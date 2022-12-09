@@ -11,7 +11,7 @@ function CarouselHeader() {
     <Carousel slide={false} className="carousel-component">
       <Carousel.Item>
         <div
-        style={{backgroundColor : colors.blue, width : '100%', height : '80vh'}}>
+        style={{backgroundColor : colors.blue, width : '100%', height : '100vh'}}>
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Innovative solution</p>
@@ -25,7 +25,8 @@ function CarouselHeader() {
       </Carousel.Item>
       <Carousel.Item>
         <div 
-        style={{backgroundColor : '#7895B2', width : '100%', height : '80vh'}}>
+
+        className="carousel-main-container">
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Cost Effective Treatment</p>
@@ -39,7 +40,7 @@ function CarouselHeader() {
       </Carousel.Item>
       <Carousel.Item>
         <div
-        style={{backgroundColor : colors.synpasilDark, width : '100%', height : '80vh'}}>
+        style={{backgroundColor : colors.synpasilDark, width : '100%', height : '100vh'}}>
           <div className='banner-content'>
             <div className="text-content">
               <p className='heading-content'>Precise Data Tracking</p>

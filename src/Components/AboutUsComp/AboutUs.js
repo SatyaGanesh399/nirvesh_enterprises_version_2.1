@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import { useInView  } from "react-intersection-observer";
 import {motion, useAnimation} from 'framer-motion'
+import {TiTick} from 'react-icons/ti';
 
 import colors from "../../DefaultColors";
 import AppButton from '../../ReusableComponents/AppButton';
@@ -18,17 +19,17 @@ const provide = [
   },
   {
     id: '2',
-    bgColor : colors.synpasilColor,
+    bgColor : colors.blue,
     text : "Targeted cognitive status classification algorithm > 80% accuracy",
   },
   {
     id: '3',
-    bgColor : colors.orange,
+    bgColor : colors.blue,
     text : "Beneficial Interventions (Audio-Visual Training) to improve well-being",
   },
   {
     id: '4',
-    bgColor : colors.navy,
+    bgColor : colors.blue,
     text : "Multimodal data collection and continuous analysis",
   },
 ];
@@ -97,7 +98,7 @@ function AboutUs() {
               {provide.map((item) => {
                 return (
                   <div key={item.id} className='list-points'>
-                    <div style={{width : '20px', height : '20px', margin : '15px', borderRadius : '10px', backgroundColor : item.bgColor}}></div>
+                    <div style={{padding : '5px'}}><TiTick size={24} color={colors.blue} /></div>
                     <p className='list'>{item.text}</p>
                   </div>
                 );
@@ -106,7 +107,7 @@ function AboutUs() {
           </div>
           <div>
             <p
-              style={{ fontSize: "16px", fontWeight: "medium", color: colors.dark }}
+              className="about-us-final-content"
             >
               With the strong need for evidence-based diagnostic technology as a
               complementary to existing technology likely to include a

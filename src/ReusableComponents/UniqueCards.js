@@ -6,7 +6,7 @@ function UniqueCards({number, title, description, bgColor, textColor, special}) 
 
   return (
     <div className='card-container'
-    style={{scale : special && "1.08", backgroundColor : special && colors.navy}}
+    style={{scale : special && "1.08", backgroundColor : special && colors.blue}}
     key={number}>
         <p className='card-number'
         style={{color : special && colors.white}}

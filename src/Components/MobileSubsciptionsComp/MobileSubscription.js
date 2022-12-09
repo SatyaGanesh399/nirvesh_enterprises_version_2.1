@@ -18,7 +18,6 @@ const benefitCard = (item) => {
       style={{ backgroundColor: item.bgColor }}
     >
       <BsClipboardData
-        size={30}
         color={colors.primaryWhite}
         className="benefit-card-icon"
       />
@@ -42,8 +41,8 @@ const subscriptionCard = (item) => {
         style={{
           backgroundColor:
             item.id === "3"
-              ? colors.navy
-              : colors.dark
+              ? colors.blue
+              : colors.blue
         }}
         className="subscription-title-header"
       >
@@ -53,12 +52,12 @@ const subscriptionCard = (item) => {
       <div style={{ paddingTop: "30px" }}>
         <table>
             <tr>
-            <th>Service</th>
-            <th>Available</th>
+            <th style={{color : colors.dark}}>Service</th>
+            <th style={{color : colors.dark}}>Available</th>
             </tr>
             {item.advantages.map((listItem, index) =>
             <tr>
-                <td>{listItem}</td>
+                <td style={{color : colors.dark}}>{listItem}</td>
                 <td>{item.accesable[index] === 1 ? <TiTick size={24} color='green' /> : <TiDelete size={24} color='red' />}</td>
             </tr>)}
         
@@ -67,24 +66,24 @@ const subscriptionCard = (item) => {
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor={colors.dark}
-            border={colors.dark}
+            bgColor={colors.blue}
+            border={colors.blue}
           />
         )}
         {item.id === "3" && (
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
+            bgColor={colors.blue}
+            border={colors.blue}
           />
         )}
         {item.id === "1" && (
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor={colors.dark}
-            border={colors.dark}
+            bgColor={colors.blue}
+            border={colors.blue}
           />
         )}
       </div>

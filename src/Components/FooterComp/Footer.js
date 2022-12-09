@@ -23,7 +23,7 @@ const listData = [
 const listItems = ({ item }) => {
   return (
     <div className="item-container">
-      <BsFillCaretRightFill size={12} color={colors.blue} />
+      <BsFillCaretRightFill size={12} color={colors.dark} />
       <p className="footer-item list-item">{item}</p>
     </div>
   );
@@ -32,21 +32,6 @@ const listItems = ({ item }) => {
 function Footer() {
   return (
     <div className="footer">
-      <div className="newsletter">
-        <AppTitle title="Join Our Newsletter" />
-        <p className="newsletter-subheading">
-          Please subscribe to newsletter to know more about our research...
-        </p>
-        <div className="newsletter-subscription">
-          <input
-            type="text"
-            className="newsletter-input"
-            placeholder="Please enter your email id"
-          />
-          <button className="newsletter-button">Subscribe</button>
-        </div>
-        <div className="newsletter-divider"></div>
-      </div>
       <div className="footer-menu">
         <div className="knowledge-center">
           <img src={synpasilLogo} alt="sunapsil-logo" className="synapsil-logo"/>

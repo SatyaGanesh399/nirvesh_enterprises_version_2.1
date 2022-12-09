@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
-  /* --navy : #25316D; */
-  --navy : #007aff;
+  --navy : #4757a6;
+  /* --navy : #007aff; */
   --red : #E14D2A;
   --orange : #EC994B;
   --lightGrey : #7895B2;
-  --blue : #277BC0;
-  --red : #FBA1A1;
+  --blue : #026ad9;
   --primary : #EAF6F6;
   --secondary : #fff;
   --dark : #434242;
   --synapsilColor : #20dcc4;
   --synapsilDark : #384d4f;
-  /* --backgroundColor : #f5f4f4; */
-  --backgroundColor : rgba(59,130,246,.1);
+  --backgroundColor : #f4f6f8;
 }
 .App {
   margin : 0;

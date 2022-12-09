@@ -1,5 +1,8 @@
-.carousel-component {
-  margin-top: -10px;
+.carousel-main-container{
+    width : 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #7895B2;
 }
 .slide-component {
   width: 100%;
@@ -12,56 +15,47 @@
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding-top: 90px;
   transition: 0.5s ease-in-out;
 }
 .text-content {
   position: absolute;
-  top: 160px;
   left: 150px;
-  max-width: 700px;
+  max-width: 600px;
 }
 .heading-content {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--secondary);
 }
 .subHeading-content {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--secondary);
   word-spacing: 5px;
 }
 .costEffective-style {
-  width: 500px;
+  width: 600px;
   object-fit: contain;
   position: absolute;
-  top: 50px;
   right: 100px;
 }
 .brain-image {
-  width: 450px;
+  width: 500px;
   position: absolute;
   top: 80px;
   right: 100px;
 }
-@media only screen and (max-width: 1300px) {
-  .banner-content {
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+@media only screen and (max-width: 1400px) {
+  .text-content{
+    width: 450px;
   }
   .heading-content {
-    font-size: 46px;
+    font-size: 2.5rem;
     font-weight: 600;
     color: var(--secondary);
   }
   .subHeading-content {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--secondary);
     word-spacing: 5px;
@@ -69,9 +63,37 @@
   .costEffective-style {
     width: 500px;
     object-fit: contain;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .banner-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-content{
+    width: 700px;
+  }
+  .heading-content {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+  .subHeading-content {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secondary);
+    word-spacing: 5px;
+  }
+  .costEffective-style {
+    width: 400px;
+    object-fit: contain;
     position: relative;
     right: 0;
-    top : 30px;
+    top : 50px;
   }
   .text-content {
     position: relative;
@@ -83,23 +105,22 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 700px) {
   .banner-content {
     width: 100%;
     height: 100%;
-    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
   .heading-content {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--secondary);
   }
   .subHeading-content {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--secondary);
     word-spacing: 5px;
@@ -114,5 +135,8 @@
     max-width: 300px;
     top : 20px;
     left : 0px;
+  }
+  .carousel-main-container{
+
   }
 }

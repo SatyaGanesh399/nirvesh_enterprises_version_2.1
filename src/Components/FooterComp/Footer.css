@@ -9,14 +9,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding : 30px;
 }
-.newsletter-divider {
+/* .newsletter-divider {
   height: 2px;
   width: 90%;
   background-color: var(--lightGrey);
   margin: 20px;
   border-radius: 1px;
-}
+} */
 .newsletter-subheading {
   color: var(--dark);
   font-size: 1.2rem;
@@ -66,7 +67,7 @@
   align-items: flex-start;
   margin: auto;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -100,7 +101,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 .iphone-footer {
   width: 120px;
@@ -119,11 +119,11 @@
   cursor: pointer;
 }
 .social-media-icon {
-  background-color: var(--blue);
+  background-color: var(--dark);
   padding: 6px;
   border-radius: 20px;
   margin: 5px;
-  transition: 1s ease-in;
+  transition: 0.5s ease-in;
 }
 .social-media-icon:hover{
   scale: 1.2;

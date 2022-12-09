@@ -32,8 +32,19 @@
 .list-points{
     display: flex;
     align-items: center;
+    margin : 10px 0;
 }
 .list{
     margin: 0;
+}
+.about-us-final-content{
+  font-size: 1rem;
+  font-weight: 500;
+  color : var(--dark)
+}
+@media only screen and (max-width : 500px) {
+  .about-us-final-content{
+    text-align: center;
+  }
 }
 

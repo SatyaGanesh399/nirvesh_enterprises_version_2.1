@@ -85,7 +85,7 @@ function CurrentStatus() {
         sx={{
           fontSize: "30px",
           fontWeight: "bold",
-          color: colors.dark,
+          color: colors.navy,
           margin: "20px",
           padding : '20px',
         }}

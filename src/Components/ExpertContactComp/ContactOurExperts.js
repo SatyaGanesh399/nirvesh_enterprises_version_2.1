@@ -61,9 +61,9 @@ function ContactOurExperts() {
             <div className="contact-details-icons">
               <TiLocation size={30} color="white" />
             </div>
-            <div>
+            <div className="address">
               <p className="contact-subheading">Location</p>
-              <p className="contact-item">
+              <p className="contact-item ">
                 Plot No 5 & 6, Road No 12 F, New Maruthinagar, Kothapet,
                 Dilsukhnagar, Hyderabad 500 060, INDIA
               </p>

@@ -4,8 +4,10 @@ import {motion, useAnimation} from 'framer-motion'
 
 import colors from "../../DefaultColors";
 import AppButton from '../../ReusableComponents/AppButton';
+import AppTitle from "../../ReusableComponents/AppTitle";
 
 import "./index.css";
+import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 
 
 const provide = [
@@ -67,7 +69,7 @@ function AboutUs() {
 
   return (
     <div className="container">
-      <p className="container-header">About Us</p>
+      <AppTitle title="About Us" />
       <div className="about-us">
         <motion.div 
         className="main-content"
@@ -104,7 +106,7 @@ function AboutUs() {
           </div>
           <div>
             <p
-              style={{ fontSize: "16px", fontWeight: "medium", color: "grey" }}
+              style={{ fontSize: "16px", fontWeight: "medium", color: colors.dark }}
             >
               With the strong need for evidence-based diagnostic technology as a
               complementary to existing technology likely to include a
@@ -124,7 +126,7 @@ function AboutUs() {
               margin: "15px",
             }}
           >
-            <AppButton text='Know More' />
+            <AppButtonRound text="Know More" bgColor={colors.blue} border={colors.blue} />
           </div>
         </motion.div>
       </div>

@@ -34,6 +34,7 @@ const subscriptionCard = (item) => {
     <div
       style={{
         marginTop: item.id === "3" ? "0" : "100px",
+        backgroundColor : colors.white
       }}
       className="subscription-card-container"
     >
@@ -41,10 +42,8 @@ const subscriptionCard = (item) => {
         style={{
           backgroundColor:
             item.id === "3"
-              ? "#FFD700"
-              : item.id === "1"
-              ? "grey"
-              : colors.blue,
+              ? colors.navy
+              : colors.dark
         }}
         className="subscription-title-header"
       >
@@ -68,24 +67,24 @@ const subscriptionCard = (item) => {
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor={colors.blue}
-            border={colors.blue}
+            bgColor={colors.dark}
+            border={colors.dark}
           />
         )}
         {item.id === "3" && (
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor="#FFD700"
-            border="#FFD700"
+            bgColor={colors.navy}
+            border={colors.navy}
           />
         )}
         {item.id === "1" && (
           <AppButtonRound
             text="Subscribe"
             width="80%"
-            bgColor='grey'
-            border="grey"
+            bgColor={colors.dark}
+            border={colors.dark}
           />
         )}
       </div>

@@ -72,21 +72,25 @@
 
 .footer-heading {
   font-size: 0.9rem;
+  text-align: center;
+  margin-right: 10px;
   font-weight: 600;
   color: var(--navy);
 }
 .footer-item {
-  color: var(--blue);
+  color: var(--dark);
 }
 .item-container {
   display: flex;
   align-items: center;
   padding: 8px;
+  margin-left: 20px;
 }
 .list-item {
   margin: 0;
   transition: 1s ease-out;
   cursor: pointer;
+  margin-left: 10px;
 }
 .list-item:hover{
   scale : 1.1;
@@ -111,7 +115,7 @@
   font-size: 0.8rem;
   padding: 3px;
   margin: 0;
-  color: var(--blue);
+  color: var(--dark);
   cursor: pointer;
 }
 .social-media-icon {
@@ -125,6 +129,9 @@
   scale: 1.2;
   background-color: var(--navy);
 }
+.click-here{
+  color : var(--navy)
+}
 
 .footer-copyright{
   background-color: var(--navy);
@@ -135,5 +142,11 @@
 }
 .footer-copyright-content{
   margin: 10px auto;
-  color : var(--backgroundColor)
+  color : var(--secondary)
+}
+.synapsil-logo{
+  width : 200px;
+  object-fit: contain;
+  margin-top: 40px;
+  margin-right: 40px;
 }

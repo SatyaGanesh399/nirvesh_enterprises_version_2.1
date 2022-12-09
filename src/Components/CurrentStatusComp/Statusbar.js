@@ -38,7 +38,7 @@ export default function LinearWithValueLabel({title, progress}) {
         sx={{
             fontSize : '12px',
             fontWeight : 'bold',
-            color : colors.blue
+            color : colors.navy
         }}
         >{title}</Typography>
       <LinearProgressWithLabel value={progress} />

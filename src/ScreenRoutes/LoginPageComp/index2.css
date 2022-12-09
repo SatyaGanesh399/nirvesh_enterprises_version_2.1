@@ -79,9 +79,9 @@
     right : 25px;
 }
 .synpasil-image{
-    width : 250px;
+    width : 350px;
     object-fit: contain;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 .left-container-toggleItem{
     display: flex;

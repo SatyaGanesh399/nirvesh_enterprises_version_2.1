@@ -19,18 +19,18 @@
 .navabar-blob{
     position: absolute;
     z-index: -1;
-    top : -80px;
-    left : 15px;
+    top : -75px;
+    left : 25px;
 }
 
 .navbar-logo img{
-    width: 80px;
+    width: 100px;
     object-fit: contain;
     cursor: pointer;
     transition: 0.2s all ease-in-out;
 }
 .navbar-logo img:hover{
-    width: 85px;
+    width: 95px;
 }
 .navbar-items{
     display: flex;

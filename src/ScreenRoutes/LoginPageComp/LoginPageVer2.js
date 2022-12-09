@@ -54,7 +54,7 @@ function LoginPageVer2() {
             <div>
             <p className="guidance-message">
               If you have a problem logging in, please send an email to
-              support@lynx.care
+              <span style={{fontWeight:"600"}}> nirveshenterprises.com</span>
             </p>
             <span className="guidance-message">or</span>
             <button className="left-button">Watch introduction movie</button>

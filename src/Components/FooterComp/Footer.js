@@ -8,6 +8,7 @@ import { BsSkype } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 import iphone from "../../Assets/iphone.png";
+import synpasilLogo from '../NavbarComp/Assets/logo.png';
 import qr from "../../Assets/qr-code.png";
 import colors from "../../DefaultColors";
 
@@ -48,8 +49,7 @@ function Footer() {
       </div>
       <div className="footer-menu">
         <div className="knowledge-center">
-          <p className="footer-heading">Knowledge Center</p>
-          <p className="footer-item">Webinar Series : Coming Soon...</p>
+          <img src={synpasilLogo} alt="sunapsil-logo" className="synapsil-logo"/>
         </div>
         <div className="useful-links">
           <p className="footer-heading">Useful Links</p>

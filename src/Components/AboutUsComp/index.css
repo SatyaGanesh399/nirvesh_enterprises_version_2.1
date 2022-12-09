@@ -1,7 +1,9 @@
 .container {
+  padding : 20px;
   padding-top: 50px;
   box-sizing: border-box;
   width: 100%;
+  background-color: var(--secondary);
 }
 .container-header {
   font-size: 2rem;
@@ -20,10 +22,12 @@
   align-items: center;
   justify-content: space-around;
   gap: 25px;
+  color : var(--dark);
 }
 .sub-heading {
   color: var(--dark);
   text-align: center;
+  color : var(--dark);
 }
 .list-points{
     display: flex;

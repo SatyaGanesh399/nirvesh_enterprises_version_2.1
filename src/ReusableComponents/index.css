@@ -74,7 +74,7 @@ font-weight : bold;
     min-height: 250px;
     overflow: hidden;
     transition: 0.3s ease-in-out;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color : var(--navy);
     margin: 5px;
 }

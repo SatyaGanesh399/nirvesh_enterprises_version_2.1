@@ -9,13 +9,13 @@ function UniqueCards({number, title, description, bgColor, textColor, special}) 
     style={{scale : special && "1.08", backgroundColor : special && colors.navy}}
     key={number}>
         <p className='card-number'
-        style={{color : special && colors.primaryWhite}}
+        style={{color : special && colors.white}}
         >{number}</p>
         <p className='card-title'
-        style={{color : special && colors.primaryWhite}}
+        style={{color : special && colors.white}}
         >{title}</p>
         <p className='card-description'
-        style={{color : special && colors.primaryWhite}}
+        style={{color : special && colors.white}}
         >{description}</p>
     </div>
   )

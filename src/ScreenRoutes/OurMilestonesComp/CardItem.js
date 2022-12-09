@@ -24,7 +24,7 @@ function CardItem(props) {
           padding: "10px",
           fontSize: "18px",
           fontWeight: "bold",
-          color: colors.blue,
+          color: colors.dark,
         }}
       >
         {props.item.subHeading}

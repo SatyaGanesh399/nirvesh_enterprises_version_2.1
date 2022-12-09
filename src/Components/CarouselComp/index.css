@@ -40,10 +40,10 @@
   right: 100px;
 }
 .brain-image {
-  width: 500px;
+  width: 460px;
   position: absolute;
-  top: 80px;
-  right: 100px;
+  top: 150px;
+  right: 180px;
 }
 @media only screen and (max-width: 1400px) {
   .text-content{

@@ -83,7 +83,7 @@ function Navbar2({ onClickMenu }) {
       }
       {navbar && 
       <div className="responsive-navbar-container">
-        <ResponsiveNavbar closeNavbar = {setNavbar} />
+        <ResponsiveNavbar closeNavbar = {setNavbar } />
       </div>
       }
     </div>

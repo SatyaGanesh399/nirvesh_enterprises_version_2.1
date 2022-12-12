@@ -8,7 +8,7 @@ import CurrentStatus from './CurrentStatusComp/CurrentStatus';
 import Achieved from './AchievedSoFar/Achieved';
 import MobileSubscription from './MobileSubsciptionsComp/MobileSubscription';
 import ContactOurExperts from './ExpertContactComp/ContactOurExperts';
-import JoinOurNewsletter from "./JoinOurNewsletter/JoinOurNewsletter";
+import Testimonial from "./TestimonialsComponent/Testimonial";
 
 function ActualHomePage() {
   return (
@@ -20,7 +20,7 @@ function ActualHomePage() {
       <Achieved />
       <MobileSubscription />
       <ContactOurExperts />
-      <JoinOurNewsletter />
+      <Testimonial />
     </div>
   );
 }

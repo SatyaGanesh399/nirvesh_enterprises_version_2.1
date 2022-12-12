@@ -6,13 +6,11 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsSkype } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { BiRightArrowCircle } from "react-icons/bi";
 
 import iphone from "../../Assets/iphone.png";
-import synpasilLogo from '../NavbarComp/Assets/logo.png';
 import qr from "../../Assets/qr-code.png";
 import colors from "../../DefaultColors";
-
-import AppTitle from "../../ReusableComponents/AppTitle";
 
 const listData = [
   "About us",
@@ -33,9 +31,6 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-menu">
-        <div className="knowledge-center">
-          <img src={synpasilLogo} alt="sunapsil-logo" className="synapsil-logo"/>
-        </div>
         <div className="useful-links">
           <p className="footer-heading">Useful Links</p>
           <div>{listData.map((item) => listItems({ item }))}</div>
@@ -45,29 +40,42 @@ function Footer() {
           <div>
             <BsTwitter
               size={30}
-              color={colors.primaryWhite}
+              color={colors.navy}
               className="social-media-icon"
             />
             <BsFacebook
               size={30}
-              color={colors.primaryWhite}
+              color={colors.navy}
               className="social-media-icon"
             />
             <AiFillInstagram
               size={30}
-              color={colors.primaryWhite}
+              color={colors.navy}
               className="social-media-icon"
             />
             <BsSkype
               size={30}
-              color={colors.primaryWhite}
+              color={colors.navy}
               className="social-media-icon"
             />
             <BsLinkedin
               size={30}
-              color={colors.primaryWhite}
+              color={colors.navy}
               className="social-media-icon"
             />
+          </div>
+          <div className="newsletter-comp">
+            <div className="footer-heading">
+              <p>Subscribe to Newsletter</p>
+              <div className="newsletter-subscription">
+                <input
+                  type="text"
+                  className="newsletter-input"
+                  placeholder="Please enter your email id"
+                />
+                <BiRightArrowCircle size={30} color={colors.dark} />
+              </div>
+            </div>
           </div>
         </div>
         <div className="playstore-comp">
@@ -85,7 +93,9 @@ function Footer() {
         </div>
       </div>
       <div className="footer-copyright">
-        <p className="footer-copyright-content">© Copyright Nirvesh Enterprises. All Rights Reserved 2021</p>
+        <p className="footer-copyright-content">
+          © Copyright Nirvesh Enterprises. All Rights Reserved 2021
+        </p>
       </div>
     </div>
   );

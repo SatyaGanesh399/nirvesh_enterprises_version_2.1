@@ -32,12 +32,42 @@ border :2px solid var(--blue);
 color : var(--primary);
 font-weight : bold;
 }
+.app-subHeading{
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--dark);
+  margin: 5px;
+}
 .container-header {
-  font-size: 2rem;
-  color: var(--navy);
+  font-size: 1.8rem;
+  /* display: inline-block; */
+  color: var(--dark);
   font-weight: 600;
   text-align: center;
   margin: 20px;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
+.container-header:before {
+  content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+.container-header:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--blue);
+    bottom: 0;
+    left: calc(50% - 20px);
 }
 /* .blob1 { 
     width: 400px;
@@ -75,7 +105,7 @@ font-weight : bold;
     overflow: hidden;
     transition: 0.3s ease-in-out;
     background-color: var(--secondary);
-    color : var(--navy);
+    color : var(--dark);
     margin: 5px;
 }
 /* .card-container:hover{
@@ -89,7 +119,8 @@ font-weight : bold;
     padding : 10px;
     height: 50px;
     font-weight: 700;
-    padding-left: 20px;;
+    padding-left: 20px;
+    color : var(--blue)
 }
 .card-title{
     font-size: 24px;
@@ -97,6 +128,7 @@ font-weight : bold;
     padding : 5px;
     min-height : 120px;
     padding-left: 20px;
+    /* color : var(--blue) */
 }
 
 .card-description{
@@ -165,6 +197,7 @@ cursor: pointer;
   position: fixed;
   bottom : 60px;
   right : 30px;
+  z-index: 999;
 }
 
   

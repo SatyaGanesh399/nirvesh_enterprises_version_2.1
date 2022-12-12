@@ -1,42 +1,58 @@
 import colors from '../../DefaultColors'
+import doctor from './Assets/doctor.png';
+import livetracking from './Assets/live-tracking.png';
+import music from './Assets/music.png';
+import doctorphoto from './Assets/doctor.png';
 const leftData= [
     {
         id : "1",
-        title : 'Live Tracking',
-        description : 'Monitor Your health live',
+        title : '24*7 Doctor',
+        description : 'All time available for emergencies',
         bgColor : colors.navy,
+        hover : true,
+        image : doctorphoto,
     },
     {
         id : "2",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
         bgColor : 'grey',
+        hover : false,
+        image : livetracking,
     },
     {
         id : "3",
-        title : 'Live Tracking',
-        description : 'Monitor Your health live',
+        title : 'Music',
+        description : 'Control your mood instantly',
         bgColor : colors.orange,
+        hover : false,
+        image : music,
     }
 ];
 const rightData= [
     {
         id : "4",
-        title : 'Live Tracking',
-        description : 'Monitor Your health live',
+        title : '24*7 Doctor',
+        description : 'All time available for emergencies',
         bgColor : colors.dark,
+        hover : false,
+        image : doctorphoto,
     },
     {
         id : "5",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
         bgColor : colors.synpasilColor,
+        hover : false,
+        image : livetracking,
     },
     {
         id : "6",
-        title : 'Live Tracking',
-        description : 'Monitor Your health live',
+        title : 'Music',
+        description : 'Control your mood instantly',
         bgColor : colors.blue,
+        hover : false,
+        image : music,
     }
 ];
 

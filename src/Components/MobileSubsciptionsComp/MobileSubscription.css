@@ -3,6 +3,48 @@
   width: 100%;
   
 }
+.side-heading{
+  font-size: 1.1rem;
+  margin :10px auto;
+  text-align: center;
+  width: 80%;
+}
+.mobile-application-features{
+  margin: 20px;
+  margin-top: 50px;
+}
+.iphone-background{
+  width : 100%;
+  height : 400px;
+  background-image:
+  linear-gradient(45deg,
+              rgba(24, 26, 29, 0.735),
+              rgba(8,83,156, 0.5)), url(
+'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80');
+background-repeat: no-repeat;
+background-size: cover;
+  z-index: 1 !important;
+  position: relative;
+  top : 518px;
+  margin-top : -300px
+}
+.features-content{
+  width: 50%;
+z-index: 2;
+position: relative;
+top : -435px;
+left : 650px;
+margin-bottom: -300px;
+}
+.features-title{
+  font-size : 2rem;
+  font-weight: 600;
+  color : var(--navy);
+  text-align: center;
+  margin-top: -80px;
+  margin-bottom: 40px;
+
+}
 .mobile-application-benefits {
   display: flex;
   align-items: center;
@@ -10,61 +52,70 @@
   padding: 30px;
 }
 .subscription-top{
-    /* background-color: var(--backgroundColor); */
     padding-top : 30px;
 }
 .benefit-card {
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+  background-color: var(--secondary);
   width: 150px;
   height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 30px;
+  margin: 15px 30px;
   border-radius: 20px;
   transition: 0.5s all ease-in-out;
+  cursor: pointer;
 }
 .benefit-card:hover{
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: var(--blue);
 }
 
 .benefit-card-icon {
-  font-size: 50px;
+  color : var(--blue);
+  font-size: 40px;
   margin: auto;
   transition: 0.3s all ease-in-out;
 }
 .benefit-card-title {
   font-size: 1.1rem;
-  color: var(--primary);
+  color: var(--dark);
+  font-weight: 500;
   margin: 0;
   padding: 5px;
   margin-top: -10px;
   padding-bottom: 15px;
 }
+.benefit-card:hover .benefit-card-title{
+  color : var(--secondary)
+}
 .benefit-card-description {
-  display: none;
   font-size: 0.8rem;
   margin: 0;
   padding: 5px;
-  color: var(--primary);
+  color: var(--dark);
   text-align: center;
   transition: 1s all ease-in-out;
 }
 .benefit-card:hover .benefit-card-description{
-  display: block;
+  color : var(--secondary)
 }
 .benefit-card:hover .benefit-card-icon {
   font-size: 30px;
+  color : var(--secondary)
 }
 .iphone-subscription {
-  max-width: 300px;
-  margin: 20px;
+  max-width: 250px;
+  position: relative;
+  z-index: 3 !important;
+  left : 150px;
 }
 .subscription-maintitle{
     font-size: 28px;
     font-weight: 500;
-    color : var(--navy);
+    color : var(--dark);
     text-align: center;
     padding-top : 20px;
 }
@@ -78,6 +129,7 @@
     justify-content: center;
     gap : 20px;
 }
+
 .subscription-card-container{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
@@ -95,9 +147,9 @@
     padding-top: 10px;
 }
 .subscription-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color : var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color : var(--navy);
     transition: 0.3s linear;
 }
 .subscription-card-container:hover .subscription-title{
@@ -107,7 +159,7 @@
     font-size: 0.9rem;
     margin: 0;
     font-weight: 500;
-    color : var(--primary)
+    color : var(--dark)
 }
 .subscription-title-header{
     border-radius: 20px;
@@ -117,6 +169,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.mobile-left{
+  display: flex;
+  z-index: 2;
+}
+.mobile-right{
+  display: flex;
+z-index: 2;
 }
 .subscription-card-container:hover .subscription-title-header{
     padding : 10px;

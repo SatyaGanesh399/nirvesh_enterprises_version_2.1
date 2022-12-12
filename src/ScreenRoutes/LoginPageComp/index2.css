@@ -152,4 +152,105 @@
     color: var(--blue);
     font-weight: 600;
 }
+.guidance-message1{
+    background-color: transparent;
+}
+.guidance-message2{
+    display: none;
+}
+@media only screen and (max-width : 1100px){
+    .main-container{
+        flex-wrap: wrap;
+        gap : 30px;
+    }
+    .synpasil-image{
+        width : 300px;
+        object-fit: contain;
+        margin: 40px auto;
+    }
+    .main-container-left{
+        width : 100%;
+        height : 400px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-container-right{
+        width: 100%;
+        margin: 30px auto;
+        position: relative;
+        left : 0px;
+    }
+    .main-container-right{
+        margin : 30px;
+    }
+    .login-title{
+        max-width: 250px;
+        text-align: center;
+        color: var(--primary);
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 10px;
+        background-color: var(--navy);
+        margin-left: 0;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+    .login-welcome-message{
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        color: var(--navy);
+        padding : 5px;
+        margin: 5px;
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width : 600px){
+    .main-container-left{
+        margin-top: -120px;
+        margin-bottom: 80px;
+    }
+    .synpasil-image{
+        max-width : 250px;
+        object-fit: contain;
+        margin: 40px auto;
+    }
+    .login-title{
+        max-width: 250px;
+        text-align: center;
+        color: var(--dark);
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 5px;
+        background-color: transparent;
+        margin-left: 0;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+    .login-welcome-message{
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        color: var(--navy);
+        padding : 5px;
+        margin: 5px;
+        /* margin-left: 40px; */
+    }
+    .guidance-message1{
+        display: none !important;
+    }
+    .guidance-message2{
+        display: block;
+        padding : 20px;
+        margin-top: -25px;;
+    }
+    .main-container-right{
+        margin-top: -200px;
+    }
+}
 

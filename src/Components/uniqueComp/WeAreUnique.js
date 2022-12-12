@@ -121,8 +121,6 @@ function Unique() {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -139,7 +137,7 @@ function Unique() {
           sx={{
             fontSize: "30px",
             fontWeight: "bold",
-            color: colors.navy,
+            color: colors.dark,
             margin: "20px",
             padding: "20px",
             textAlign : 'center',
@@ -169,9 +167,6 @@ function Unique() {
 
         </div>
       </motion.div>
-      {/* <motion.div variants={imageContainer} initial="hidden" animate={controls}>
-        <img src={image} alt="uniqueImage" width="100%" height="100%" />
-      </motion.div> */}
     </div>
   );
 }

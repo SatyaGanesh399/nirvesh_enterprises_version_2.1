@@ -23,3 +23,8 @@
   margin-bottom: 10px;
   color: var(--navy);
 }
+@media only screen and (max-width : 1000px){
+  .cardComponent{
+    flex-wrap: wrap;
+  }
+}

@@ -1,18 +1,15 @@
 import { DefaultContext } from "react-icons"
 
 const colors = {
-    navy : '#4757a6',
-    // navy : '#007aff',
-    red : '#E14D2A',
-    orange : '#FD841F',
-    blue : '#026ad9',
+    navy : '#1570ad',
+    blue : '#54afeb',
     lightGrey : '#7895B2',
-    primaryWhite : '#EAF6F6',
+    primaryWhite : '#f4f4f4',
     white : '#ffffff',
-    dark : '#434242',
+    dark : '#444444',
     synpasilColor : '#20dcc4',
     synpasilDark : '#384d4f',
-    backgroundColor : '#f4f6f8'
+    backgroundColor : '#F7F9FB'
 }
 
 export default colors;

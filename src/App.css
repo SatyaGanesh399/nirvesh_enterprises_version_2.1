@@ -1,24 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
-  --navy : #4757a6;
-  /* --navy : #007aff; */
-  --red : #E14D2A;
-  --orange : #EC994B;
+  --navy : #1570ad;
   --lightGrey : #7895B2;
-  --blue : #026ad9;
-  --primary : #EAF6F6;
+  --blue : #54afeb;
+  --primary : #f4f4f4;
   --secondary : #fff;
-  --dark : #434242;
+  --dark : #444444;
   --synapsilColor : #20dcc4;
   --synapsilDark : #384d4f;
-  --backgroundColor : #f4f6f8;
+  --backgroundColor : #F7F9FB;
 }
 .App {
   margin : 0;
   padding : 0;
   box-sizing: border-box;
-  font-family: Poppins, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--secondary);
 }
 

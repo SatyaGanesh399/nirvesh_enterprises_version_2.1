@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar2.css';
+import { Link } from "react-router-dom";
 
 import {RxCrossCircled} from 'react-icons/rx'
 
@@ -13,25 +14,25 @@ function ResponsiveNavbar({closeNavbar}) {
       <div className="responsive-navbar-items">
             <ul>
                 <li>
-                <a >Home</a>
+                <Link to="/" >Home</Link>
                 </li>
                 <li>
-                <a >About Us</a>
+                <Link to="/" >About Us</Link>
                 </li>
                 <li>
-                <a >Our Milestones</a>
+                <Link to='/milestones' >Our Milestones</Link>
                 </li>
                 <li>
-                <a >Portfolio</a>
+                <Link to='/portoflio' >Portfolio</Link>
                 </li>
                 <li>
-                <a >Our Team</a>
+                <Link to='/team' >Our Team</Link>
                 </li>
                 <li>
-                <a >Contact Us</a>
+                <Link to="/" >Contact Us</Link>
                 </li>
                 <li>
-                <a to="/login">Login</a>
+                <Link to="/login">Login</Link>
                 </li>
             </ul>
             <div onClick={handleClick}>

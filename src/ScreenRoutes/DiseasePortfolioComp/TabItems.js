@@ -7,22 +7,18 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 
 import colors from "../../DefaultColors";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 const panelContainer = {
   hidden: {
-    y: 200,
+    scale: 0.8,
     opacity: 0,
   },
   visible: {
-    y: 0,
+    scale: 1,
     opacity: 1,
     transition: {
-      type: "spring",
-      delay: 0.2,
+      type: "tween",
       duration: 1,
-      stiffness: 40,
-      ease: "easeIn",
     },
   },
 };
@@ -34,8 +30,6 @@ export default function TabItems({ item }) {
   React.useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [inView, controls]);
 
@@ -61,8 +55,15 @@ export default function TabItems({ item }) {
 
   return (
     // Card front goes here
-    <div>
-      <ReactCardFlip isFlipped={flipped} flipDirection="vertical" key={item.id}>
+    <motion.div
+      variants={panelContainer}
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      key={item.id}
+      className="portfolio-card-container"
+    >
+      <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
         <div className="disease-container">
           <img
             src={item.url}
@@ -100,6 +101,6 @@ export default function TabItems({ item }) {
           />
         </div>
       </ReactCardFlip>
-    </div>
+    </motion.div>
   );
 }

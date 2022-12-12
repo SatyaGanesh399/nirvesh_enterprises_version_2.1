@@ -40,29 +40,28 @@ const cardData = [
 
 const cardVarient = {
   hidden: {
-    scale : 0
+    opacity : 0,
+    scale : 0.8
   },
   visible: {
+    opacity : 1,
     scale : 1,
 
     transition: {
       delay: 0.2,
       type: "tween",
+      duration :1,
     },
   },
 };
 
 function OurMilestones() {
   const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
+  const { ref, inView } = useInView({});
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [controls, inView]);
 

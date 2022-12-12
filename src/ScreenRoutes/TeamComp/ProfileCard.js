@@ -12,14 +12,16 @@ import "./index.css";
 
 const cardContainer = {
   hidden : {
-    scale:0
+    scale:0.8,
+    opacity : 0
   },
   visible : {
-    scale : 1,
+    scale:1,
+    opacity : 1,
   transition  : {
     type : 'tween',
-    delay : 0.2,
-    ease : 'easeIn'
+    ease : 'easeIn',
+    duration : 0.5,
   },
 },
 }

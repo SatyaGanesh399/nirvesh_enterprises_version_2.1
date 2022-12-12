@@ -57,8 +57,6 @@ function CurrentStatus() {
 
     if (inView) {
       controls.start('visible');
-    } else{
-      controls.start('hidden');
     }
   }, [controls, inView]);
 
@@ -85,7 +83,7 @@ function CurrentStatus() {
         sx={{
           fontSize: "30px",
           fontWeight: "bold",
-          color: colors.navy,
+          color: colors.dark,
           margin: "20px",
           padding : '20px',
         }}

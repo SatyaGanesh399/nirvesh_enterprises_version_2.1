@@ -1,0 +1,122 @@
+.test-container{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+
+.testimonial-card-container {
+padding : 20px;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+.testimonial-container{
+    display: flex;
+    align-items: center;
+
+}
+.testimonial-content{
+    width: 65%;
+}
+.testimonial-person-details{
+    display: flex;
+    flex-direction: column;
+    width : 35%;
+}
+.testimonial-comment{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color : var(--navy)
+}
+.quotes{
+    font-size: 2rem;
+    opacity: 0.4;
+    color : var(--blue);
+}
+.quote-left{
+    position: relative;
+    top : 20px;
+    right : 40px;
+}
+.quote-right{
+    position: relative;
+    top : -40px;
+    left : 400px;
+}
+.testimonial-description{
+    width: 100%;
+    height : 150px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+.testimonial-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+.testimonial-image-background1{
+    margin-top: -70px;
+    width : 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: var(--blue);
+    opacity: 0.9;
+    position: relative;
+    top : 95px;
+    z-index: -1;
+    right : 15px;
+}
+.testimonial-image-background2{
+    margin-top: -100px;
+    width : 110px;
+    height: 110px;
+    border-radius: 60px;
+    background-color: var(--blue);
+    opacity: 0.9;
+    position: relative;
+    top : 90px;
+    z-index: -1;
+    left : 10px;
+}
+.testimonial-person-name{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.testimonial-person-design{
+    color: var(--blue);
+    font-size: 0.9rem;
+    margin-top: -18px;
+    margin-left: 55px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}

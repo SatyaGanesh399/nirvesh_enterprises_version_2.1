@@ -19,12 +19,6 @@ const subscriptionCard = (item) => {
         className="subscription-card-container"
       >
         <div
-          style={{
-            // backgroundColor:
-            //   item.id === "3"
-            //     ? colors.blue
-            //     : colors.blue
-          }}
           className="subscription-title-header"
         >
           <p className="subscription-title">{item.title}</p>

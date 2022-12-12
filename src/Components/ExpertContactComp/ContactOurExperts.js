@@ -1,6 +1,6 @@
-import React,{useEffect} from "react";
-import { useInView  } from "react-intersection-observer";
-import {motion, useAnimation} from 'framer-motion'
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import "./ContactOurExpert.css";
 import colors from "../../DefaultColors";
 import AppTitle from "../../ReusableComponents/AppTitle";
@@ -11,51 +11,42 @@ import { TiLocation } from "react-icons/ti";
 import { TfiEmail } from "react-icons/tfi";
 import { RiContactsFill } from "react-icons/ri";
 
-
-// Animation 
+// Animation
 
 const cardComponent = {
-  hidden : {
-    opacity : 0,
+  hidden: {
+    opacity: 0,
   },
-  visible : {
-    opacity : 1,
-    transition : {
-      type : 'tween',
-      duration : 0.5,
-      ease :'easeIn'
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+      ease: "easeIn",
     },
-  }
-
+  },
 };
 
 function ContactOurExperts() {
   const controls = useAnimation();
-  const {ref, inView} = useInView({
-    threshold : 0.1
-  });
+  const { ref, inView } = useInView({});
 
   useEffect(() => {
-
     if (inView) {
-      controls.start('visible');
-    } else{
-      controls.start('hidden');
+      controls.start("visible");
     }
   }, [controls, inView]);
-
 
   return (
     <div className="expert-container">
       <AppTitle title="Contact Our Experts" />
-      <div 
-      className="expert-contact">
-        <motion.div 
-        className="expert-contact-details"
-        ref={ref}
-      variants={cardComponent}
-      initial = 'hidden'
-      animate={controls}
+      <div className="expert-contact">
+        <motion.div
+          className="expert-contact-details"
+          ref={ref}
+          variants={cardComponent}
+          initial="hidden"
+          animate={controls}
         >
           <div className="contact-details-content">
             <div className="contact-details-icons">
@@ -90,18 +81,21 @@ function ContactOurExperts() {
 
           <img src={mapImage} alt="googleImage" className="google-map-image" />
         </motion.div>
-        <motion.div 
-        className="expert-contact-form"
-        variants={cardComponent}
-        initial="hidden"
-        animate={controls}
+        <motion.div
+          className="expert-contact-form"
+          variants={cardComponent}
+          initial="hidden"
+          animate={controls}
         >
           <p className="contact-form-heading">
             Submit Your queries or suggestions
           </p>
           <div className="expert-contact-content">
-            <AppInputWithLabel labelText="Your Name" width="45%" />
-            <AppInputWithLabel labelText="Your Email" width="45%" />
+            <div
+            className="first-details">
+            <AppInputWithLabel labelText="Your Name" width="100%" />
+            <AppInputWithLabel labelText="Your Email" width="100%" />
+            </div>
             <AppInputWithLabel labelText="Subject" width="100%" />
             <p>
               <label className="message-label">Message</label>

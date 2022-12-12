@@ -1,108 +1,112 @@
-.test-container{
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    margin-bottom: 40px;
+.test-container {
+  width: 100%;
+  height: 100%;
+  margin-top : 50px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  overflow: hidden;
 }
-
 
 .testimonial-card-container {
-padding : 20px;
-  width: 50%;
-  position: relative;
-  z-index: 2;
+    padding: 20px;
+    width : 80%;
+    height: 80%;
+    position: relative;
+    z-index: 2;
 }
-.testimonial-container{
-    display: flex;
-    align-items: center;
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-content {
+  width: 65%;
+  height: 100%;
+}
+.testimonial-person-details {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+.testimonial-comment {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  height : 25px;
+}
+.quotes {
+  font-size: 2rem;
+  opacity: 0.4;
+  color: var(--blue);
+}
 
+.testimonial-description {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-.testimonial-content{
-    width: 65%;
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
 }
-.testimonial-person-details{
-    display: flex;
-    flex-direction: column;
-    width : 35%;
+.testimonial-image-background1 {
+  margin-top: -70px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background-color: var(--blue);
+  opacity: 0.9;
+  position: relative;
+  top: 95px;
+  z-index: -1;
+  right: 15px;
 }
-.testimonial-comment{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color : var(--navy)
+.testimonial-image-background2 {
+  margin-top: -100px;
+  width: 110px;
+  height: 110px;
+  border-radius: 60px;
+  background-color: var(--blue);
+  opacity: 0.9;
+  position: relative;
+  top: 90px;
+  z-index: -1;
+  left: 10px;
 }
-.quotes{
-    font-size: 2rem;
-    opacity: 0.4;
-    color : var(--blue);
+.testimonial-person-name {
+  width: 100%;
+    text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 25px;
+  margin-left: 10px;
 }
-.quote-left{
-    position: relative;
-    top : 20px;
-    right : 40px;
-}
-.quote-right{
-    position: relative;
-    top : -40px;
-    left : 400px;
-}
-.testimonial-description{
-    width: 100%;
-    height : 150px;
-    display: flex;
-    align-items: center;
-    justify-content: baseline;
-}
-.testimonial-image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    object-fit: cover;
-}
-.testimonial-image-background1{
-    margin-top: -70px;
-    width : 80px;
-    height: 80px;
-    border-radius: 50px;
-    background-color: var(--blue);
-    opacity: 0.9;
-    position: relative;
-    top : 95px;
-    z-index: -1;
-    right : 15px;
-}
-.testimonial-image-background2{
-    margin-top: -100px;
-    width : 110px;
-    height: 110px;
-    border-radius: 60px;
-    background-color: var(--blue);
-    opacity: 0.9;
-    position: relative;
-    top : 90px;
-    z-index: -1;
-    left : 10px;
-}
-.testimonial-person-name{
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-top: 25px;
-    margin-left: 20px;
-}
-.testimonial-person-design{
-    color: var(--blue);
-    font-size: 0.9rem;
-    margin-top: -18px;
-    margin-left: 55px;
+.testimonial-person-design {
+  width: 100%;
+    text-align: center;
+  color: var(--blue);
+  font-size: 0.9rem;
+  margin-top: -18px;
+  margin-left: 35px;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
 }
-
+.mySwiper{
+    width: 100%;
+    height: 100%;
+    margin : 25px;
+}
 .swiper-slide {
-
+    width : 100%;
+    height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -120,3 +124,41 @@ padding : 20px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+@media only screen and (max-width : 700px){
+    .testimonial-container{
+        flex-direction: column;
+    }
+    .testimonial-card-container {
+        padding: 20px;
+        width : 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    .testimonial-person-name {
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      .testimonial-person-design {
+        color: var(--blue);
+        font-size: 0.9rem;
+        margin-top: -18px;
+        margin-left: 0px;
+      }
+      .testimonial-person-details{
+        margin-left: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+}
+@media only screen and (max-width : 450px){
+    .testimonial-person-details{
+        margin-left: 0px;
+      }
+}
+

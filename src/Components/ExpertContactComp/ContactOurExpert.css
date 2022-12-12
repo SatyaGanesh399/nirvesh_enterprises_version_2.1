@@ -4,6 +4,10 @@
     padding : 30px;
     /* background-color: var(--backgroundColor); */
 }
+.google-map-image{
+    width: 100%;
+    object-fit: contain;
+}
 .expert-contact{
     width : 90%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -48,6 +52,11 @@
     color : var(--dark);
     padding: 5px;
 }
+.first-details{
+    display: flex;
+    width : 100%;
+    gap : 20px;
+}
 .expert-contact-form{
     width : 60%;
     height: 100%;
@@ -80,4 +89,21 @@
 .form-submit-button{
     margin: auto 0 auto auto;
     margin-top: 10px;
+}
+@media only screen and (max-width : 800px){
+.expert-contact{
+    flex-direction: column;
+}
+.expert-contact-details{
+    width: 100%;
+}
+.expert-contact-form{
+    width : 100%;
+}
+}
+@media only screen and (max-width : 500px){
+    .first-details{
+        flex-direction: column;
+        gap : 0;
+    }
 }

@@ -1,49 +1,46 @@
 .mobile-subscription-container {
   box-sizing: border-box;
   width: 100%;
-  
 }
-.side-heading{
+.side-heading {
   font-size: 1.1rem;
-  margin :10px auto;
+  margin: 10px auto;
   text-align: center;
   width: 80%;
 }
-.mobile-application-features{
+.mobile-application-features {
   margin: 20px;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.iphone-background{
-  width : 100%;
-  height : 400px;
-  background-image:
-  linear-gradient(45deg,
-              rgba(24, 26, 29, 0.735),
-              rgba(8,83,156, 0.5)), url(
-'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80');
-background-repeat: no-repeat;
-background-size: cover;
+.iphone-background {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(
+      45deg,
+      rgba(24, 26, 29, 0.735),
+      rgba(8, 83, 156, 0.5)
+    ),
+    url('https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1 !important;
   position: relative;
-  top : 518px;
-  margin-top : -300px
+  margin-top: -400px;
+  top : 500px;
 }
-.features-content{
-  width: 50%;
-z-index: 2;
-position: relative;
-top : -435px;
-left : 650px;
-margin-bottom: -300px;
+.features-content {
+  z-index: 2;
 }
-.features-title{
-  font-size : 2rem;
+.features-title {
+  font-size: 2rem;
   font-weight: 600;
-  color : var(--navy);
+  color: var(--navy);
   text-align: center;
   margin-top: -80px;
   margin-bottom: 40px;
-
 }
 .mobile-application-benefits {
   display: flex;
@@ -51,11 +48,10 @@ margin-bottom: -300px;
   justify-content: center;
   padding: 30px;
 }
-.subscription-top{
-    padding-top : 30px;
+.subscription-top {
+  padding-top: 30px;
 }
 .benefit-card {
-    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
   background-color: var(--secondary);
   width: 150px;
   height: 150px;
@@ -68,13 +64,14 @@ margin-bottom: -300px;
   transition: 0.5s all ease-in-out;
   cursor: pointer;
 }
-.benefit-card:hover{
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.benefit-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: var(--blue);
 }
 
 .benefit-card-icon {
-  color : var(--blue);
+  color: var(--blue);
   font-size: 40px;
   margin: auto;
   transition: 0.3s all ease-in-out;
@@ -88,9 +85,10 @@ margin-bottom: -300px;
   margin-top: -10px;
   padding-bottom: 15px;
 }
-.benefit-card:hover .benefit-card-title{
-  color : var(--secondary)
+.benefit-card:hover .benefit-card-title {
+  color: var(--secondary);
 }
+
 .benefit-card-description {
   font-size: 0.8rem;
   margin: 0;
@@ -99,100 +97,145 @@ margin-bottom: -300px;
   text-align: center;
   transition: 1s all ease-in-out;
 }
-.benefit-card:hover .benefit-card-description{
-  color : var(--secondary)
+.benefit-card:hover .benefit-card-description {
+  color: var(--secondary);
 }
 .benefit-card:hover .benefit-card-icon {
   font-size: 30px;
-  color : var(--secondary)
+  color: var(--secondary);
 }
 .iphone-subscription {
   max-width: 250px;
   position: relative;
   z-index: 3 !important;
-  left : 150px;
 }
-.subscription-maintitle{
-    font-size: 28px;
-    font-weight: 500;
-    color : var(--dark);
-    text-align: center;
-    padding-top : 20px;
+.subscription-maintitle {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--dark);
+  text-align: center;
+  padding-top: 20px;
 }
-.offers-subscription-content{
+.offers-subscription-content {
   width: 100%;
   background-color: var(--backgroundColor);
 }
-.mobile-subscription-benefits{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap : 20px;
+.mobile-subscription-benefits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.subscription-card-container{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    text-align: center;
-    padding : 20px;
-    margin : 20px;
-    border-radius: 20px;
-    transition: 0.3s linear;
+.subscription-card-container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 0.3s linear;
 }
-.subscription-card-container:hover{
-    box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
-    padding: 25px;
+.subscription-card-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
+  padding: 25px;
 }
-.subscription-benefits{
-    color : var(--navy);
-    padding-top: 10px;
+.subscription-benefits {
+  color: var(--navy);
+  padding-top: 10px;
 }
 .subscription-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color : var(--navy);
-    transition: 0.3s linear;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--navy);
+  transition: 0.3s linear;
 }
-.subscription-card-container:hover .subscription-title{
-    font-size: 1.4rem;
+.subscription-card-container:hover .subscription-title {
+  font-size: 1.4rem;
 }
 .subscription-cost {
-    font-size: 0.9rem;
-    margin: 0;
-    font-weight: 500;
-    color : var(--dark)
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--dark);
 }
-.subscription-title-header{
-    border-radius: 20px;
-    padding : 5px;
-    transition: 0.3s linear;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.subscription-title-header {
+  border-radius: 20px;
+  padding: 5px;
+  transition: 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.mobile-left{
+.mobile-left {
   display: flex;
   z-index: 2;
 }
-.mobile-right{
+.mobile-right {
   display: flex;
-z-index: 2;
+  z-index: 2;
 }
-.subscription-card-container:hover .subscription-title-header{
-    padding : 10px;
+.subscription-card-container:hover .subscription-title-header {
+  padding: 10px;
 }
-table{
-    margin: 10px;
+.subscription-button{
+  width: 100%;
+  background-color: var(--navy);
+  height: 100%;
+  color : var(--secondary)
 }
-    
-  th {
-    border-bottom: 2px solid lightgray;
-    padding: 10px;
-    font-weight: 600;
+table {
+  margin: 10px;
+}
+
+th {
+  border-bottom: 2px solid lightgray;
+  padding: 10px;
+  font-weight: 600;
+}
+
+td {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+@media only screen and (max-width: 900px) {
+  .mobile-application-features {
+    flex-direction: column;
   }
-    
-  td {
-    text-align: center;
-    font-size : 0.9rem;
-    padding: 8px;;
+  .features-title {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
+  .mobile-left {
+    flex-direction: column;
+    margin : -15px;
+  }
+  .mobile-right {
+    flex-direction: column;
+    margin : -15px;
+  }
+  .all-the-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .all-the-features{
+    flex-direction: column;
+    gap : 20px;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .mobile-subscription-benefits {
+    flex-direction: column;
+  }
+  .subscription-card-container:nth-child(2) {
+    margin-bottom: -80px;
+  }
+}

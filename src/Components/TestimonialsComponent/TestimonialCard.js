@@ -17,8 +17,8 @@ function TestimonialCard({item}) {
           <p className="testimonial-person-design">Senior Accountant</p>
         </div>
         <div className="testimonial-content">
-          <ImQuotesLeft className="quotes quote-left" />
-          <p className="testimonial-comment">Best of all</p>
+          
+          <p className="testimonial-comment"><span><ImQuotesLeft className="quotes quote-left" /></span>Best of all</p>
           <p className="testimonial-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -26,8 +26,9 @@ function TestimonialCard({item}) {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
+            <span><ImQuotesRight className="quotes quote-right" /></span>
           </p>
-          <ImQuotesRight className="quotes quote-right" />
+          
         </div>
       </div>
     </div>

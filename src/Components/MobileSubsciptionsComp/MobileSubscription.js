@@ -113,9 +113,11 @@ function MobileSubscription() {
     <div className="mobile-subscription-container">
       <div className="subscription-top">
         <AppTitle title="Mobile Application Subscription(s)" />
-        <p className="side-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <p className="side-heading">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
         <div className="iphone-background"></div>
-
         <div className="mobile-application-features">
           <div>
             <img
@@ -123,14 +125,21 @@ function MobileSubscription() {
               alt="mobileImage"
               className="iphone-subscription"
             />
+            <div className="blob-iphone-background">
+
+             </div>
           </div>
           <div className="features-content">
             <p className="features-title">Our Main Features</p>
-            <div className="mobile-left">
-              {leftCardData.map((item) => benefitCard(item, handleMouseOver))}
-            </div>
-            <div className="mobile-right">
-              {rightCardData.map((item) => benefitCard(item, handleMouseOver))}
+            <div className="all-the-features">
+              <div className="mobile-left">
+                {leftCardData.map((item) => benefitCard(item, handleMouseOver))}
+              </div>
+              <div className="mobile-right">
+                {rightCardData.map((item) =>
+                  benefitCard(item, handleMouseOver)
+                )}
+              </div>
             </div>
           </div>
         </div>

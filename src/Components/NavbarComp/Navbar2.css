@@ -153,9 +153,14 @@
     margin: 5px;
     font-size: 1.2rem;
     padding : 1px 7px;
-    color : var(--primary);
+    color : var(--navy);
     cursor: pointer;
     transition: 0.5s all ease-in-out;
+}
+.responsive-navbar-items ul li a:hover{
+    opacity: 0.8;
+    color : var(--dark);
+
 }
 .navbar-menu-icon {
     display: none;

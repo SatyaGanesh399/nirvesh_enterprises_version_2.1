@@ -19,8 +19,8 @@ function ActualHomePage() {
       <CurrentStatus />
       <Achieved />
       <MobileSubscription />
-       <ContactOurExperts />
       <Testimonial />
+       <ContactOurExperts />
     </div>
   );
 }

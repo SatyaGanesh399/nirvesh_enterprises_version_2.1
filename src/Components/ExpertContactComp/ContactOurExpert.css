@@ -9,7 +9,7 @@
     object-fit: contain;
 }
 .expert-contact{
-    width : 90%;
+    width : 85%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: auto;
     display: flex;
@@ -93,6 +93,7 @@
 @media only screen and (max-width : 800px){
 .expert-contact{
     flex-direction: column;
+    width : 100%;
 }
 .expert-contact-details{
     width: 100%;
@@ -102,6 +103,9 @@
 }
 }
 @media only screen and (max-width : 500px){
+    .expert-contact{
+        width : 100%;
+    }
     .first-details{
         flex-direction: column;
         gap : 0;

@@ -31,7 +31,7 @@ function ResponsiveNavbar({closeNavbar}) {
                 onClick={handleClick}>Our Milestones</Link>
                 </li>
                 <li>
-                <Link to='/portoflio'
+                <Link to='/portfolio'
                 onClick={handleClick} >Portfolio</Link>
                 </li>
                 <li>

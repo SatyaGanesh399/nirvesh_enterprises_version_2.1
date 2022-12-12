@@ -76,7 +76,7 @@ function Navbar2({ onClickMenu }) {
 
           {/* Responsive code */}
           <div className="navbar-menu-icon" onClick={handleNavbar}>
-            <BiMenu size={35} color={colors.navy} />
+            <BiMenu size={35} color={location.pathname !== "/" ? colors.dark : colors.white} />
           </div>
         </div>
       </div>

@@ -34,6 +34,10 @@
   color: var(--navy);
   height : 25px;
 }
+.testimonial-comment span{
+  margin:20px;
+  margin-left: -20px;
+}
 .quotes {
   font-size: 2rem;
   opacity: 0.4;

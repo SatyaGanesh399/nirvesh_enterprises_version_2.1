@@ -9,6 +9,7 @@ import Achieved from './AchievedSoFar/Achieved';
 import MobileSubscription from './MobileSubsciptionsComp/MobileSubscription';
 import ContactOurExperts from './ExpertContactComp/ContactOurExperts';
 import Testimonial from "./TestimonialsComponent/Testimonial";
+import SupportedBy from './SupportedByComp/SupportedBy';
 
 function ActualHomePage() {
   return (
@@ -19,8 +20,9 @@ function ActualHomePage() {
       <CurrentStatus />
       <Achieved />
       <MobileSubscription />
-      <Testimonial />
        <ContactOurExperts />
+      <Testimonial />
+      {/* <SupportedBy /> */}
     </div>
   );
 }

@@ -21,8 +21,8 @@ function Testimonial() {
     <div className="test-container">
       <div>
         <AppTitle title="Testimonials" />
-        <AppSubHeading text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+        {/* <AppSubHeading text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua" /> */}
         <div>
           <Swiper
             spaceBetween={30}

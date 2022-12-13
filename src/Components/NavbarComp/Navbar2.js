@@ -53,7 +53,7 @@ function Navbar2({ onClickMenu }) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/">About Us</Link>
+                <a href="#ABOUT-US">About Us</a>
               </li>
               <li>
                 <Link to="/milestones">Our Milestones</Link>
@@ -65,7 +65,7 @@ function Navbar2({ onClickMenu }) {
                 <Link to="/team">Our Team</Link>
               </li>
               <li>
-                <Link to="/">Contact Us</Link>
+                <a href="#CONTACT-US">Contact Us</a>
               </li>
             </ul>
 

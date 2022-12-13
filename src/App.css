@@ -17,6 +17,7 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   background-color: var(--secondary);
+  scroll-behavior: smooth;
 }
 
 

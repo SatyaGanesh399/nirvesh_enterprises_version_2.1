@@ -66,7 +66,7 @@ function AboutUs() {
   }, [controls, inView]);
 
   return (
-    <div className="about-us-container">
+    <div className="about-us-container" id="ABOUT-US">
       <AppTitle title="About Us" />
       <AppSubHeading
         text="We are a team of 45 persons' years with good combination of

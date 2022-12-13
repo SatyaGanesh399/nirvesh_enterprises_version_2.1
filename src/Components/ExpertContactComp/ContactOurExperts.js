@@ -38,7 +38,7 @@ function ContactOurExperts() {
   }, [controls, inView]);
 
   return (
-    <div className="expert-container">
+    <div className="expert-container" id="CONTACT-US">
       <AppTitle title="Contact Our Experts" />
       <div className="expert-contact">
         <motion.div

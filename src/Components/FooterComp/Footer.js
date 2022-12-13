@@ -8,7 +8,7 @@ import { BsSkype } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { BiRightArrowCircle } from "react-icons/bi";
 
-import iphone from "../../Assets/iphone.png";
+import iphone from "../../Assets/iphone-synapsil.png";
 import qr from "../../Assets/qr-code.png";
 import colors from "../../DefaultColors";
 

@@ -79,7 +79,13 @@ function ContactOurExperts() {
             </div>
           </div>
 
-          <img src={mapImage} alt="googleImage" className="google-map-image" />
+          <iframe
+            class="gmap_iframe"
+            className="google-map-image"
+            src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=nirvesh enterprises&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
+
+          {/* <img src={mapImage} alt="googleImage" className="google-map-image" /> */}
         </motion.div>
         <motion.div
           className="expert-contact-form"
@@ -91,10 +97,9 @@ function ContactOurExperts() {
             Submit Your queries or suggestions
           </p>
           <div className="expert-contact-content">
-            <div
-            className="first-details">
-            <AppInputWithLabel labelText="Your Name" width="100%" />
-            <AppInputWithLabel labelText="Your Email" width="100%" />
+            <div className="first-details">
+              <AppInputWithLabel labelText="Your Name" width="100%" />
+              <AppInputWithLabel labelText="Your Email" width="100%" />
             </div>
             <AppInputWithLabel labelText="Subject" width="100%" />
             <p>

@@ -1,8 +1,9 @@
 import colors from '../../DefaultColors'
-import doctor from './Assets/doctor.png';
-import livetracking from './Assets/live-tracking.png';
-import music from './Assets/music.png';
-import doctorphoto from './Assets/doctor.png';
+import doctor from '../../Assets/iphone-doctor.png';
+import livetracking from '../../Assets/iphone-treatment.png';
+import music from '../../Assets/iphone-homescreen.png';
+import  center from '../../Assets/iphone-center-details.png';
+
 const leftData= [
     {
         id : "1",
@@ -10,7 +11,7 @@ const leftData= [
         description : 'All time available for emergencies',
         bgColor : colors.navy,
         hover : true,
-        image : doctorphoto,
+        image : doctor,
     },
     {
         id : "2",
@@ -32,11 +33,11 @@ const leftData= [
 const rightData= [
     {
         id : "4",
-        title : '24*7 Doctor',
+        title : '24*7 Centers',
         description : 'All time available for emergencies',
         bgColor : colors.dark,
         hover : false,
-        image : doctorphoto,
+        image : center,
     },
     {
         id : "5",
@@ -44,7 +45,7 @@ const rightData= [
         description : 'Monitor Your health live',
         bgColor : colors.synpasilColor,
         hover : false,
-        image : livetracking,
+        image : music,
     },
     {
         id : "6",
@@ -52,7 +53,7 @@ const rightData= [
         description : 'Control your mood instantly',
         bgColor : colors.blue,
         hover : false,
-        image : music,
+        image : livetracking,
     }
 ];
 

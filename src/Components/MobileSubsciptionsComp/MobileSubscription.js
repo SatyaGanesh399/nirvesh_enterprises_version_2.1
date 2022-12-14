@@ -3,8 +3,8 @@ import { BsClipboardData } from "react-icons/bs";
 import { TiTick } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
 
-import {subscriptionData } from "./Data";
-import colors from '../../DefaultColors';
+import { subscriptionData } from "./Data";
+import colors from "../../DefaultColors";
 
 import "./MobileSubscription.css";
 import { leftData, rightData } from "./Data";
@@ -15,6 +15,7 @@ const benefitCard = (item, handleMouseOver) => {
   const handleChange = () => {
     handleMouseOver(item);
   };
+  console.log(item.icon);
 
   return (
     <div
@@ -27,13 +28,23 @@ const benefitCard = (item, handleMouseOver) => {
       }}
       onMouseEnter={handleChange}
     >
-      <BsClipboardData
-        className="benefit-card-icon"
+      {/* <span
+        className="material-symbols-rounded"
         style={{
-          color: item.hover ? colors.white : colors.navy,
-          size: item.hover ? "30px" : "40px",
+          color: "red",
+          // color: item.hover ? colors.white : colors.navy,
+          // width: item.hover ? "30px" : "40px",
         }}
-      />
+      >
+        {item.icon}
+      </span> */}
+      <span 
+      style={{
+        color: "red",
+        color: item.hover ? colors.white : colors.navy,
+        fontSize: item.hover ? "30px" : "40px",
+      }}
+      class="material-symbols-rounded benefit-card-icon">{item.icon.toString()}</span>
       <p
         className="benefit-card-title"
         style={{
@@ -54,42 +65,45 @@ const benefitCard = (item, handleMouseOver) => {
   );
 };
 
-
 const subscriptionCard = (item) => {
   return (
     <div
       style={{
         marginTop: item.id === "3" ? "0" : "100px",
-        backgroundColor : colors.white
+        backgroundColor: colors.white,
       }}
       className="subscription-card-container"
     >
-      <div
-        className="subscription-title-header"
-      >
+      <div className="subscription-title-header">
         <p className="subscription-title">{item.title}</p>
         <p className="subscription-cost">{item.cost}</p>
       </div>
       <div style={{ paddingTop: "30px" }}>
         <table>
+          <tr>
+            <th style={{ color: colors.dark }}>Service</th>
+            <th style={{ color: colors.dark }}>Available</th>
+          </tr>
+          {item.advantages.map((listItem, index) => (
             <tr>
-            <th style={{color : colors.dark}}>Service</th>
-            <th style={{color : colors.dark}}>Available</th>
+              <td style={{ color: colors.dark }}>{listItem}</td>
+              <td>
+                {item.accesable[index] === 1 ? (
+                  <TiTick size={24} color="green" />
+                ) : (
+                  <TiDelete size={24} color="red" />
+                )}
+              </td>
             </tr>
-            {item.advantages.map((listItem, index) =>
-            <tr>
-                <td style={{color : colors.dark}}>{listItem}</td>
-                <td>{item.accesable[index] === 1 ? <TiTick size={24} color='green' /> : <TiDelete size={24} color='red' />}</td>
-            </tr>)}
-        
-            </table>
-            {item.id === "2" && (
+          ))}
+        </table>
+        {item.id === "2" && (
           <AppButtonRound
-          text="Subscribe"
-          width="80%"
-          bgColor={colors.navy}
-          border={colors.navy}
-        />
+            text="Subscribe"
+            width="80%"
+            bgColor={colors.navy}
+            border={colors.navy}
+          />
         )}
         {item.id === "3" && (
           <AppButtonRound
@@ -111,7 +125,6 @@ const subscriptionCard = (item) => {
     </div>
   );
 };
-
 
 function MobileSubscription() {
   let [leftCardData, setLeftCardData] = useState(leftData);
@@ -172,17 +185,9 @@ function MobileSubscription() {
     setRightCardData(hoveredRightChange);
   };
 
-
-  
-
-
   return (
-    <div 
-    className="mobile-subscription-container"
-    >
-      <div className="subscription-top"
-      id="mobile-subscription-top"
-      >
+    <div className="mobile-subscription-container">
+      <div className="subscription-top" id="mobile-subscription-top">
         <AppTitle title="Mobile Application Subscription(s)" />
         <p className="side-heading">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -196,9 +201,7 @@ function MobileSubscription() {
               alt="mobileImage"
               className="iphone-subscription"
             />
-            <div className="blob-iphone-background">
-
-             </div>
+            <div className="blob-iphone-background"></div>
           </div>
           <div className="features-content">
             <p className="features-title">Our Main Features</p>

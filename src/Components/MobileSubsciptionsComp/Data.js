@@ -10,6 +10,7 @@ import analysis from './Assets/pic6.png';
 const leftData= [
     {
         id : "1",
+        icon : "medication",
         title : '24*7 Doctor Availability',
         description : 'All time available for emergencies',
         bgColor : colors.navy,
@@ -18,6 +19,7 @@ const leftData= [
     },
     {
         id : "2",
+        icon : "pending_actions",
         title : 'Live Tracking',
         description : 'Monitor Your health live',
         bgColor : 'grey',
@@ -26,6 +28,7 @@ const leftData= [
     },
     {
         id : "3",
+        icon : "headphones",
         title : 'Beneficial Interventions',
         description : 'Control your mood instantly',
         bgColor : colors.orange,
@@ -36,6 +39,7 @@ const leftData= [
 const rightData= [
     {
         id : "4",
+        icon : 'cognition',
         title : 'Post Operative Brain Health Management',
         description : 'Worry not during post operation',
         bgColor : colors.dark,
@@ -44,6 +48,7 @@ const rightData= [
     },
     {
         id : "5",
+        icon : 'pie_chart',
         title : 'Accurate Brain Health Status',
         description : 'Accurate brain health data instantly',
         bgColor : colors.synpasilColor,
@@ -52,6 +57,7 @@ const rightData= [
     },
     {
         id : "6",
+        icon : 'analytics',
         title : 'Data Collection and Continous Analysis',
         description : 'Data driven health care and continous monitoring',
         bgColor : colors.blue,

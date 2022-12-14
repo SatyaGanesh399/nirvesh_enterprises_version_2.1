@@ -78,7 +78,6 @@
 .benefit-card-icon {
   color: var(--blue);
   font-size: 40px;
-
   transition: 0.3s all ease-in-out;
 }
 .benefit-card-title {
@@ -86,11 +85,15 @@
   color: var(--dark);
   font-weight: 500;
   height : 50px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
   margin: 0;
   padding: 5px;
   margin-top: -10px;
   padding-bottom: 15px;
   text-align: center;
+  /* background-color: red; */
 }
 .benefit-card:hover .benefit-card-title {
   color: var(--secondary);

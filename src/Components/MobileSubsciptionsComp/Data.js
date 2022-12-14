@@ -1,8 +1,8 @@
 import colors from '../../DefaultColors'
-import doctor from '../../Assets/iphone-doctor.png';
-import livetracking from '../../Assets/iphone-treatment.png';
-import music from '../../Assets/iphone-homescreen.png';
-import  center from '../../Assets/iphone-center-details.png';
+import doctor from './Assets/pic1.png';
+import livetracking from './Assets/pic3.png';
+import music from './Assets/pic2.png';
+
 
 const leftData= [
     {
@@ -37,23 +37,23 @@ const rightData= [
         description : 'All time available for emergencies',
         bgColor : colors.dark,
         hover : false,
-        image : center,
+        image : livetracking,
     },
     {
         id : "5",
-        title : 'Live Tracking',
-        description : 'Monitor Your health live',
+        title : 'Doctor',
+        description : 'All time available for emergencies',
         bgColor : colors.synpasilColor,
         hover : false,
-        image : music,
+        image : doctor,
     },
     {
         id : "6",
-        title : 'Music',
-        description : 'Control your mood instantly',
+        title : 'Appointment',
+        description : 'instant appointment booking',
         bgColor : colors.blue,
         hover : false,
-        image : livetracking,
+        image : music,
     }
 ];
 

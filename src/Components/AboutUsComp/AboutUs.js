@@ -39,7 +39,7 @@ const provide = [
 
 // Animation
 
-const cardComponent = {
+const aboutComponent = {
   hidden: {
     opacity: 0,
   },
@@ -56,7 +56,7 @@ const cardComponent = {
 function AboutUs() {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold : 0.2
   });
 
   useEffect(() => {
@@ -66,7 +66,14 @@ function AboutUs() {
   }, [controls, inView]);
 
   return (
-    <div className="about-us-container" id="ABOUT-US">
+    <motion.div
+      className="about-us-container"
+      id="ABOUT-US"
+      ref={ref}
+      variants={aboutComponent}
+      initial="hidden"
+      animate={controls}
+    >
       <AppTitle title="About Us" />
       <AppSubHeading
         text="We are a team of 45 persons' years with good combination of
@@ -74,16 +81,9 @@ function AboutUs() {
             Neuropsychiatry"
       />
       <div className="about-us">
-        <motion.div
-          className="main-content"
-          ref={ref}
-          variants={cardComponent}
-          initial="hidden"
-          animate={controls}
-        >
+        <motion.div className="main-content">
           <div>
             <div className="we-provide">
-            
               <div className="right-content">
                 <p className="we-provide-subheading">What we Provide</p>
                 <div className="features-cards">
@@ -94,27 +94,25 @@ function AboutUs() {
               </div>
             </div>
             <div className="final-content">
-
-            <p className="about-us-final-content">
-                  With the strong need for evidence-based diagnostic technology
-                  as a complementary to existing technology likely to include a
-                  multimodal approach and consolidates it in a holistc report
-                  with a wide range of compliance rates of assessmennt tools
-                  with better accuracy. Our mission is to redefine neurohealth
-                  and serve as unique solution for all rehabilitation centers /
-                  organizations looking to take control of their patient's
-                  health.
-                </p>
-                <AppButtonRound
-                  text="Learn More"
-                  bgColor={colors.navy}
-                  border={colors.navy}
-                  />
-                  </div>
+              <p className="about-us-final-content">
+                With the strong need for evidence-based diagnostic technology as
+                a complementary to existing technology likely to include a
+                multimodal approach and consolidates it in a holistc report with
+                a wide range of compliance rates of assessmennt tools with
+                better accuracy. Our mission is to redefine neurohealth and
+                serve as unique solution for all rehabilitation centers /
+                organizations looking to take control of their patient's health.
+              </p>
+              <AppButtonRound
+                text="Learn More"
+                bgColor={colors.navy}
+                border={colors.navy}
+              />
+            </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

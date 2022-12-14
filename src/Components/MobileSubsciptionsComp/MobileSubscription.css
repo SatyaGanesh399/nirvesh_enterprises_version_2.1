@@ -17,7 +17,7 @@
 }
 .iphone-background {
   width: 100%;
-  height: 400px;
+  height: 420px;
   background-image: linear-gradient(
       90deg,
       rgba(79, 226, 191, 0.535),
@@ -33,7 +33,7 @@
 }
 .all-the-features{
   position: relative;
-  top : 20px;
+  top : 10px;
 }
 .features-content {
   z-index: 2;
@@ -57,12 +57,13 @@
 }
 .benefit-card {
   background-color: var(--secondary);
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding : 10px 5px;
   margin: 15px 30px;
   border-radius: 20px;
   transition: 0.5s all ease-in-out;
@@ -77,17 +78,19 @@
 .benefit-card-icon {
   color: var(--blue);
   font-size: 40px;
-  margin: auto;
+
   transition: 0.3s all ease-in-out;
 }
 .benefit-card-title {
   font-size: 1.1rem;
   color: var(--dark);
   font-weight: 500;
+  height : 50px;
   margin: 0;
   padding: 5px;
   margin-top: -10px;
   padding-bottom: 15px;
+  text-align: center;
 }
 .benefit-card:hover .benefit-card-title {
   color: var(--secondary);
@@ -112,6 +115,7 @@
   max-width: 250px;
   position: relative;
   z-index: 3 !important;
+  position: relative;
 }
 .subscription-maintitle {
   font-size: 28px;
@@ -227,7 +231,29 @@ td {
     justify-content: center;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
+  .benefit-card {
+    width: 160px;
+    height: 180px;
+    
+  }
+  
+  .benefit-card-icon {
+    font-size: 30px;
+  }
+  .benefit-card-title {
+    font-size: 0.9rem;
+  }
+  .benefit-card-description {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 5px;
+    color: var(--dark);
+    text-align: center;
+    transition: 1s all ease-in-out;
+  }
+}
+@media only screen and (max-width: 350px) {
   .all-the-features{
     flex-direction: column;
     gap : 20px;

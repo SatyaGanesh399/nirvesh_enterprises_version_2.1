@@ -1,13 +1,16 @@
 import colors from '../../DefaultColors'
 import doctor from './Assets/pic1.png';
-import livetracking from './Assets/pic3.png';
+import livetracking from './Assets/pic5.png';
 import music from './Assets/pic2.png';
+import cognitive from './Assets/pic3.png';
+import accurate from './Assets/pic4.png';
+import analysis from './Assets/pic6.png';
 
 
 const leftData= [
     {
         id : "1",
-        title : '24*7 Doctor',
+        title : '24*7 Doctor Availability',
         description : 'All time available for emergencies',
         bgColor : colors.navy,
         hover : true,
@@ -23,7 +26,7 @@ const leftData= [
     },
     {
         id : "3",
-        title : 'Music',
+        title : 'Beneficial Interventions',
         description : 'Control your mood instantly',
         bgColor : colors.orange,
         hover : false,
@@ -33,27 +36,27 @@ const leftData= [
 const rightData= [
     {
         id : "4",
-        title : '24*7 Centers',
-        description : 'All time available for emergencies',
+        title : 'Post Operative Brain Health Management',
+        description : 'Worry not during post operation',
         bgColor : colors.dark,
         hover : false,
-        image : livetracking,
+        image : cognitive,
     },
     {
         id : "5",
-        title : 'Doctor',
-        description : 'All time available for emergencies',
+        title : 'Accurate Brain Health Status',
+        description : 'Accurate brain health data instantly',
         bgColor : colors.synpasilColor,
         hover : false,
-        image : doctor,
+        image : accurate,
     },
     {
         id : "6",
-        title : 'Appointment',
-        description : 'instant appointment booking',
+        title : 'Data Collection and Continous Analysis',
+        description : 'Data driven health care and continous monitoring',
         bgColor : colors.blue,
         hover : false,
-        image : music,
+        image : analysis,
     }
 ];
 

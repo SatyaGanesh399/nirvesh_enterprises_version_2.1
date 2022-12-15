@@ -23,7 +23,7 @@ const panelContainer = {
   },
 };
 
-export default function TabItems({ item }) {
+export default function TabItems({ item, clickHandler, clickFlipBack}) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -35,10 +35,12 @@ export default function TabItems({ item }) {
 
   // Card flip Logic here
 
-  const [flipped, setFlipped] = React.useState(false);
   const handleClick = () => {
-    setFlipped(!flipped);
+    clickHandler(item.id);
   };
+  const handleFlipback = () =>{
+    clickFlipBack()
+  }
 
   // Card hover logic here
 
@@ -63,7 +65,7 @@ export default function TabItems({ item }) {
       key={item.id}
       className="portfolio-card-container"
     >
-      <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
+      <ReactCardFlip isFlipped={item.flipped} flipDirection="vertical">
         <div className="disease-container">
           <img
             src={item.url}
@@ -97,7 +99,7 @@ export default function TabItems({ item }) {
             bgColor={colors.blue}
             border={colors.blue}
             width="150px"
-            afterClick={handleClick}
+            afterClick={handleFlipback}
           />
         </div>
       </ReactCardFlip>

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { BsClipboardData } from "react-icons/bs";
+import React, { useState } from "react";
 import { TiTick } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
 
@@ -15,7 +14,6 @@ const benefitCard = (item, handleMouseOver) => {
   const handleChange = () => {
     handleMouseOver(item);
   };
-  console.log(item.icon);
 
   return (
     <div
@@ -40,7 +38,6 @@ const benefitCard = (item, handleMouseOver) => {
       </span> */}
       <span 
       style={{
-        color: "red",
         color: item.hover ? colors.white : colors.navy,
         fontSize: item.hover ? "30px" : "40px",
       }}

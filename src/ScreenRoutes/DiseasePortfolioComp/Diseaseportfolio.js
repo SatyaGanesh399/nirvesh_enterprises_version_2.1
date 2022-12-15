@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import AppTitle from '../../ReusableComponents/AppTitle';
+import AppTitle from "../../ReusableComponents/AppTitle";
 
-
-import colors from "../../DefaultColors";
 import TabItems from "./TabItems";
 import image1 from "./Assests/portfolio-1.jpg";
 import image2 from "./Assests/portfolio-2.jpg";
@@ -22,64 +20,104 @@ const allData = [
     type: "TBI",
     disease: "Traumatic Brain Injury",
     url: image1,
+    flipped: false,
   },
   {
     id: "2",
     type: "TBI",
     disease: "fMRI",
     url: image2,
+    flipped: false,
   },
   {
     id: "3",
     type: "TBI",
     disease: "Prevalence",
     url: image3,
+    flipped: false,
   },
   {
     id: "4",
     type: "STROKE",
     disease: "Brain Stroke",
     url: image4,
+    flipped: false,
   },
   {
     id: "5",
     type: "BRAIN STROKE",
     disease: "Symptoms",
     url: image6,
+    flipped: false,
   },
   {
     id: "6",
     type: "Epidemiology",
     disease: "Brain Stroke Prevalence",
     url: image5,
+    flipped: false,
   },
   {
     id: "7",
     type: "Hearable",
     disease: "Music Therapy",
     url: image7,
+    flipped: false,
   },
 ];
 
-const tbiData = allData.filter((item) => item.type == "TBI");
-const strokeData = allData.filter((item) => item.type != "TBI");
-
-
 function Diseaseportfolio() {
+  // portfolio Data stored in state
+  const [portfolioData, setPortfolioData] = useState(allData);
+ // portfolio data slpit between tabs
+  const tbiData = portfolioData.filter((item) => item.type == "TBI");
+  const strokeData = portfolioData.filter((item) => item.type != "TBI");
+  // Tab 1 always shows all the data
   const [value, setValue] = React.useState("1");
-
+  // Tab 1 always shows all the data
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    // Data goes back to default with toggle tabs
+    setPortfolioData(allData);
   };
-  
+
+  //  only one item stays flipped at a time
+
+  const handleCLick = (id) => {
+    let flippedData = portfolioData.map((item) =>{
+      if(item.id === id){
+        return {
+          ...item,
+          flipped : true,
+        }
+      }else{
+        return{
+          ...item,
+          flipped : false,
+        }
+      }
+    });
+    setPortfolioData(flippedData);
+  }
+  // Flipping back to normal state
+    
+  const handleFlipBack = () => {
+    let flippedData = portfolioData.map((item) =>{
+        return {
+          ...item,
+          flipped : false,
+        }
+    });
+    setPortfolioData(flippedData);
+  };
+
+
+
   return (
-    <Box
-    sx={{marginTop : '120px'}}>
+    <Box sx={{ marginTop: "120px" }}>
       <AppTitle title="Our Disease Portfolio" />
 
-      <Box 
-      
-      sx={{ width: "100%", typography: "body1" }}>
+      <Box sx={{ width: "100%", typography: "body1" }}>
         <TabContext value={value}>
           <Box>
             <TabList
@@ -93,7 +131,6 @@ function Diseaseportfolio() {
             </TabList>
           </Box>
           <TabPanel
-          
             value="1"
             sx={{
               display: "flex",
@@ -103,8 +140,10 @@ function Diseaseportfolio() {
               flexWrap: "wrap",
             }}
           >
-            {allData.map((item) => (
-              <TabItems item={item} />
+            {portfolioData.map((item) => (
+              <TabItems item={item}
+              clickHandler={handleCLick} 
+              clickFlipBack={handleFlipBack}/>
             ))}
           </TabPanel>
           <TabPanel
@@ -118,7 +157,9 @@ function Diseaseportfolio() {
             }}
           >
             {tbiData.map((item) => (
-              <TabItems item={item} />
+              <TabItems item={item}
+              clickHandler={handleCLick}
+              clickFlipBack={handleFlipBack} />
             ))}
           </TabPanel>
           <TabPanel
@@ -132,7 +173,9 @@ function Diseaseportfolio() {
             }}
           >
             {strokeData.map((item) => (
-              <TabItems item={item} />
+              <TabItems item={item}
+              clickHandler={handleCLick}
+              clickFlipBack={handleFlipBack} />
             ))}
           </TabPanel>
         </TabContext>

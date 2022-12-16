@@ -36,7 +36,7 @@ function OffersAndSubscription() {
         className="subscription-option-button"
         style={{marginBottom : "-50px"}}>
           <p className="subscription-card-title">Basic Plan</p>
-          <p className="subscription-card-price">888/Month</p>
+          <p className="subscription-card-price">666/Month</p>
           <AppButtonRound text="Details" 
           bgColor={colors.blue}
           border={colors.blue}
@@ -47,7 +47,7 @@ function OffersAndSubscription() {
         className="subscription-option-button"
         style={{marginBottom : "50px"}}>
           <p className="subscription-card-title">Premium Plan</p>
-          <p className="subscription-card-price">888/Month</p>
+          <p className="subscription-card-price">1199/Month</p>
           <AppButtonRound text="Details" 
           bgColor={colors.blue}
           border={colors.blue}

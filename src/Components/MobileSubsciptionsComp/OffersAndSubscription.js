@@ -1,80 +1,75 @@
-import React from "react";
-import { TiTick } from "react-icons/ti";
-import { TiDelete } from "react-icons/ti";
-
-import { subscriptionData } from "./Data";
-import colors from "../../DefaultColors";
+import React, { useState } from "react";
 import "./MobileSubscription.css";
-import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import SubscriptionModal from './SubscriptionModal';
 
-// Subscription card component for prices
-const subscriptionCard = (item) => {
-  return (
-    <div
-      style={{
-        marginTop: item.id === "3" ? "0" : "100px",
-        backgroundColor: colors.white,
-      }}
-      className="subscription-card-container"
-    >
-      <div className="subscription-title-header">
-        <p className="subscription-title">{item.title}</p>
-        <p className="subscription-cost">{item.cost}</p>
-      </div>
-      <div style={{ paddingTop: "30px" }}>
-        <table>
-          <tr>
-            <th style={{ color: colors.dark }}>Service</th>
-            <th style={{ color: colors.dark }}>Available</th>
-          </tr>
-          {item.advantages.map((listItem, index) => (
-            <tr>
-              <td style={{ color: colors.dark }}>{listItem}</td>
-              <td>
-                {item.accesable[index] === 1 ? (
-                  <TiTick size={24} color="green" />
-                ) : (
-                  <TiDelete size={24} color="red" />
-                )}
-              </td>
-            </tr>
-          ))}
-        </table>
-        {item.id === "2" && (
-          <AppButtonRound
-            text="Subscribe"
-            width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
-          />
-        )}
-        {item.id === "3" && (
-          <AppButtonRound
-            text="Subscribe"
-            width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
-          />
-        )}
-        {item.id === "1" && (
-          <AppButtonRound
-            text="Subscribe"
-            width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
-          />
-        )}
-      </div>
-    </div>
-  );
-};
+import iphonex from './Assets/iphonex.png'
+import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import colors from "../../DefaultColors";
+
 
 function OffersAndSubscription() {
+
+  const [modal, setModal] = useState("0");
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const handleClick = (itemNumber) =>{
+    setModal(itemNumber);
+    setShow(true);
+  }
+
   return (
     <div className="offers-subscription-content">
-      <p className="subscription-maintitle">Offers & Subscriptions</p>
+      <div className="offer-content">
+        <p className="offers-subTitle">A ONE STOP SOLUTION <br/> FOR ALL YOUR PROBLEMS</p>
+        <p className="offers-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <div className="offers-guidance">
+          <button className="download-playstore">Download from playstore</button>
+        </div>
+      </div>
+      <div className="offers-right-container">
       <div className="mobile-subscription-benefits">
-        {subscriptionData.map((item) => subscriptionCard(item))}
+        <div
+        className="subscription-option-button"
+        style={{marginBottom : "-50px"}}>
+          <p className="subscription-card-title">Basic Plan</p>
+          <p className="subscription-card-price">888/Month</p>
+          <AppButtonRound text="Details" 
+          bgColor={colors.blue}
+          border={colors.blue}
+          width = '100px'
+          afterClick={()=>{handleClick("1")}} />
+        </div>
+        <div
+        className="subscription-option-button"
+        style={{marginBottom : "50px"}}>
+          <p className="subscription-card-title">Premium Plan</p>
+          <p className="subscription-card-price">888/Month</p>
+          <AppButtonRound text="Details" 
+          bgColor={colors.blue}
+          border={colors.blue}
+          width = '100px'
+          afterClick={()=>{handleClick("3")}} />
+        </div>
+        <div
+        className="subscription-option-button"
+        style={{marginBottom : "-50px"}}>
+          <p className="subscription-card-title">Standard Plan</p>
+          <p className="subscription-card-price">888/Month</p>
+          <AppButtonRound text="Details" 
+          bgColor={colors.blue}
+          border={colors.blue}
+          width = '100px'
+          afterClick={()=>{handleClick("2")}} />
+        </div>
+        <SubscriptionModal showItem={modal} show={show} hideModal = {handleClose} />
+      </div>
+      <div className="iphonex-container">
+        <img src={iphonex} alt="iphone" className="subscription-iphone" />
+      </div>
       </div>
     </div>
   )

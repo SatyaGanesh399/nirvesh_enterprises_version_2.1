@@ -69,14 +69,14 @@ const rightData= [
 const subscriptionData =[
     {
         id:'1',
-        title : 'BASIC',
+        title : 'BASIC PLAN',
         cost: '666/month',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
         accesable : [1, 0, 0, 0]
     },
     {
         id:'3',
-        title : 'PREMIUM',
+        title : 'PREMIUM PLAN',
         cost: '1222/month',
         description : 'Basic plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
@@ -84,7 +84,7 @@ const subscriptionData =[
     },
     {
         id:'2',
-        title : 'STANDARD',
+        title : 'STANDARD PLAN',
         cost: '888/month',
         description : ' plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],

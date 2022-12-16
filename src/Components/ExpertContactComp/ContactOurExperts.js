@@ -66,7 +66,7 @@ function ContactOurExperts() {
             </div>
             <div>
               <p className="contact-subheading">Email</p>
-              <p className="contact-item">info@nirveshenterprises.in</p>
+              <p className="contact-item">info@nirveshenterprises.com</p>
             </div>
           </div>
           <div className="contact-details-content">

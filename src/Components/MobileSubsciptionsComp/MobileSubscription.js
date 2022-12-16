@@ -9,6 +9,7 @@ import "./MobileSubscription.css";
 import { leftData, rightData } from "./Data";
 import AppTitle from "../../ReusableComponents/AppTitle";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import OffersAndSubscription from "./OffersAndSubscription";
 
 const benefitCard = (item, handleMouseOver) => {
   const handleChange = () => {
@@ -198,7 +199,6 @@ function MobileSubscription() {
               alt="mobileImage"
               className="iphone-subscription"
             />
-            <div className="blob-iphone-background"></div>
           </div>
           <div className="features-content">
             <p className="features-title">Our Main Features</p>
@@ -216,10 +216,7 @@ function MobileSubscription() {
         </div>
       </div>
       <div className="offers-subscription-content">
-        <p className="subscription-maintitle">Offers & Subscriptions</p>
-        <div className="mobile-subscription-benefits">
-          {subscriptionData.map((item) => subscriptionCard(item))}
-        </div>
+        {/* <OffersAndSubscription /> */}
       </div>
     </div>
   );

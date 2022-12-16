@@ -149,7 +149,7 @@ function LoginPageVer2() {
                 If you have a problem logging in, please send an email to
                 <span style={{ fontWeight: "600" }}>
                   {" "}
-                  nirveshenterprises.com
+                  info@nirveshenterprises.com
                 </span>
               </p>
               <span className="guidance-message">or</span>

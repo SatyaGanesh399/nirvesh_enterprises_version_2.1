@@ -65,7 +65,7 @@ function Navbar2({ onClickMenu }) {
                 <Link to="/team">Our Team</Link>
               </li>
               <li>
-                <a href="#CONTACT-US">Contact Us</a>
+              <Link to="/contactus">Contact Us</Link>
               </li>
             </ul>
 

@@ -167,6 +167,7 @@
   align-items: baseline;
   justify-content: center;
   padding: 30px;
+  padding-right: 50px;
 }
 .offers-right-container{
   width : 45%;
@@ -220,8 +221,9 @@
   gap: 10px;
   margin-top: 30px;
   position: relative;
-    top: 25px;
+  top: 25px;
 }
+
 .subscription-main-container{
   width : 100vw;
   height : 100vh;
@@ -305,12 +307,20 @@
   align-items: center;
   justify-content: center;
 }
+.regular-card{
+  margin-bottom: -50px ;
+}
+.special-card{
+  margin-bottom: 50px;
+}
 .subscription-card-title{
+  text-align: center;
   font-size: 1.2rem;
   color : var(--navy);
   font-weight : 600;
 }
 .subscription-card-price{
+  text-align: center;
   font-size: 0.9rem;
   color : var(--dark);
   font-weight : 600;
@@ -357,7 +367,7 @@ td {
   padding: 8px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .mobile-application-features {
     flex-direction: column;
   }
@@ -378,14 +388,26 @@ td {
     align-items: center;
     justify-content: center;
   }
+  .offers-subTitle{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .offers-description{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .offers-guidance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .benefit-card {
     width: 160px;
     height: 180px;
-    
   }
-  
   .benefit-card-icon {
     font-size: 30px;
   }
@@ -400,6 +422,36 @@ td {
     text-align: center;
     transition: 1s all ease-in-out;
   }
+    .regular-card{
+    margin-bottom: 0px ;
+  }
+  .special-card{
+    margin-bottom: 0px;
+  }
+  .subscription-iphone{
+    width : 90%;
+    object-fit: contain;
+    min-height : 100px;
+    margin-bottom: 50px;
+  }
+  .offer-content{
+    width : 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .offers-subTitle{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .offers-description{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .offers-guidance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 350px) {
   .all-the-features{
@@ -408,12 +460,52 @@ td {
   }
 }
 
-
+@media only screen and (max-width: 1250px) {
+.subscription-card-title{
+  font-size: 1.1rem;
+}
+.subscription-card-price {
+  font-size: 0.8rem;
+}
+.subscription-option-button{
+  width: 150px;
+  height : 150px;
+  padding : 10px;
+}
+}
 @media only screen and (max-width: 1000px) {
-  .mobile-subscription-benefits {
-    flex-direction: column;
+  .subscription-option-button{
+    width: 150px;
+    height : 150px;
+    padding : 10px;
   }
+  .mobile-subscription-benefits{
+    flex-wrap: wrap;
+  }
+
   .subscription-card-container:nth-child(2) {
     margin-bottom: -80px;
+  }
+  .offers-subscription-content{
+    flex-direction: column;
+  }
+  .offer-content{
+    width : 100%;
+    align-items: center;
+  }
+  .offers-right-container{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .offers-subscription-content{
+    flex-direction: column;
+  }
+  .offer-content{
+    width : 100%;
+    align-items: center;
+  }
+  .offers-right-container{
+    width: 100%;
   }
 }

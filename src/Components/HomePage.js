@@ -17,27 +17,10 @@ import Team from "../ScreenRoutes/TeamComp/Team";
 import LoginPageVer2 from "../ScreenRoutes/LoginPageComp/LoginPageVer2";
 import LoaderPage from "./LoaderPage/LoaderPage";
 
-const pathContainer = {
-  hidden : {
-    opacity : 1,
-    pathLength : 0,
-    scale: 0.6,
-  },
-  visible : {
-    opacity : 1,
-    pathLength : 1,
-    scale: 1,
-    transition : {
-      type : "tween",
-      duration : 2,
-      delay : 0.5,
-      ease : "easeOut",
-    }
-  }
-}
+
 const homeContainer = {
   hidden : {
-    opacity : 1,
+    opacity : 0,
   },
   visible : {
     opacity : 1,
@@ -53,11 +36,11 @@ const homeContainer = {
 let strokeWidth = 70;
 
 function HomePage() {
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
 
-  // setTimeout(()=>{
-  //   setLoader(false);
-  // }, 4000);
+  setTimeout(()=>{
+    setLoader(false);
+  }, 4000);
 
   if (loader) {
     return (

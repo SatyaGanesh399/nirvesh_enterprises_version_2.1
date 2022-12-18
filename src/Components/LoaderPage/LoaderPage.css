@@ -1,0 +1,35 @@
+.cls-1 {
+    fill: #19250a;
+    stroke: #19250a;
+  }
+
+  .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+    stroke-linejoin: round;
+    stroke-width: 10px;
+    fill-rule: evenodd;
+  }
+
+  .cls-2 {
+    fill: blue;
+    stroke: blue;
+  }
+
+  .cls-3 {
+    fill: #ff4e01;
+    stroke: #ff4e01;
+  }
+
+  .cls-4 {
+    fill: #3d4649;
+    stroke: #3d4649;
+  }
+
+  .cls-5 {
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  .cls-6 {
+    fill: #309bff;
+    stroke: #309bff;
+  }

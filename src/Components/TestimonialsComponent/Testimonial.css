@@ -20,7 +20,7 @@
   justify-content: center;
 }
 .testimonial-content {
-  width: 65%;
+  width: 80%;
   height: 100%;
 }
 .testimonial-person-details {
@@ -45,14 +45,17 @@
   color: var(--blue);
 }
 .testimonial-description {
+  padding-left: 30px;
   width: 100%;
   min-height: 150px;
+  /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .testimonial-description span{
   align-self: flex-end;
+  /* background-color: blue; */
 }
 .testimonial-image {
   width: 100px;

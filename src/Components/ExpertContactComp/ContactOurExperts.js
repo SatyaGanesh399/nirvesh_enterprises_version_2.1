@@ -1,10 +1,18 @@
 import React, { useEffect } from "react";
+
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import "./ContactOurExpert.css";
 import colors from "../../DefaultColors";
 import AppTitle from "../../ReusableComponents/AppTitle";
-import mapImage from "./Assests/map.png";
 import AppInputWithLabel from "../../ReusableComponents/AppInputWithLabel";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 import { TiLocation } from "react-icons/ti";
@@ -27,6 +35,11 @@ const cardComponent = {
   },
 };
 
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 function ContactOurExperts() {
   const controls = useAnimation();
   const { ref, inView } = useInView({});
@@ -36,6 +49,19 @@ function ContactOurExperts() {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+
+  // Alertbox
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="expert-container" id="CONTACT-US">
@@ -84,8 +110,6 @@ function ContactOurExperts() {
             className="google-map-image"
             src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=nirvesh enterprises&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
-
-          {/* <img src={mapImage} alt="googleImage" className="google-map-image" /> */}
         </motion.div>
         <motion.div
           className="expert-contact-form"
@@ -112,11 +136,33 @@ function ContactOurExperts() {
                 bgColor={colors.blue}
                 border={colors.blue}
                 width="150px"
+                afterClick={handleClickOpen}
               />
             </div>
           </div>
         </motion.div>
       </div>
+    <div>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Submission Alert"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+            Your Message was submitted successfully.
+            Thank you!
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>OK</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+      
     </div>
   );
 }

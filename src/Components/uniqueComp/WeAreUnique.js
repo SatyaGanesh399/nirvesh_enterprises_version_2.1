@@ -1,18 +1,12 @@
 import React, { useEffect } from "react";
 import {
-  Box,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Typography,
 } from "@mui/material";
 import "./index.css";
 
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import image from "./Assets/why-us.png";
 import colors from "../../DefaultColors";
 import UniqueCards from "../../ReusableComponents/UniqueCards";
 
@@ -38,32 +32,12 @@ const data = [
     
   },
 ];
-
-const imageContainer = {
-  hidden: {
-    x: "100",
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "tween",
-      ease: "easeInOut",
-      duration: 1,
-    },
-  },
-};
 const contentContainer = {
   hidden: {
-    x: "-100",
     opacity: 0,
-    scale: 0,
+    scale: 0.7,
   },
   visible: {
-    x: 0,
     opacity: 1,
     scale: 1,
     transition: {
@@ -73,44 +47,6 @@ const contentContainer = {
     },
   },
 };
-
-// function Accordin({ id, title, descrption }) {
-
-//   return (
-//     <Box sx={{ width: "80%"}}>
-//       <Accordion sx={{ margin: "20px" }}>
-//         <AccordionSummary
-//           expandIcon={<ExpandMoreIcon />}
-//           aria-controls="panel1a-content"
-//           id="panel1a-header"
-//         >
-//           <Box
-//             sx={{
-//               display: "flex",
-//               justifyContent: "center",
-//               alignItems: "center",
-//             }}
-//           >
-//             <Typography
-//               sx={{
-//                 color: colors.light,
-//                 fontSize: "20px",
-//                 fontWeight: "bold",
-//                 marginRight: "20px",
-//               }}
-//             >
-//               {id}
-//             </Typography>
-//             <Typography>{title}</Typography>
-//           </Box>
-//         </AccordionSummary>
-//         <AccordionDetails>
-//           <Typography>{descrption}</Typography>
-//         </AccordionDetails>
-//       </Accordion>
-//     </Box>
-//   );
-// }
 
 function Unique() {
   const controls = useAnimation();

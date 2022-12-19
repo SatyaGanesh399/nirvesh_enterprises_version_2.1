@@ -3,6 +3,7 @@
     width : 100%;
     padding : 30px;
     margin-top: 70px;
+    position: relative;
     /* background-color: var(--backgroundColor); */
 }
 .google-map-image{
@@ -92,6 +93,9 @@
 .form-submit-button{
     margin: auto 0 auto auto;
     margin-top: 10px;
+}
+.contact-submit-alert{
+    
 }
 @media only screen and (max-width : 800px){
 .expert-contact{

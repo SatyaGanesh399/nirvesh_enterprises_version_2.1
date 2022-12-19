@@ -23,8 +23,8 @@ function ResponsiveNavbar({closeNavbar}) {
                 onClick={handleClick} >Home</Link>
                 </li>
                 <li>
-                <a href="#ABOUT-US"
-                onClick={handleClick} >About Us</a>
+                <Link to="/"
+                onClick={handleClick} >About Us</Link>
                 </li>
                 <li>
                 <Link to='/milestones' 
@@ -39,7 +39,7 @@ function ResponsiveNavbar({closeNavbar}) {
                 onClick={handleClick} >Our Team</Link>
                 </li>
                 <li>
-                <a href="#CONTACT-US" 
+                <a href="/contactus" 
                 onClick={handleClick}>Contact Us</a>
                 </li>
                 <li>

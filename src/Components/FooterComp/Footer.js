@@ -1,28 +1,76 @@
 import React from "react";
 import "./Footer.css";
-import { BsFillCaretRightFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+// import { BsFillCaretRightFill } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsSkype } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import { BiRightArrowCircle } from "react-icons/bi";
+import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
-import iphone from "../../Assets/iphone-synapsil.png";
-import qr from "../../Assets/qr-code.png";
+// import iphone from "../../Assets/iphone-synapsil.png";
+// import qr from "../../Assets/qr-code.png";
 import colors from "../../DefaultColors";
 
 const listData = [
-  "About us",
-  "Milestones",
-  "Terms of service",
-  "privacy policy",
+  {
+    id: "1",
+    link : "aboutus",
+    text : "About Us",
+  },
+  {
+    id: "2",
+    link : "milestones",
+    text : "Milestones",
+  },
+  {
+    id: "3",
+    link : "portfolio",
+    text : "Portfolio",
+  },
+  {
+    id: "4",
+    link : "ourteam",
+    text : "Our Team",
+  },
+  {
+    id: "5",
+    link : "contactus",
+    text : "Contact Us",
+  },
+  {
+    id: "6",
+    link : "login",
+    text : "Synpasil Login",
+  },
+];
+const usefulLinks = [
+  {
+    id: "1",
+    link : "newsletter",
+    text : "Newsletter",
+  },
+  {
+    id: "2",
+    link : "careers",
+    text : "Careers",
+  },
+  {
+    id: "3",
+    link : "termsofservice",
+    text : "Terms of Service",
+  },
+  {
+    id: "4",
+    link : "privacypolicy",
+    text : "Privacy Policy",
+  },
 ];
 const listItems = ({ item }) => {
   return (
     <div className="item-container">
-      <BsFillCaretRightFill size={12} color={colors.dark} />
-      <p className="footer-item list-item">{item}</p>
+      <p className="footer-item list-item">{item.text}</p>
     </div>
   );
 };
@@ -32,54 +80,16 @@ function Footer() {
     <div className="footer">
       <div className="footer-menu">
         <div className="useful-links">
-          <p className="footer-heading">Useful Links</p>
+          <p className="footer-heading useful-links-heading">Quick Links</p>
           <div>{listData.map((item) => listItems({ item }))}</div>
         </div>
-        <div className="social-networks">
-          <p className="footer-heading">Our Social Networks</p>
-          <div>
-            <BsTwitter
-              size={30}
-              color={colors.navy}
-              className="social-media-icon"
-            />
-            <BsFacebook
-              size={30}
-              color={colors.navy}
-              className="social-media-icon"
-            />
-            <AiFillInstagram
-              size={30}
-              color={colors.navy}
-              className="social-media-icon"
-            />
-            <BsSkype
-              size={30}
-              color={colors.navy}
-              className="social-media-icon"
-            />
-            <BsLinkedin
-              size={30}
-              color={colors.navy}
-              className="social-media-icon"
-            />
-          </div>
-          <div className="newsletter-comp">
-            <div className="footer-heading">
-              <p>Subscribe to Newsletter</p>
-              <div className="newsletter-subscription">
-                <input
-                  type="text"
-                  className="newsletter-input"
-                  placeholder="Please enter your email id"
-                />
-                <BiRightArrowCircle size={30} color={colors.dark} />
-              </div>
-            </div>
-          </div>
+        <div className="useful-links">
+          <p className="footer-heading useful-links-heading">Useful Links</p>
+          <div>{usefulLinks.map((item) => listItems({ item }))}</div>
         </div>
+
         <div className="playstore-comp">
-          <img src={iphone} alt="iphone" className="iphone-footer" />
+          {/* <img src={iphone} alt="iphone" className="iphone-footer" />
           <div>
             <img src={qr} alt="qr-code" className="footer-qr" />
             <p className="playstore-message">
@@ -89,6 +99,55 @@ function Footer() {
             <u className="playstore-message click-here">
               click here to rate our app in the play store
             </u>
+          </div> */}
+          <div className="newsletter-comp">
+            <div className="useful-links">
+              <p className="footer-heading">Subscribe to Newsletter</p>
+              <p className="newsletter-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                doloribus sit porro maxime nihil corrupti in distinctio.
+              </p>
+              <div className="newsletter-subscription">
+                <input
+                  type="text"
+                  className="newsletter-input"
+                  placeholder="Please enter your email id"
+                />
+                <div className="newsletter-icon">
+                  <BsFillArrowRightSquareFill size={32} color={colors.navy} />
+                </div>
+              </div>
+            </div>
+            <div className="social-networks">
+              <p className="footer-heading follow-us">Follow us on</p>
+              <div>
+                <BsTwitter
+                  size={32}
+                  color={colors.navy}
+                  className="social-media-icon"
+                />
+                <BsFacebook
+                  size={32}
+                  color={colors.navy}
+                  className="social-media-icon"
+                />
+                <AiFillInstagram
+                  size={32}
+                  color={colors.navy}
+                  className="social-media-icon"
+                />
+                <BsSkype
+                  size={32}
+                  color={colors.navy}
+                  className="social-media-icon"
+                />
+                <BsLinkedin
+                  size={32}
+                  color={colors.navy}
+                  className="social-media-icon"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

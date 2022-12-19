@@ -53,7 +53,7 @@ function Navbar2({ onClickMenu }) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#ABOUT-US">About Us</a>
+              <Link to="/" >About Us</Link>
               </li>
               <li>
                 <Link to="/milestones">Our Milestones</Link>

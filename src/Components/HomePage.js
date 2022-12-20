@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Outlet,
 } from "react-router-dom";
+import botImage from './ChatBotComp/Assets/bot-image.jpg';
 import CookieConsent from "react-cookie-consent";
 import colors from "../DefaultColors";
 
@@ -15,10 +16,9 @@ import Footer from "./FooterComp/Footer";
 import OurMilestones from "../ScreenRoutes/OurMilestonesComp/OurMilestones";
 import Diseaseportfolio from "../ScreenRoutes/DiseasePortfolioComp/Diseaseportfolio";
 import ContactOurExperts from "./ExpertContactComp/ContactOurExperts";
-// import Team from "../ScreenRoutes/TeamComp/Team";
 import Team2 from "../ScreenRoutes/TeamComp/Team2";
-import LoginPageVer2 from "../ScreenRoutes/LoginPageComp/LoginPageVer2";
 import LoaderPage from "./LoaderPage/LoaderPage";
+import ChatBot from './ChatBotComp/ChatBot';
 import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPolicy';
 
 const homeContainer = {
@@ -38,6 +38,23 @@ const homeContainer = {
 
 function HomePage() {
   const [loader, setLoader] = useState(true);
+  const [chatBotOpen, setChatBotOpen] = useState(false);
+  const [showBot, setShowBot] = useState(false);
+
+  useEffect(()=>{
+      window.addEventListener("scroll", () => {
+          if(window.scrollY >100){
+            setShowBot(true)
+          }else{
+            setShowBot(false);
+          }
+      })
+  }, []);
+
+  const handleOpenChatbot = (e) =>{
+    e.stopPropagation()
+    setChatBotOpen(!chatBotOpen);
+  }
 
   setTimeout(() => {
     setLoader(false);
@@ -82,6 +99,8 @@ function HomePage() {
             By clicking "I Understand", You accept our cookies and <a href="#">privacy policy</a> of our website
           </CookieConsent>;
         <Footer />
+        {showBot && <img src={botImage} alt="botImage" className="bot-image-open" onClick={handleOpenChatbot} /> }
+        {(chatBotOpen && showBot) && <ChatBot />}
       </motion.div>
     );
   }

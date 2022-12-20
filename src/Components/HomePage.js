@@ -15,7 +15,8 @@ import Footer from "./FooterComp/Footer";
 import OurMilestones from "../ScreenRoutes/OurMilestonesComp/OurMilestones";
 import Diseaseportfolio from "../ScreenRoutes/DiseasePortfolioComp/Diseaseportfolio";
 import ContactOurExperts from "./ExpertContactComp/ContactOurExperts";
-import Team from "../ScreenRoutes/TeamComp/Team";
+// import Team from "../ScreenRoutes/TeamComp/Team";
+import Team2 from "../ScreenRoutes/TeamComp/Team2";
 import LoginPageVer2 from "../ScreenRoutes/LoginPageComp/LoginPageVer2";
 import LoaderPage from "./LoaderPage/LoaderPage";
 import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPolicy';
@@ -58,12 +59,12 @@ function HomePage() {
             <Route exact path="/" element={<ActualHomePage />} />
             <Route path="milestones" element={<OurMilestones />} />
             <Route path="portfolio" element={<Diseaseportfolio />} />
-            <Route path="team" element={<Team />} />
+            <Route path="team" element={<Team2 />} />
             <Route path="contactus" element={<ContactOurExperts />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />
+            {/* <Route path="login" element={<LoginPageVer2 />} />
             <Route path="login" element={<LoginPageVer2 />} />
-            <Route path="login" element={<LoginPageVer2 />} />
-            <Route path="login" element={<LoginPageVer2 />} />
+            <Route path="login" element={<LoginPageVer2 />} /> */}
           </Routes>
         </Router>
           <CookieConsent 

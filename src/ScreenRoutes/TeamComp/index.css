@@ -7,17 +7,19 @@
 }
 .profileCards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin : 50px auto;
+  place-items: center;
+  margin : 50px 30px;
 }
 .cardImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  border: 4px solid var(--blue);
+  width: 110px;
+  height: 110px;
+  border-radius: 55px;
   position: relative;
+  padding : 5px;
   top : 30px;
+  background-color: var(--blue);
 }
 .profileCardContainer {
   display: flex;
@@ -95,6 +97,32 @@
   color : var(--blue);
   background-color: var(--primary);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.secondary-cards{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.founder-cards{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.team-mini-container1{
+  width : 80%;
+  margin: 20px auto 30px auto;
+}
+.team-mini-container2{
+  width : 70%;
+  margin: 20px auto 30px auto;
+}
+.teams-mini-heading{
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color : var(--dark)
 }
 @media only screen and (max-width: 1100px) {
   .profileCards {

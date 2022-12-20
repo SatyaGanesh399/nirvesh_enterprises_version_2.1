@@ -34,8 +34,6 @@ export default function ProfileCard({ item }) {
   useEffect(()=> {
     if(inView){
       controls.start("visible");
-    }else{
-      controls.start("hidden");
     }
 
   },[inView, controls]);

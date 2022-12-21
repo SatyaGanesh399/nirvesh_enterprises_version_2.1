@@ -50,7 +50,7 @@
 .disease-description {
     text-align: center;
     margin-top: 20px;
-    color: var(--navy)
+    color: var(--dark)
 }
 .disease-name-back{
     text-align: center;
@@ -63,4 +63,56 @@
 .click-here-link{
     color : var(--blue);
     cursor: pointer;
+}
+.details-page{
+    margin-top: 120px;
+}
+.disease-header{
+    background-image: linear-gradient(
+      90deg,
+      rgba(79, 226, 191, 0.535),
+      rgba(8, 83, 156, .8)
+    ),
+    url('./Assests/brain.jpg');
+    width: 100%;
+    height : 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.disease-details-description{
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 1fr;
+    margin-top: 50px;
+}
+.disease-description-left{
+    text-align: left;
+}
+.disease-description-left ul li{
+    /* list-style: none; */
+    text-decoration: underline;
+    margin: 5px;
+    color : var(--navy);
+    cursor: pointer;
+}
+.disease-description-right{
+    text-align: justify;
+    padding : 0px 30px;
+    color : var(--dark)
+}
+.disease-header h2{
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    color : var(--secondary);
+    margin-left: 50px;
+    letter-spacing: 2px;
+}
+@media only screen and (max-width : 600px){
+    .disease-header{
+        justify-content: center;
+    }
 }

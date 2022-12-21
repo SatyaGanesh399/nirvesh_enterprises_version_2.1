@@ -6,65 +6,8 @@ import TabPanel from "@mui/lab/TabPanel";
 import AppTitle from "../../ReusableComponents/AppTitle";
 
 import TabItems from "./TabItems";
-import image1 from "./Assests/portfolio-1.jpg";
-import image2 from "./Assests/portfolio-2.jpg";
-import image3 from "./Assests/portfolio-3.jpg";
-import image4 from "./Assests/portfolio-4.jpg";
-import image5 from "./Assests/portfolio-6.jpg";
-import image6 from "./Assests/portfolio-7.jpg";
-import image7 from "./Assests/portfolio-8.jpg";
 
-const allData = [
-  {
-    id: "1",
-    type: "TBI",
-    disease: "Traumatic Brain Injury",
-    url: image1,
-    flipped: false,
-  },
-  {
-    id: "2",
-    type: "TBI",
-    disease: "fMRI",
-    url: image2,
-    flipped: false,
-  },
-  {
-    id: "3",
-    type: "TBI",
-    disease: "Prevalence",
-    url: image3,
-    flipped: false,
-  },
-  {
-    id: "4",
-    type: "STROKE",
-    disease: "Brain Stroke",
-    url: image4,
-    flipped: false,
-  },
-  {
-    id: "5",
-    type: "BRAIN STROKE",
-    disease: "Symptoms",
-    url: image6,
-    flipped: false,
-  },
-  {
-    id: "6",
-    type: "Epidemiology",
-    disease: "Brain Stroke Prevalence",
-    url: image5,
-    flipped: false,
-  },
-  {
-    id: "7",
-    type: "Hearable",
-    disease: "Music Therapy",
-    url: image7,
-    flipped: false,
-  },
-];
+import allData from "./DiseasePortfolioData";
 
 function Diseaseportfolio() {
   // portfolio Data stored in state

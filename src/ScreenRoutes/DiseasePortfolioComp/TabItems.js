@@ -2,6 +2,7 @@ import * as React from "react";
 import "./DiseasePortfolio.css";
 import ReactCardFlip from "react-card-flip";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
+import { useNavigate } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
@@ -55,6 +56,12 @@ export default function TabItems({ item, clickHandler, clickFlipBack}) {
     setHovered(!hovered);
   };
 
+  // Dynamic routing
+  const navigation = useNavigate();
+  const handleRoute =() =>{
+    navigation(`/detailspage/${item.id}`);
+  }
+
   return (
     // Card front goes here
     <motion.div
@@ -93,7 +100,8 @@ export default function TabItems({ item, clickHandler, clickFlipBack}) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <u className="click-here-link">Click here for more details</u>
+          <u className="click-here-link"
+          onClick={handleRoute}>Click here for more details</u>
           <AppButtonRound
             text="Go back"
             bgColor={colors.blue}

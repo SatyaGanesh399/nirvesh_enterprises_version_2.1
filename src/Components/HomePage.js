@@ -20,6 +20,7 @@ import Team2 from "../ScreenRoutes/TeamComp/Team2";
 import LoaderPage from "./LoaderPage/LoaderPage";
 import ChatBot from './ChatBotComp/ChatBot';
 import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPolicy';
+import DiseaseDetailsPage from "../ScreenRoutes/DiseasePortfolioComp/DiseaseDetailsPage";
 
 const homeContainer = {
   hidden: {
@@ -76,12 +77,11 @@ function HomePage() {
             <Route exact path="/" element={<ActualHomePage />} />
             <Route path="milestones" element={<OurMilestones />} />
             <Route path="portfolio" element={<Diseaseportfolio />} />
+            <Route path="detailspage/:id" element={<DiseaseDetailsPage />} />
             <Route path="team" element={<Team2 />} />
             <Route path="contactus" element={<ContactOurExperts />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />
-            {/* <Route path="login" element={<LoginPageVer2 />} />
-            <Route path="login" element={<LoginPageVer2 />} />
-            <Route path="login" element={<LoginPageVer2 />} /> */}
+
           </Routes>
         </Router>
           <CookieConsent 

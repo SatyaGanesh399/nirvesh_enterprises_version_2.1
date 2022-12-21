@@ -13,7 +13,8 @@ import SupportedBy from '../../Components/SupportedByComp/SupportedBy';
 
 function Team2() {
   return (
-    <div style={{ marginTop: "120px" }}>
+    <div style={{ marginTop: "120px",
+    transition : "0.4s all ease-in-out" }}>
       <AppTitle title="Meet The Team" />
       <div className="team-mini-container1">
         <p className="teams-subtitle">

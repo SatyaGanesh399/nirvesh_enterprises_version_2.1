@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import botImage from "./Assets/bot-image.jpg";
 import { FaDotCircle } from "react-icons/fa";
+import {MdSend} from "react-icons/md";
 
 const chatData = [
   {
@@ -82,7 +83,8 @@ function ChatBot() {
       </div>
       <div className="chatbot-footer">
         <input type="text" value={textInput} placeholder="Type your question here" className="chatbot-input-box" onChange={(e)=>handleChangeText(e)}/>
-        <button className="chatbot-submit-button" onClick={handleSubmit}>Submit</button>
+        {/* <button className="chatbot-submit-button" onClick={handleSubmit}>Submit</button> */}
+        <MdSend className="chat-bot-submit-icon" />
       </div>
     </div>
   );

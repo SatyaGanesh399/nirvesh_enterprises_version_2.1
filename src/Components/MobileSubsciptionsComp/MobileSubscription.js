@@ -27,22 +27,15 @@ const benefitCard = (item, handleMouseOver) => {
       }}
       onMouseEnter={handleChange}
     >
-      {/* <span
-        className="material-symbols-rounded"
+      <span
         style={{
-          color: "red",
-          // color: item.hover ? colors.white : colors.navy,
-          // width: item.hover ? "30px" : "40px",
+          color: item.hover ? colors.white : colors.navy,
+          fontSize: item.hover ? "30px" : "40px",
         }}
+        class="material-symbols-rounded benefit-card-icon"
       >
-        {item.icon}
-      </span> */}
-      <span 
-      style={{
-        color: item.hover ? colors.white : colors.navy,
-        fontSize: item.hover ? "30px" : "40px",
-      }}
-      class="material-symbols-rounded benefit-card-icon">{item.icon.toString()}</span>
+        {item.icon.toString()}
+      </span>
       <p
         className="benefit-card-title"
         style={{
@@ -191,8 +184,12 @@ function MobileSubscription() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua
         </p>
+        {/* <p className="features-title-responsive">Our Main Features</p> */}
         <div className="iphone-background"></div>
         <div className="mobile-application-features">
+          {/* <div className="mobile-left-responsive">
+            {leftCardData.map((item) => benefitCard(item, handleMouseOver))}
+          </div> */}
           <div>
             <img
               src={photo}
@@ -200,6 +197,9 @@ function MobileSubscription() {
               className="iphone-subscription"
             />
           </div>
+          {/* <div className="mobile-right-responsive">
+            {rightCardData.map((item) => benefitCard(item, handleMouseOver))}
+          </div> */}
           <div className="features-content">
             <p className="features-title">Our Main Features</p>
             <div className="all-the-features">

@@ -48,6 +48,8 @@
 }
 .features-content {
   z-index: 2;
+  margin-top: -100px;
+
 }
 .blob-iphone-background{
   width : 700px;
@@ -62,8 +64,14 @@
   font-weight: 600;
   color: var(--navy);
   text-align: center;
-  margin-top: -80px;
+}
+.features-title-responsive{
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: center;
   margin-bottom: 40px;
+  display: none;
 }
 .mobile-application-benefits {
   display: flex;
@@ -342,6 +350,14 @@
   display: flex;
   z-index: 2;
 }
+.mobile-left-responsive{
+  z-index: 2;
+  display: none;
+}
+.mobile-right-responsive{
+  display: none;
+  z-index: 2;
+}
 .subscription-card-container:hover .subscription-title-header {
   padding: 10px;
 }
@@ -368,12 +384,34 @@ td {
 }
 
 @media only screen and (max-width: 1000px) {
-  .mobile-application-features {
+
+  .features-content{
+    margin-top: 0px;
+  }
+  .mobile-application-features{
     flex-direction: column;
   }
-  .features-title {
-    margin-top: 20px;
-    margin-bottom: 40px;
+  .iphone-background{
+    position: relative;
+    height : 300px;
+    top : 550px;
+  }
+  .iphone-subscription{
+    width : 100%;
+    min-width: 120px;
+    margin: 0px;
+    margin-top: 120px;
+    margin-bottom: 25px;
+  }
+  .benefit-card{
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    gap: 10px;
+    padding : 0px;
+  }
+  .benefit-card-description{
+    display: none;
   }
   .mobile-left {
     flex-direction: column;
@@ -453,12 +491,6 @@ td {
     justify-content: center;
   }
 }
-@media only screen and (max-width: 350px) {
-  .all-the-features{
-    flex-direction: column;
-    gap : 20px;
-  }
-}
 
 @media only screen and (max-width: 1250px) {
 .subscription-card-title{
@@ -501,6 +533,32 @@ td {
   .offers-subscription-content{
     flex-direction: column;
   }
+  .mobile-application-features {
+    justify-content: center;
+}
+.features-title-responsive{
+  font-size: 1.5rem;
+}
+  .benefit-card-title{
+    font-size: 0.8rem;
+  }
+  .iphone-subscription{
+    width: 130px;
+    margin-top: 170px;
+  }
+  .iphone-background{
+    position: relative;
+    height: 200px;
+    top: 460px;
+  }
+  .features-title{
+    font-size: 1.5rem;
+  }
+  .benefit-card {
+    width: 120px;
+    height: 120px;
+    margin: 6px 30px;
+}
   .offer-content{
     width : 100%;
     align-items: center;

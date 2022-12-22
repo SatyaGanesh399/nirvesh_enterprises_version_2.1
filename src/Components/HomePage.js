@@ -42,6 +42,12 @@ function HomePage() {
   const [chatBotOpen, setChatBotOpen] = useState(false);
   const [showBot, setShowBot] = useState(false);
 
+  // if(chatBotOpen){
+  //   document.querySelector("body").style.overflow = "hidden"
+  // }else{
+  //   document.querySelector("body").style.overflow = "auto"
+  // }
+
   useEffect(()=>{
       window.addEventListener("scroll", () => {
           if(window.scrollY >100){

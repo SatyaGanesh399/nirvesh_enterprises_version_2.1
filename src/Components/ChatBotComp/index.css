@@ -19,14 +19,14 @@
 .chatbot-header p{
     margin : 0;
     padding : 0;
+    color : var(--dark);
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 .bot-image{
-    width : 60px;
-    height : 60px;
-    border-radius: 30px;
-    padding : 5px;
-    background-color: car(--secondary);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    width : 80px;
+    height : 80px;
+    border-radius: 40px;
 }
 .status-block{
     display: flex;
@@ -36,9 +36,11 @@
 }
 .chatbot-title{
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1rem !important;
     padding-bottom: 5px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    color : var(--dark);
+    font-weight: 600 !important;
 }
 .chatbot-text-area{
     height : 200px;
@@ -106,7 +108,7 @@
 .chat-bot-submit-icon{
     color: var(--secondary);
     background-color: var(--navy);
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding : 5px;
     border-radius: 50%;
 

@@ -39,18 +39,35 @@
   animation-delay: 1.5s;
 }
 .bot-image-open{
-  width : 60px;
-  height: 60px;
-  border-radius: 30px;
-  padding: 8px;
-  background-color: var(--primary);
+  width : 80px;
+  height: 80px;
+  /* border-radius: 40px;
+  background-color: var(--primary); */
   position: fixed;
   bottom : 30px;
   right : 30px;
   transition: 0.3s all ease-in-out;
   z-index: 999;
+  animation: fadeIn 2s 2s infinite forwards;
 }
 .bot-image-open:hover{
+  padding : 5px;
+  /* opacity: 0.8; */
+}
+.bot-image-close{
+  width : 80px;
+  height: 80px;
+  /* border-radius: 40px;
+  background-color: var(--primary); */
+  position: fixed;
+  bottom : 30px;
+  right : 30px;
+  transition: 0.3s all ease-in-out;
+  z-index: 999;
+  animation: fadeOut 3s 2s infinite forwards;
+
+}
+.bot-image-close:hover{
   padding : 5px;
   /* opacity: 0.8; */
 }

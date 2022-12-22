@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
-import botImage from "./Assets/bot-image.jpg";
+import botImageOpen from "./Assets/eyes-open.png";
+import botImageClose from "./Assets/eyes-close.png";
 import { FaDotCircle } from "react-icons/fa";
 import {MdSend} from "react-icons/md";
 
@@ -69,7 +70,7 @@ function ChatBot() {
   return (
     <div className="chatbot-container">
       <div className="chatbot-header">
-        <img src={botImage} alt="botImage" className="bot-image" />
+        <img src={botImageOpen} alt="botImage" className="bot-image" />
         <div>
           <p className="chatbot-title">Chat Bot</p>
           <div className="status-block">
@@ -82,7 +83,7 @@ function ChatBot() {
         {chatConvo}
       </div>
       <div className="chatbot-footer">
-        <input type="text" value={textInput} placeholder="Type your question here" className="chatbot-input-box" onChange={(e)=>handleChangeText(e)}/>
+        <input type="text" value={textInput} placeholder="Type your message here" className="chatbot-input-box" onChange={(e)=>handleChangeText(e)}/>
         {/* <button className="chatbot-submit-button" onClick={handleSubmit}>Submit</button> */}
         <MdSend className="chat-bot-submit-icon" />
       </div>

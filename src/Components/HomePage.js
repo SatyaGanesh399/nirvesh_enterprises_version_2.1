@@ -5,7 +5,8 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
-import botImage from './ChatBotComp/Assets/bot-image.jpg';
+import botImage from './ChatBotComp/Assets/eyes-open.png';
+import botImageClose from './ChatBotComp/Assets/eyes-close.png';
 import CookieConsent from "react-cookie-consent";
 import colors from "../DefaultColors";
 
@@ -106,6 +107,8 @@ function HomePage() {
           </CookieConsent>;
         <Footer />
         {showBot && <img src={botImage} alt="botImage" className="bot-image-open" onClick={handleOpenChatbot} /> }
+        {(chatBotOpen && showBot) && <ChatBot />}
+        {showBot && <img src={botImageClose} alt="botImage" className="bot-image-close" onClick={handleOpenChatbot} /> }
         {(chatBotOpen && showBot) && <ChatBot />}
       </motion.div>
     );

@@ -1,10 +1,10 @@
 import colors from '../../DefaultColors'
-import doctor from './Assets/pic1.png';
-import livetracking from './Assets/pic5.png';
+import doctor from './Assets/pic11.png';
+import livetracking from './Assets/pic51.png';
 import music from './Assets/pic2.png';
-import cognitive from './Assets/pic3.png';
-import accurate from './Assets/pic4.png';
-import analysis from './Assets/pic6.png';
+import cognitive from './Assets/pic31.png';
+import accurate from './Assets/pic14.png';
+import analysis from './Assets/pic16.png';
 
 
 const leftData= [

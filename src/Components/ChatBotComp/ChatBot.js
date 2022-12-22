@@ -85,7 +85,7 @@ function ChatBot() {
       <div className="chatbot-footer">
         <input type="text" value={textInput} placeholder="Type your message here" className="chatbot-input-box" onChange={(e)=>handleChangeText(e)}/>
         {/* <button className="chatbot-submit-button" onClick={handleSubmit}>Submit</button> */}
-        <MdSend className="chat-bot-submit-icon" />
+        <MdSend onClick={handleSubmit} className="chat-bot-submit-icon" />
       </div>
     </div>
   );

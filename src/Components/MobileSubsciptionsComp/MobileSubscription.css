@@ -1,6 +1,7 @@
 .mobile-subscription-container {
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 30px;
 }
 .side-heading {
   font-size: 1.1rem;

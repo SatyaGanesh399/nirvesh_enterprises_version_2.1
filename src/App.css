@@ -44,8 +44,8 @@
   /* border-radius: 40px;
   background-color: var(--primary); */
   position: fixed;
-  bottom : 30px;
-  right : 30px;
+  bottom : 20px;
+  right : 10px;
   transition: 0.3s all ease-in-out;
   z-index: 999;
   animation: fadeIn 2s 2s infinite forwards;
@@ -60,8 +60,8 @@
   /* border-radius: 40px;
   background-color: var(--primary); */
   position: fixed;
-  bottom : 30px;
-  right : 30px;
+  bottom : 20px;
+  right : 10px;
   transition: 0.3s all ease-in-out;
   z-index: 999;
   animation: fadeOut 3s 2s infinite forwards;

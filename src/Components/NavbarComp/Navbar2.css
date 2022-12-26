@@ -6,6 +6,27 @@
     height : 70px;
     box-sizing: border-box;
     z-index: 3;
+    animation: 300ms ease-in-out 0s normal fadeInDown;
+}
+.navbar-container-isSticky{
+    background-color: var(--secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height : 90px;
+    box-sizing: border-box;
+    z-index: 999;
+    animation: 500ms ease-in-out 0s normal fadeInDown;
+}
+.navbar-items-isSticky ul li a{
+    color : var(--navy) !important;
+}
+.navbar-content-isSticky{
+    height : 90px !important;
+}
+.navbar-logo-isSticky img{
+    margin-top: 0px !important;
 }
 .navbar-content{
     width : 90%;
@@ -18,8 +39,8 @@
 .navabar-blob{
     position: absolute;
     z-index: -1;
-    top : -125px;
-    left : -35px;
+    top : -155px;
+    left : -55px;
     transition: 0.5s all ease-in-out;
 }
 
@@ -54,11 +75,30 @@
     text-decoration: none;
     margin: 5px;
     font-size: 0.95rem;
+    font-weight: 500;
     padding : 5px 7px;
     color : var(--primary);
     cursor: pointer;
     transition: 0.5s all ease-in-out;
 }
+.dropdown-toggle{
+    background-color: transparent !important;
+    border: none !important;
+    padding : 5px 7px !important;
+    font-weight: 500 !important;
+}
+.dropdown-toggle:hover{
+    background-color: rgb(255, 255, 255, 0.2) !important;
+    border-radius: 5px !important;
+}
+.dropdown-item{
+    margin: 0 !important;
+    color : var(--navy) !important;
+}
+.dropdown-item:hover{
+    background-color: rgb(150, 150, 150, 0.15) !important;
+}
+
 .navbar-items-rest{
     display: flex;
     align-items: center;
@@ -100,19 +140,30 @@
 .navbar-login-button{
     margin : 30px;
     font-size: 0.9rem;
-    padding : 5px 10px;
+    padding : 5px 15px;
     color : var(--primary);
     border-radius: 5px;
-    background-color: var(--navy);
+    background-color: var(--blue);
     font-weight: 600;
     cursor: pointer;
     transition: 0.4s all ease-in-out;
+    position: relative;
 }
-.navbar-login-button:hover{
-    background-color: var(--synapsilColor);
-    padding : 5px 10px;
+.navbar-login-button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
     border-radius: 5px;
-    color : var(--primary)
+    background-color: var(--synapsilColor);
+    mix-blend-mode: hue;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.navbar-login-button:hover::before{
+    width : 100%
 }
 .navbar-login-button a{
     text-decoration: none;
@@ -169,6 +220,16 @@
 }
 .navbar-menu-icon {
     display: none;
+}
+
+@keyframes fadeInDown {
+    0%{
+        transform : translateY(-100px);
+    }
+    100%{
+        transform : translateY(0px);
+    }
+    
 }
 
 @media only screen and (max-width: 1000px) {

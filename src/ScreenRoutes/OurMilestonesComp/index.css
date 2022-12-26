@@ -10,6 +10,20 @@
   text-align: center;
   color: var(--dark);
 }
+.milestones-card-container {
+  width: 250px;
+  min-height: 350px;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+  transition: 0.4s all ease-in-out;
+}
+.milestones-card-container:hover {
+  transform: translateY(-10px);
+  
+}
 .cardComponent {
   display: flex;
   align-items: center;
@@ -22,9 +36,15 @@
   padding-left: 30px;
   margin-bottom: 10px;
   color: var(--navy);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform-origin: 50px 50px;
 }
-@media only screen and (max-width : 1000px){
-  .cardComponent{
+.milestones-card-container:hover .card-icon{
+  transform: rotateY(180deg);
+}
+@media only screen and (max-width: 1000px) {
+  .cardComponent {
     flex-wrap: wrap;
   }
 }

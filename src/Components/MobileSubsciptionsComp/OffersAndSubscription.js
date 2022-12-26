@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MobileSubscription.css";
 import SubscriptionModal from "./SubscriptionModal";
+import {FaGooglePlay} from 'react-icons/fa';
 
 import iphonex from "./Assets/iphonex.png";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
@@ -31,6 +32,7 @@ function OffersAndSubscription() {
         </p>
         <div className="offers-guidance">
           <button className="download-playstore">
+          <FaGooglePlay className="playstore-icon"/>
             Download from playstore
           </button>
         </div>

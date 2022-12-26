@@ -8,6 +8,7 @@ function PrimaryCard({item}) {
   return (
     <div className='primary-card-container'>
         <img src={item.url} alt="profileImage" className="profile-image3" />
+        <p className='primary-card-description'>{item.description}</p>
         <p className='secondary-card-name'>{item.profileName}</p>
         <p className='secondary-card-design'>{item.profileDesign}</p>
         <div className='social-media-accounts3'>
@@ -15,7 +16,6 @@ function PrimaryCard({item}) {
           <AiFillInstagram className="social-media-icons3" />
           <BsTwitter className="social-media-icons3" />
       </div>
-        <p className='primary-card-description'>{item.description}</p>
     </div>
   )
 }

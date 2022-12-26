@@ -18,18 +18,18 @@ const FoundersData = [
     {
       id: "1",
       profileName: "Anvesh Jallapally ",
-      profileDesign: "Founder & Chief Technology Officer",
+      profileDesign: "Founder & Chief Executive Officer",
       description:
-        "Expert in delivering overall technology leadership and direction encompassing application development, technology strategy and staff management. Expert in delivering overall technology leadership and direction encompassing application development, technology strategy and staff management",
+        "Business Operations and  Product Development",
       url: Anvesh,
       linkedin: "",
     },
     {
       id: "2",
       profileName: "Akhila Reddy Lingannagari",
-      profileDesign: "Co-Founder & Chief Executive Officer",
+      profileDesign: "Co-Founder & Chief Technical Officer",
       description:
-        "Expert in Neuroscience and a serial entrepreneur who has developed a thorough knowledge of the global technology and innovation marketplace during his 10-year executive career. Expert in Neuroscience and a serial entrepreneur who has developed a thorough knowledge of the global technology and innovation marketplace during his 10-year executive career.",
+        "Technical Management Head",
       url: image,
       linkedin: "",
     },
@@ -38,7 +38,7 @@ const FoundersData = [
       profileName: "Prabitha Urwyler",
       profileDesign: "Co-Founder",
       description:
-        "Experienced biomedical scientist who has spent more than 25 years developing and bringing to market innovative sensor technologies in the arena of mental health. Experienced biomedical scientist who has spent more than 25 years developing and bringing to market innovative sensor technologies in the arena of mental health.",
+        "Product Technical Validation",
       url: Prabitha,
       linkedin: "",
     },

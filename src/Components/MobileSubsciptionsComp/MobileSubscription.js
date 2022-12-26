@@ -201,7 +201,6 @@ function MobileSubscription() {
             {rightCardData.map((item) => benefitCard(item, handleMouseOver))}
           </div> */}
           <div className="features-content">
-            <p className="features-title">Our Main Features</p>
             <div className="all-the-features">
               <div className="mobile-left">
                 {leftCardData.map((item) => benefitCard(item, handleMouseOver))}

@@ -30,9 +30,8 @@
   justify-content: center;
   gap : 40px;
   margin-bottom: 40px;
-  /* background-color: red; */
-  
 }
+
 .feature-icon{
   color: var(--blue);
   width: 100%;
@@ -52,6 +51,14 @@
   align-items: center;
   justify-content: space-evenly;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.4s all ease-in-out
+}
+.feature-card:hover{
+  transform: translateY(-10px);
+}
+.feature-card:hover .feature-icon{
+  color: var(--navy);
+  font-size: 3rem;
 }
 .about-us {
   display: flex;

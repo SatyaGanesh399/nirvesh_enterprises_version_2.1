@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Outlet,
+  withRouter
 } from "react-router-dom";
 import botImage from './ChatBotComp/Assets/eyes-open.png';
 import botImageClose from './ChatBotComp/Assets/eyes-close.png';
@@ -18,10 +19,12 @@ import OurMilestones from "../ScreenRoutes/OurMilestonesComp/OurMilestones";
 import Diseaseportfolio from "../ScreenRoutes/DiseasePortfolioComp/Diseaseportfolio";
 import ContactOurExperts from "./ExpertContactComp/ContactOurExperts";
 import Team2 from "../ScreenRoutes/TeamComp/Team2";
+import LoginPageVer2 from '../ScreenRoutes/LoginPageComp/LoginPageVer2';
 import LoaderPage from "./LoaderPage/LoaderPage";
 import ChatBot from './ChatBotComp/ChatBot';
 import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPolicy';
 import DiseaseDetailsPage from "../ScreenRoutes/DiseasePortfolioComp/DiseaseDetailsPage";
+import ScrollToTopPage from "./ScrollToTopPage";
 
 const homeContainer = {
   hidden: {
@@ -37,6 +40,7 @@ const homeContainer = {
     },
   },
 };
+
 
 function HomePage() {
   const [loader, setLoader] = useState(true);
@@ -78,6 +82,7 @@ function HomePage() {
     return (
       <motion.div variants={homeContainer} initial="hidden" animate="visible">
         <Router>
+          <ScrollToTopPage />
           <Navbar2 />
           <Outlet />
           <Routes>
@@ -86,6 +91,7 @@ function HomePage() {
             <Route path="portfolio" element={<Diseaseportfolio />} />
             <Route path="detailspage/:id" element={<DiseaseDetailsPage />} />
             <Route path="team" element={<Team2 />} />
+            <Route path="login" element={<LoginPageVer2 />} />
             <Route path="contactus" element={<ContactOurExperts />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />
 
@@ -96,7 +102,7 @@ function HomePage() {
           style={{
             backgroundColor : colors.primaryWhite,
             color : colors.dark,
-            padding : "0px 30px",
+            padding : "0px 60px 0px 20px",
           }}
           buttonStyle={{
             backgroundColor : colors.blue,
@@ -104,7 +110,7 @@ function HomePage() {
             fontSize : "1.1rem",
           }}>
             By clicking "I Understand", You accept our cookies and <a href="#">privacy policy</a> of our website
-          </CookieConsent>;
+          </CookieConsent>
         <Footer />
         {showBot && <img src={botImage} alt="botImage" className="bot-image-open" onClick={handleOpenChatbot} /> }
         {(chatBotOpen && showBot) && <ChatBot />}

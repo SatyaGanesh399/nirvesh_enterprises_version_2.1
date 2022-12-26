@@ -41,8 +41,6 @@
 .bot-image-open{
   width : 80px;
   height: 80px;
-  /* border-radius: 40px;
-  background-color: var(--primary); */
   position: fixed;
   bottom : 20px;
   right : 10px;

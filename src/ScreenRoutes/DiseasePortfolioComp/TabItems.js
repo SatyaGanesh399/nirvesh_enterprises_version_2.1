@@ -24,7 +24,7 @@ const panelContainer = {
   },
 };
 
-export default function TabItems({ item, clickHandler, clickFlipBack}) {
+export default function TabItems({ item, clickHandler, clickFlipBack }) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -39,9 +39,9 @@ export default function TabItems({ item, clickHandler, clickFlipBack}) {
   const handleClick = () => {
     clickHandler(item.id);
   };
-  const handleFlipback = () =>{
-    clickFlipBack()
-  }
+  const handleFlipback = () => {
+    clickFlipBack();
+  };
 
   // Card hover logic here
 
@@ -58,9 +58,9 @@ export default function TabItems({ item, clickHandler, clickFlipBack}) {
 
   // Dynamic routing
   const navigation = useNavigate();
-  const handleRoute =() =>{
+  const handleRoute = () => {
     navigation(`/detailspage/${item.id}`);
-  }
+  };
 
   return (
     // Card front goes here
@@ -85,23 +85,32 @@ export default function TabItems({ item, clickHandler, clickFlipBack}) {
           <div className="disease-titles">
             <p className="disease-type">{item.type}</p>
             <p className="disease-name">{item.disease}</p>
+            <AppButtonRound
+              text="Know more"
+              bgColor={colors.blue}
+              border={colors.blue}
+              width="150px"
+              afterClick={handleClick}
+            />
           </div>
-          <AppButtonRound
-            text="Know more"
-            bgColor={colors.blue}
-            border={colors.blue}
-            width="150px"
-            afterClick={handleClick}
-          />
         </div>
         <div className="disease-container">
+          <div className="author-information">
+            <p>
+              <span class="material-symbols-outlined">person</span> Author
+            </p>
+            <p>
+              <span class="material-symbols-outlined">event</span> 17 June 2021
+            </p>
+          </div>
           <p className="disease-name-back">{item.disease}</p>
           <p className="disease-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <u className="click-here-link"
-          onClick={handleRoute}>Click here for more details</u>
+          <u className="click-here-link" onClick={handleRoute}>
+            Click here for more details
+          </u>
           <AppButtonRound
             text="Go back"
             bgColor={colors.blue}

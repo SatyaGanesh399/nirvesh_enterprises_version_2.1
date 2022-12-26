@@ -7,16 +7,9 @@ import { Box, Typography } from "@mui/material";
 
 function CardItem(props) {
   return (
-    <Box
+    <div
       key={props.item.id}
-      sx={{
-        width: "250px",
-        minHeight: "350px",
-        borderRadius: "10px",
-        margin: "15px",
-        padding : '10px',
-        boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-      }}
+      className="milestones-card-container"
     >
       <span class="material-symbols-rounded card-icon">{props.item.icon}</span>
       <Typography
@@ -34,7 +27,7 @@ function CardItem(props) {
       >
         {props.item.description}
       </Typography>
-    </Box>
+    </div>
   );
 }
 

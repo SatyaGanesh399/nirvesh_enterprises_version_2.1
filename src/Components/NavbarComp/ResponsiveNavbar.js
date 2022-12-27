@@ -22,17 +22,14 @@ function ResponsiveNavbar({ closeNavbar }) {
     <div className="responsive-navbar-container">
       <div className="responsive-navbar-items">
         <ul>
-          <li style={{
-            color : colors.blue,
-            fontWeight : "500",
-            transition : "0.4s all ease-in-out"
-          }}
+          <li className="why-us-responsive"
           onClick={handleExpand}>
             Why us? <span class="material-symbols-outlined"
             style={{position: "relative",
               top: "5px"}}
             >expand_more</span>
-            {expand && <ul
+            {expand && 
+            <ul
             style={{
               transition : "0.4s all ease-in-out"
             }}>
@@ -54,6 +51,11 @@ function ResponsiveNavbar({ closeNavbar }) {
           <li>
             <Link to="/team" onClick={handleClick}>
               Our Team
+            </Link>
+          </li>
+          <li>
+            <Link to="/careers" onClick={handleClick}>
+              Careers
             </Link>
           </li>
           <li>

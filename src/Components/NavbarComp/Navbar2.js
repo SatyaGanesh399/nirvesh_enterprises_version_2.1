@@ -102,6 +102,9 @@ function Navbar2({ onClickMenu }) {
                   <Link to="/team">Our Team</Link>
                 </li>
                 <li>
+                  <Link to="/careers">Careers</Link>
+                </li>
+                <li>
                   <Link to="/contactus">Contact Us</Link>
                 </li>
               </ul>
@@ -174,6 +177,9 @@ function Navbar2({ onClickMenu }) {
                 </li>
                 <li>
                   <Link to="/team">Our Team</Link>
+                </li>
+                <li>
+                  <Link to="/careers">Careers</Link>
                 </li>
                 <li>
                   <Link to="/contactus">Contact Us</Link>

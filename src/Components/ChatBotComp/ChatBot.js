@@ -72,7 +72,7 @@ function ChatBot() {
       <div className="chatbot-header">
         <img src={botImageOpen} alt="botImage" className="bot-image" />
         <div>
-          <p className="chatbot-title">Chat Bot</p>
+          <p className="chatbot-title">Veda</p>
           <div className="status-block">
             <FaDotCircle size={12} color="green" />
             <p className="online-status">Online</p>

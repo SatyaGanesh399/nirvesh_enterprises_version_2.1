@@ -1,20 +1,21 @@
-import React from 'react'
+import React from "react";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 import { TiTick } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
+import { RxCross2 } from "react-icons/rx";
 import colors from "../../DefaultColors";
 
-
-function SubscriptionCard({item}) {
+function SubscriptionCard({ item, closeModal }) {
+  const handleCloseButton = () => {
+    closeModal();
+  };
   return (
-
-        <div
-      style={{
-        backgroundColor: colors.white,
-      }}
-      className="subscription-card-container"
-    >
+    <div className="subscription-card-container">
       <div className="subscription-title-header">
+        <RxCross2
+          className="subscription-close-button"
+          onClick={handleCloseButton}
+        />
         <p className="subscription-title">{item.title}</p>
         <p className="subscription-cost">{item.cost}</p>
       </div>
@@ -63,7 +64,7 @@ function SubscriptionCard({item}) {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default SubscriptionCard
+export default SubscriptionCard;

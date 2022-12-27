@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { TiTick } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
 
-import { subscriptionData } from "./Data";
 import colors from "../../DefaultColors";
 
 import "./MobileSubscription.css";
 import { leftData, rightData } from "./Data";
 import AppTitle from "../../ReusableComponents/AppTitle";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
-import OffersAndSubscription from "./OffersAndSubscription";
 
 const benefitCard = (item, handleMouseOver) => {
   const handleChange = () => {
@@ -21,7 +19,7 @@ const benefitCard = (item, handleMouseOver) => {
       key={item.id}
       className="benefit-card"
       style={{
-        backgroundColor: item.hover ? colors.navy : colors.white,
+        backgroundColor: item.hover ? colors.navy : colors.primaryWhite,
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         scale: item.hover ? "1.1" : "1",
       }}

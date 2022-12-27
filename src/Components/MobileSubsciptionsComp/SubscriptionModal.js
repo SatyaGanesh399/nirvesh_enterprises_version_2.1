@@ -13,9 +13,11 @@ function SubscriptionModal({showItem, hideModal, show, }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        {showItem === '1' && <SubscriptionCard item={subscriptionData[0]} />}
-        {showItem === '2' && <SubscriptionCard item={subscriptionData[2]} />}
-        {showItem === '3' && <SubscriptionCard item={subscriptionData[1]} />}
+        {showItem === '1' && <SubscriptionCard item={subscriptionData[0]} closeModal={handleClose} />}
+        {showItem === '2' && <SubscriptionCard item={subscriptionData[2]} 
+        closeModal={handleClose}/>}
+        {showItem === '3' && <SubscriptionCard item={subscriptionData[1]} 
+        closeModal={handleClose}/>}
       </Modal>
     </>
   );

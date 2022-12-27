@@ -6,6 +6,7 @@ import {
   Outlet,
   withRouter
 } from "react-router-dom";
+import {RxCross2} from 'react-icons/rx';
 import botImage from './ChatBotComp/Assets/eyes-open.png';
 import botImageClose from './ChatBotComp/Assets/eyes-close.png';
 import CookieConsent from "react-cookie-consent";
@@ -25,6 +26,7 @@ import ChatBot from './ChatBotComp/ChatBot';
 import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPolicy';
 import DiseaseDetailsPage from "../ScreenRoutes/DiseasePortfolioComp/DiseaseDetailsPage";
 import ScrollToTopPage from "./ScrollToTopPage";
+import Careers from "../ScreenRoutes/CareersComp/Careers";
 
 const homeContainer = {
   hidden: {
@@ -46,6 +48,7 @@ function HomePage() {
   const [loader, setLoader] = useState(true);
   const [chatBotOpen, setChatBotOpen] = useState(false);
   const [showBot, setShowBot] = useState(false);
+  const [botMessage, setBotMessage] = useState(true);
 
   // if(chatBotOpen){
   //   document.querySelector("body").style.overflow = "hidden"
@@ -66,6 +69,10 @@ function HomePage() {
   const handleOpenChatbot = (e) =>{
     e.stopPropagation()
     setChatBotOpen(!chatBotOpen);
+  }
+
+  const handleChatMessage = () =>{
+    setBotMessage(false);
   }
 
   setTimeout(() => {
@@ -91,6 +98,7 @@ function HomePage() {
             <Route path="portfolio" element={<Diseaseportfolio />} />
             <Route path="detailspage/:id" element={<DiseaseDetailsPage />} />
             <Route path="team" element={<Team2 />} />
+            <Route path="careers" element={<Careers />} />
             <Route path="login" element={<LoginPageVer2 />} />
             <Route path="contactus" element={<ContactOurExperts />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />
@@ -116,6 +124,16 @@ function HomePage() {
         {(chatBotOpen && showBot) && <ChatBot />}
         {showBot && <img src={botImageClose} alt="botImage" className="bot-image-close" onClick={handleOpenChatbot} /> }
         {(chatBotOpen && showBot) && <ChatBot />}
+        {(showBot && botMessage && !chatBotOpen) &&
+        <div className="chat-bot-message">
+          <RxCross2 className="chat-message-close"
+          onClick={handleChatMessage} />
+          <p>Hello welcome,<br/>
+            I'm Veda a chatbot,
+            Let me know if you need any help!!
+          </p>
+        </div>
+  }
       </motion.div>
     );
   }

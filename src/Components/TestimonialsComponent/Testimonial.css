@@ -5,20 +5,24 @@
   box-sizing: border-box;
   margin-bottom: 40px;
   overflow: hidden;
-  
 }
-
+.testimonial-container{
+  width: 100%;
+  min-height: 300px;
+}
 .testimonial-card-container {
     padding: 20px;
     width : 80%;
     height: 80%;
     position: relative;
     z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 .testimonial-container {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .testimonial-content {
   width: 80%;
@@ -33,7 +37,7 @@
 .testimonial-comment {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--dark);
   height : 25px;
 }
 .testimonial-comment span{
@@ -43,7 +47,7 @@
 .quotes {
   font-size: 2rem;
   opacity: 0.4;
-  color: var(--blue);
+  color: var(--dark);
 }
 .testimonial-description {
   padding-left: 30px;
@@ -70,40 +74,44 @@
   width: 80px;
   height: 80px;
   border-radius: 50px;
-  background-color: var(--blue);
+  background: rgb(120,34,195);
+background: linear-gradient(0deg, rgba(120,34,195,1) 0%, rgba(21,112,173,1) 100%);
   opacity: 0.9;
   position: relative;
   top: 95px;
   z-index: -1;
   right: 15px;
   margin-left: 100px;
+  opacity: 0.4;
 }
 .testimonial-image-background2 {
   margin-top: -100px;
   width: 110px;
   height: 110px;
   border-radius: 60px;
-  background-color: var(--blue);
+  background: rgb(120,34,195);
+background: linear-gradient(0deg, rgba(120,34,195,1) 0%, rgba(21,112,173,1) 100%);
   opacity: 0.9;
   position: relative;
   top: 90px;
   z-index: -1;
   left: 10px;
   margin-left: 100px;
+  opacity: 0.4;
 }
 .testimonial-person-name {
   width: 100%;
     text-align: center;
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--blue);
   margin-top: 25px;
   margin-left: 10px;
 }
 .testimonial-person-design {
   width: 100%;
     text-align: center;
-  color: var(--blue);
+  color: var(--navy);
   font-size: 0.9rem;
   margin-top: -18px;
   margin-left: 35px;
@@ -116,8 +124,8 @@
 }
 .mySwiper{
     width: 100%;
-    height: 100%;
-    margin : 25px;
+    min-height: 400px;
+    padding : 25px;
 }
 .swiper-slide {
     width : 100%;

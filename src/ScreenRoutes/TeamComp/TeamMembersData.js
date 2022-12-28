@@ -42,11 +42,8 @@ const FoundersData = [
       url: Prabitha,
       linkedin: "",
     },
-  ];
-
-  const TeamData = [
     {
-      id: "1",
+      id: "4",
       profileName: "Matthew Barras",
       profileDesign: "Chief Product Officer",
       description:
@@ -54,6 +51,10 @@ const FoundersData = [
       url: Matthew,
       linkedin: "",
     },
+  ];
+
+  const TeamData = [
+    
     {
       id: "2",
       profileName: "Dr. Pranjali Gajbhiye, PhD",
@@ -89,7 +90,7 @@ const FoundersData = [
         linkedin: "",
       },
       {
-        id: "5",
+        id: "6",
         profileName: "Satya Ganesh",
         profileDesign: "Software Developer - Intern",
         description: "Mobile and Web Applications",

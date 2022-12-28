@@ -4,10 +4,22 @@ import colors from "../../DefaultColors";
 import innovation from "./Assets/innovation.png";
 import dataTracking from "./Assets/data-tracking.png";
 import costEffective from "./Assets/costEffective.png";
+import {FaChevronRight} from 'react-icons/fa';
+import {FaChevronLeft} from 'react-icons/fa';
+
+const nextIcon = () =>{
+  return <FaChevronRight size={36} color={colors.lightGrey} />
+}
+const prevIcon = () =>{
+  return <FaChevronLeft size={36} color={colors.lightGrey} />
+}
 
 function CarouselHeader() {
   return (
-    <Carousel slide={false} className="carousel-component">
+    <Carousel 
+    nextIcon={nextIcon()}
+    prevIcon={prevIcon()}
+    slide={false} className="carousel-component">
       <Carousel.Item>
         <div
           style={{

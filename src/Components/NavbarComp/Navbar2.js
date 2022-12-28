@@ -77,7 +77,7 @@ function Navbar2({ onClickMenu }) {
                       transition : "0.4s all ease-in-out"
                     }}
                     >
-                      why us?{" "}
+                      Why us?{" "}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                     <Dropdown.Item href="#/action-1">
@@ -154,7 +154,7 @@ function Navbar2({ onClickMenu }) {
                       transition : "0.4s all ease-in-out"
                     }}
                     >
-                      why us?{" "}
+                      Why us?{" "}
                     </Dropdown.Toggle>
                     <Dropdown.Menu style={{colors : colors.nav}}>
                       <Dropdown.Item href="#/action-1">

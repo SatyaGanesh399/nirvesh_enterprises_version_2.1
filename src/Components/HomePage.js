@@ -27,6 +27,7 @@ import PrivacyPolicy from '../UsefulLinksComponents/PrivacyPolicyComp/PrivacyPol
 import DiseaseDetailsPage from "../ScreenRoutes/DiseasePortfolioComp/DiseaseDetailsPage";
 import ScrollToTopPage from "./ScrollToTopPage";
 import Careers from "../ScreenRoutes/CareersComp/Careers";
+import JobSearchPage from "../ScreenRoutes/JobSearchPage/JobSearchPage";
 
 const homeContainer = {
   hidden: {
@@ -99,6 +100,7 @@ function HomePage() {
             <Route path="detailspage/:id" element={<DiseaseDetailsPage />} />
             <Route path="team" element={<Team2 />} />
             <Route path="careers" element={<Careers />} />
+            <Route path="jobsearch" element={<JobSearchPage />} />
             <Route path="login" element={<LoginPageVer2 />} />
             <Route path="contactus" element={<ContactOurExperts />} />
             <Route path="privacypolicy" element={<PrivacyPolicy />} />

@@ -1,4 +1,5 @@
 import employeeImage from './Assets/team-pic.jpg'
+import hrEmployee from './Assets/employee-image.jpg'
 const employeeVideoData = [
     {
         id:"1",
@@ -31,5 +32,39 @@ const employeeVideoData = [
         img : employeeImage,
     },
 ];
+const hrEmployeeDetails = [
+    {
+        id:"1",
+        name: "Anand Gupta",
+        base : "Talent Aquisition",
+        position : "Manager",
+        img : hrEmployee,
+        Linkedin : ""
+    },
+    {
+        id:"2",
+        name: "Anand Gupta",
+        base : "Talent Aquisition",
+        position : "Manager",
+        img : hrEmployee,
+        Linkedin : ""
+    },
+    {
+        id:"3",
+        name: "Anand Gupta",
+        base : "Talent Aquisition",
+        position : "Manager",
+        img : hrEmployee,
+        Linkedin : ""
+    },
+    {
+        id:"4",
+        name: "Anand Gupta",
+        base : "Talent Aquisition",
+        position : "Manager",
+        img : hrEmployee,
+        Linkedin : ""
+    },
+];
 
-export {employeeVideoData};
+export {employeeVideoData, hrEmployeeDetails};

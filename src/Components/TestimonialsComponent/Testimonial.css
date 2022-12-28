@@ -63,10 +63,10 @@
   /* background-color: blue; */
 }
 .testimonial-image {
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
   border-radius: 50px;
-  object-fit: cover;
+  object-fit: cover !important;
   margin-left: 100px;
 }
 .testimonial-image-background1 {

@@ -105,13 +105,14 @@
   flex-wrap: wrap;
 }
 .founder-cards{
+  width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .team-mini-container1{
-  width : 80%;
+  width : 90%;
   margin: 20px auto 30px auto;
 }
 .team-mini-container2{
@@ -124,7 +125,7 @@
   font-weight: 500;
   color : var(--dark)
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   .profileCards {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -132,6 +133,13 @@
   }
   .profileCardContainer {
     margin-bottom: 50px;
+  }
+  .founder-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    align-items: center;
   }
 }
 
@@ -141,6 +149,10 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     place-items: center;
     
+  }
+  .founder-cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
   .profileCardContainer {
     margin-bottom: 50px;

@@ -1,0 +1,43 @@
+.payment-container{
+    background-color: var(--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.payment-customer-label{
+    font-size: 1.05rem;
+    color : var(--navy);
+    margin: 10px 0;
+}
+.payment-customer-input{
+    border : 1px solid rgba(70, 70, 70, 0.3);
+}
+.payment-customer-input::placeholder{
+    color : rgba(70, 70, 70, 0.3);
+    
+}
+.payment-first-container{
+    padding: 20px;
+}
+.payment-user-confirm{
+    width: 100%;
+    height : 200px;
+}
+.payment-checkbox-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap : 10px;
+}
+.payment-checkbox-card{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap : 5px;
+}

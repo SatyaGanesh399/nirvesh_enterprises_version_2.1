@@ -39,8 +39,8 @@
 .navabar-blob{
     position: absolute;
     z-index: -1;
-    top : -155px;
-    left : -55px;
+    top : -125px;
+    left : -25px;
     transition: 0.5s all ease-in-out;
 }
 
@@ -241,7 +241,17 @@
     
 }
 
+@media only screen and (max-width: 1400px) {
+    .navabar-blob{
+        left : -65px;
+    }
+}
+
+
 @media only screen and (max-width: 1000px) {
+    .navbar-logo img{
+        left : 0px;
+    }
     .navbar-items-rest{
         display: none;
     }
@@ -255,14 +265,14 @@
         display: block;
     }
     .navabar-blob{
-        left : -75px;
+        left : -65px;
     }
     
   }
   @media only screen and (max-width: 500px) {
-    .navbar-logo img{
+    /* .navbar-logo img{
         left : 0px;
-    }
+    } */
     .navabar-blob{
         left : -75px;
     }

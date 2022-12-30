@@ -5,10 +5,12 @@ import { TiDelete } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 import colors from "../../DefaultColors";
 
-function SubscriptionCard({ item, closeModal }) {
+function SubscriptionCard({ item, closeModal, openPayment }) {
   const handleCloseButton = () => {
     closeModal();
   };
+
+  const handleClick =() => openPayment();
   return (
     <div className="subscription-card-container">
       <div className="subscription-title-header">
@@ -38,30 +40,14 @@ function SubscriptionCard({ item, closeModal }) {
             </tr>
           ))}
         </table>
-        {item.id === "2" && (
+
           <AppButtonRound
             text="Subscribe"
             width="80%"
             bgColor={colors.navy}
             border={colors.navy}
+            afterClick = {handleClick}
           />
-        )}
-        {item.id === "3" && (
-          <AppButtonRound
-            text="Subscribe"
-            width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
-          />
-        )}
-        {item.id === "1" && (
-          <AppButtonRound
-            text="Subscribe"
-            width="80%"
-            bgColor={colors.navy}
-            border={colors.navy}
-          />
-        )}
       </div>
     </div>
   );

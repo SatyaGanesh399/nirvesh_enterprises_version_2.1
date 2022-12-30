@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import AppHeader from "../../ReusableComponents/AppHeader";
+import contactUs from './Assests/contact-us.jpg';
 
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -65,7 +67,11 @@ function ContactOurExperts() {
 
   return (
     <div className="expert-container" id="CONTACT-US">
-      <AppTitle title="Contact Our Experts" />
+      <AppHeader 
+      image={contactUs}
+      title="Contact Us"
+      subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non accumsan odio, ut volutpat eros. Nullam porta"
+      />
       <div className="expert-contact">
         <motion.div
           className="expert-contact-details"

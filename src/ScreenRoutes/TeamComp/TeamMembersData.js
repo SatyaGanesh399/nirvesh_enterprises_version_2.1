@@ -17,7 +17,7 @@ import Girdhar from "./Assests/Girdhar.png";
 const FoundersData = [
     {
       id: "1",
-      profileName: "Anvesh Jallapally ",
+      profileName: "Dr. Anvesh Jallapally, PhD ",
       profileDesign: "Founder & Chief Executive Officer",
       description:
         "Business Operations and  Product Development",
@@ -35,7 +35,7 @@ const FoundersData = [
     },
     {
       id: "3",
-      profileName: "Prabitha Urwyler",
+      profileName: "Dr.Prabitha Urwyler, PhD",
       profileDesign: "Co-Founder",
       description:
         "Product Technical Validation",

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import milestonesImage from './Assets/milestones-background.jpg';
 
 
 import { motion, useAnimation } from "framer-motion";
@@ -7,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import "./index.css";
 import CardItem from "./CardItem";
 import AppTitle from "../../ReusableComponents/AppTitle";
+import AppHeader from "../../ReusableComponents/AppHeader";
 
 const cardData = [
   {
@@ -69,13 +71,12 @@ function OurMilestones() {
     <div
       className="milestones-container"
     >
-      <AppTitle title="Our Milestones" />
-      <p
-        className="milestones-subtitle"
-      >
-        Our company milestones are the significant moments of accomplishment
-        that mark our companys' development and growth.
-      </p>
+      <AppHeader 
+      image={milestonesImage}
+      title="Milestones"
+      subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      />
       <motion.div
         ref={ref}
         variants={cardVarient}

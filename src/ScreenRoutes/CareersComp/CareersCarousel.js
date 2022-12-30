@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import CareerHrTeamCard from "./CareerHrTeamCard";
@@ -15,6 +15,10 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import CareerEmployeeCard from "./CareerEmployeeCard";
 
 export default function CareersCarousel({hr, employee, slides}) {
+
+  
+
+
   return (
 
       <Swiper

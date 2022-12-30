@@ -1,8 +1,10 @@
 import React from "react";
 import "./index2.css";
 import "./index.css";
+import teamWork from './Assests/team-work.jpg';
 
 import AppTitle from "../../ReusableComponents/AppTitle";
+import AppHeader from '../../ReusableComponents/AppHeader';
 
 // import ProfileCard from "./ProfileCard";
 
@@ -15,18 +17,11 @@ function Team2() {
   return (
     <div style={{ marginTop: "120px",
     transition : "0.4s all ease-in-out" }}>
-      <AppTitle title="Meet The Team" />
-      <div className="team-mini-container1">
-        <p className="teams-subtitle">
-          We are a team with good combination of experience and skills across
-          Information technology, Neuroscience, Biomedical sciences and Trauma /
-          Stroke Research.
-          We are a team with good combination of experience and skills across
-          Information technology, Neuroscience, Biomedical sciences and Trauma /
-          Stroke Research.
-        </p>
-
-      </div>
+      <AppHeader 
+      image={teamWork}
+      title="Meet The Team"
+      subTitle="We are a team with good combination of experience and skills across Information technology, Neuroscience, Biomedical sciences and Trauma / Stroke Research."
+      />
       <div className="team-mini-container1">
         {/* <p className="teams-mini-heading">Founders</p> */}
         <AppTitle title="Founders" />

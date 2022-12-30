@@ -80,6 +80,7 @@ function OffersAndSubscription() {
           </div>
           <SubscriptionModal
             showItem={modal}
+            handleModal={()=> setModal("4")}
             show={show}
             hideModal={handleClose}
           />

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import diseaseBackground from './Assests/portfolio-background.jpg';
+import AppHeader from "../../ReusableComponents/AppHeader";
 import { Box, Typography, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import AppTitle from "../../ReusableComponents/AppTitle";
 
 import TabItems from "./TabItems";
 
@@ -58,7 +59,12 @@ function Diseaseportfolio() {
 
   return (
     <Box sx={{ marginTop: "120px" }}>
-      <AppTitle title="Our Disease Portfolio" />
+      <AppHeader 
+      image={diseaseBackground}
+      title="Portfolio"
+      subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      />
 
       <Box sx={{ width: "100%", typography: "body1" }}>
         <TabContext value={value}>

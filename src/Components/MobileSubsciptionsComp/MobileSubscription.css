@@ -29,7 +29,7 @@
 }
 .iphone-background {
   width: 100%;
-  height: 420px;
+  height: 450px;
   background-image: linear-gradient(
       90deg,
       rgba(79, 226, 191, 0.535),
@@ -42,7 +42,7 @@
   z-index: 1 !important;
   position: relative;
   margin-top: -400px;
-  top: 530px;
+  top: 540px;
 }
 .all-the-features {
   position: relative;
@@ -451,7 +451,7 @@ td {
   .iphone-background {
     position: relative;
     height: 300px;
-    top: 550px;
+    top: 580px;
   }
   .iphone-subscription {
     width: 100%;

@@ -8,10 +8,10 @@ import {FaChevronRight} from 'react-icons/fa';
 import {FaChevronLeft} from 'react-icons/fa';
 
 const nextIcon = () =>{
-  return <FaChevronRight size={36} color={colors.lightGrey} />
+  return <FaChevronRight size={36} color={colors.blue} />
 }
 const prevIcon = () =>{
-  return <FaChevronLeft size={36} color={colors.lightGrey} />
+  return <FaChevronLeft size={36} color={colors.blue} />
 }
 
 function CarouselHeader() {
@@ -29,7 +29,7 @@ function CarouselHeader() {
 
             backgroundColor: colors.blue,
             width: "100%",
-            height: "100vh",
+            height: "80vh",
           }}
           className="glass-morphic-effect"
         >
@@ -80,7 +80,7 @@ function CarouselHeader() {
           style={{
             backgroundImage: 'linear-gradient(to right, #243949 0%, #517fa4 100%)',
             width: "100%",
-            height: "100vh",
+            height: "80vh",
           }}
           className="glass-morphic-effect"
         >

@@ -1,43 +1,324 @@
-.payment-container{
-    background-color: var(--secondary);
-    padding: 20px;
+.payment-container {
+  background-color: var(--secondary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.showPayment1 {
+  width: 100%;
+  /* animation: 0.5s 0.5s slideIn ease-in-out forwards; */
+}
+.hidePayment1 {
+  width: 100%;
+  animation: 0.5s slideOut ease-in-out forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slidein {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(1000px);
+    opacity: 1;
+  }
+}
+
+.payment-first-container {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+.payment-user-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-user-submit input {
+  flex-grow: 1;
+}
+.payment-customer-label {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin: 10px 0;
+  font-weight: 500;
+}
+.payment-customer-input {
+  border: 1px solid rgba(70, 70, 70, 0.3);
+  padding: 10px 20px;
+}
+.payment-customer-input::placeholder {
+  color: rgba(70, 70, 70, 0.3);
+}
+.confirm-user-button {
+  padding: 10px 20px;
+  border: 1px solid rgba(70, 70, 70, 0.3);
+  background-color: var(--navy);
+  color: var(--secondary);
+  font-weight: 500;
+  outline: none;
+}
+.payment-user-confirm {
+  width: 100%;
+  height: 250px;
+  padding-top: 40px;
+  margin: 10px auto;
+  overflow-y: scroll;
+  position: relative;
+}
+.patient-manual-enter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.patient-manual-input {
+  margin-right: 5px;
+}
+.patient-manual-label {
+  font-size: 0.8rem;
+}
+
+.patient-details-title {
+  width: 100%;
+  /* text-align: center; */
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+.payment-patient-label {
+  font-size: 0.9rem;
+  width: 30%;
+  color: var(--dark);
+  font-weight: 500;
+}
+.payment-patient-details {
+  margin: 10px auto;
+}
+.payment-patient-input {
+  min-width: 200px;
+  max-width: 40%;
+}
+.payment-patient-input::placeholder {
+  color: rgba(70, 70, 70, 0.3);
+}
+.payment-checkbox-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 10px 0px 20px 0px;
+}
+.patient-acknowledgement-checkbox {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.patient-acknowledgement-checkbox input {
+  margin-right: 10px;
+  margin-top: 7px;
+}
+.patient-acknowledgement-checkbox label {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.payment-checkbox-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.payment-buttons-group {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.confirm-acceptance-button {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background-color: var(--navy);
+  color: var(--secondary);
+  font-weight: 500;
+  margin: 0px 10px;
+}
+.payment-page2-container {
+  width: 100%;
+  padding-top: 20px;
+}
+.payment2-accordin-container {
+  margin-bottom: 50px;
+}
+.payment2-order-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0 30px 0;
+  text-align: center;
+}
+.payment2-order-item {
+  width: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment2-order-label {
+  font-weight: 500;
+}
+
+.payment3-page{
+  width: 100%;
+}
+.payment3-container{
+    width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-evenly;
-}
-.payment-customer-label{
-    font-size: 1.05rem;
-    color : var(--navy);
-    margin: 10px 0;
-}
-.payment-customer-input{
-    border : 1px solid rgba(70, 70, 70, 0.3);
-}
-.payment-customer-input::placeholder{
-    color : rgba(70, 70, 70, 0.3);
-    
-}
-.payment-first-container{
-    padding: 20px;
-}
-.payment-user-confirm{
-    width: 100%;
-    height : 200px;
-}
-.payment-checkbox-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    gap : 10px;
-}
-.payment-checkbox-card{
-    width: 100%;
-    padding: 5px;
-    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap : 5px;
+    justify-content: center;
+}
+.payment-done-symbol {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  animation : 5s 0.1s zigzag ease infinite forwards;
+}
+.payment-successful-message{
+    margin-top : 30px;
+    color : var(--dark);
+}
+@keyframes zigzag {
+
+    0%{
+        opacity: 0.8;
+        scale: 0.8;
+    };
+    50%{
+        opacity: 1;
+        scale: 1;
+    }
+    80%{
+        opacity: 1;
+        scale: 1.2;
+    }
+    100%{
+        opacity: 0.8;
+        scale: 0.8;
+    }
+}
+.payment-cards{
+  width: 100%;
+}
+.payment-card-title{
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+.credit-card-payment{
+    width: 80px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;
+}
+.credit-card-payment:hover{
+  opacity: 0.8;
+}
+.card-divider{
+  width: 90%;
+  height: 1px;
+  margin-left: 10px;
+  border-radius: 2px;
+  background-color: rgba(70, 70, 70, 0.3);
+}
+.payment-card-details{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap : 10px;
+}
+.payment-card-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.payment-card-label{
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 5px;
+}
+.payment-card-input{
+  border: 1px solid rgba(70, 70, 70, 0.3);
+  flex-grow: 1;
+}
+.payment-card-input::placeholder{
+  opacity: 0.5;
+}
+.card-holder{
+  width: 100%;
+}
+.payment-submit-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-submit-button{
+  width: 80%;
+  background-color: green;
+  border: 0;
+  padding : 5px 10px;
+  color : var(--secondary);
+  margin-bottom: 10px;
+
+}
+.upi-payment{
+  margin-bottom: 10px;
+}
+.upi-card-item{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.upi-card-input{
+  flex-grow: 1;
+}
+.upi-container{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+.upi-submit{
+  background-color: green;
+  border: 0;
+  padding : 5px 10px;
+  color : var(--secondary);
+  margin-bottom: 10px;
 }

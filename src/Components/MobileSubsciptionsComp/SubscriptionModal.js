@@ -19,7 +19,7 @@ function SubscriptionModal({showItem, hideModal, show, handleModal }) {
         closeModal={handleClose} openPayment = {handleModal}/>}
         {showItem === '3' && <SubscriptionCard item={subscriptionData[1]} 
         closeModal={handleClose} openPayment = {handleModal}/>}
-        {showItem === '4' && <Payment />}
+        {showItem === '4' && <Payment closeModal={handleClose} />}
       </Modal>
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import masterCard from "../Assets/Mastercard-logo.png";
 import phonePay from "../Assets/phonepay.jpg";
 import { styled } from "@mui/material/styles";
@@ -20,6 +20,27 @@ const Accordion = styled((props) => (
     display: "none",
   },
 }));
+
+const planDetails = [
+  {
+    id : "1",
+    title : "basic",
+    price : 666,
+    checked : false,
+  },
+  {
+    id : "2",
+    title : "standard",
+    price : 888,
+    checked : false,
+  },
+  {
+    id : "3",
+    title : "premium",
+    price : 1199,
+    checked : false,
+  },
+]
 
 const creditCardData = [
   {
@@ -87,7 +108,44 @@ const paymentCard = ({ item, title }) => {
   );
 };
 
-export default function AccordinPage() {
+export default function AccordinPage({item}) {
+
+  let selectedPlan = planDetails.map(plan => {
+    if(plan.id === item.id){
+      return{
+        ...plan,
+        checked : true,
+      }
+    }else return plan;
+  })
+
+  
+  let mainselectionPlan = selectedPlan.filter(plan => plan.id === item.id);
+  const [allPlans, setAllPlans] = useState(selectedPlan);
+  const [data, setData] = useState(mainselectionPlan[0]);
+
+  const handlePlanChange = (event) => {
+    let selectedPlan = allPlans.map(plan => {
+      if(plan.title === event.target.name){
+        return {
+          ...plan,
+          checked : true,
+        }
+      }else{
+        return {
+          ...plan,
+          checked : false,
+        }
+      }
+    });
+
+    setAllPlans(selectedPlan);
+
+    let alterSelection = selectedPlan.filter(plan => plan.title === event.target.name);
+
+    setData(alterSelection[0]);
+  }
+
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -125,9 +183,9 @@ export default function AccordinPage() {
               <input
                 type="checkbox"
                 id="packages"
-                // checked={packages.basic}
                 name="basic"
-                // onChange={handlePackages}
+                onChange={handlePlanChange}
+                checked = {allPlans[0].checked}
               />
               <label for="basic">Basic Plan</label>
             </div>
@@ -135,9 +193,9 @@ export default function AccordinPage() {
               <input
                 type="checkbox"
                 id="packages"
-                // checked={packages.standard}
                 name="standard"
-                // onChange={handlePackages}
+                onChange={handlePlanChange}
+                checked = {allPlans[1].checked}
               />
               <label for="standard">Standard Plan</label>
             </div>
@@ -145,9 +203,9 @@ export default function AccordinPage() {
               <input
                 type="checkbox"
                 id="packages"
-                // checked={packages.premium}
                 name="premium"
-                // onChange={handlePackages}
+                onChange={handlePlanChange}
+                checked = {allPlans[2].checked}
               />
               <label for="premium">Premium Plan</label>
             </div>
@@ -166,7 +224,7 @@ export default function AccordinPage() {
           <div className="payment2-order-container">
             <div className="payment2-order-item">
               <p className="payment2-order-label">Plan Cost :</p>
-              <p className="payment2-order-cost">Rs. 666/-</p>
+              <p className="payment2-order-cost">Rs. {data.price}</p>
             </div>
             <div className="payment2-order-item">
               <p className="payment2-order-label">GST :</p>
@@ -174,7 +232,7 @@ export default function AccordinPage() {
             </div>
             <div className="payment2-order-item">
               <p className="payment2-order-label">Total Cost (incl. GST)</p>
-              <p className="payment2-order-cost">Rs. 785.88/-</p>
+              <p className="payment2-order-cost">Rs. {data.price + (data.price * 18) / 100}/-</p>
             </div>
           </div>
         </AccordionDetails>
@@ -240,7 +298,7 @@ export default function AccordinPage() {
                 className="payment-card-label">Enter your UPI ID</label>
                 <input
                   placeholder="UPI ID"
-                  className=" upi-card-input"
+                  className="upi-card-input"
                 />
               </div>
               <div className="upi-container">

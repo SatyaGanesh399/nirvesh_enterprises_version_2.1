@@ -237,10 +237,17 @@
   margin-bottom: 5px;
   margin-left: 20px;
 }
+.payment-credit-card{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 .credit-card-payment{
-    width: 80px;
+    width: 70px;
     object-fit: contain;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 .credit-card-payment:hover{
@@ -307,6 +314,8 @@
 }
 .upi-card-input{
   flex-grow: 1;
+  border: 1px solid rgba(70, 70, 70, 0.3);
+
 }
 .upi-container{
   display: flex;
@@ -322,3 +331,77 @@
   color : var(--secondary);
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width : 700px){
+  .upi-card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width : 400px){
+  .payment-first-container{
+    padding: 5px;
+  }
+  .payment-user-submit{
+    width: 80%;
+    width : 300px;
+    display: block;
+  }
+  .payment-user-submit input{
+    flex-grow: 0;
+    width: 170px;
+  }
+  .confirm-user-button{
+    padding : 10px 10px;
+  }
+  .patient-manual-enter{
+    right : 5px;
+  }
+  .payment-patient-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .payment-patient-label{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .payment-patient-input{
+    width: 100%;
+    max-width: 90%;
+  }
+  .patient-acknowledgement-checkbox{
+    margin-bottom: 30px;
+  }
+  .payment-buttons-group{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .confirm-acceptance-button{
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    margin: 5px;
+  }
+  .payment-submit-container{
+    display: block;
+  }
+  .upi-container{
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .upi-card-input{
+    width: 90%;
+  }
+  .upi-submit{
+    width: 90%;
+  }
+}
+

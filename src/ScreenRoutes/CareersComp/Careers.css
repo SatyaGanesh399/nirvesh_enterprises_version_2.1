@@ -108,17 +108,36 @@
   width: 70vw;
 }
 .career-employee-card {
-  max-width: 300px;
+  width: 300px;
+  height : 400px;
   margin: 20px;
   overflow: hidden;
   background-color: var(--secondary);
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
   transition: 0.4s all ease-in-out;
+  position: relative;
+  padding-bottom: 20px;
+}
+.career-employee-card-backside{
+  width: 300px;
+  height : 400px;
+  margin: 20px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--secondary);
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  transition: 0.4s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .career-employee-video-image {
-  width: 300px;
-  height: 200px;
+  width: 300px !important;
+  height: 250px !important;
   object-fit: cover;
   transition: 0.4s all ease-in-out;
 }
@@ -130,17 +149,62 @@
     rgba(17, 17, 26, 0.2) 0px 0px 10px;
 }
 .career-employee-video-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-top: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .career-employee-video-sub-title {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--navy);
   margin-left: 20px;
-  margin-top: -10px;
+  margin-top: -5px;
+}
+.career-employee-comment{
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--navy);
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+.career-employee-know{
+  font-size: 0.8rem;
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  right : 10px;
+}
+.career-employee-words{
+  font-size: 0.95rem;
+  color : var(--dark);
+  padding: 10px;
+  text-align: left;
+}
+.employee-quote-left{
+  position: absolute;
+  left: 10px;
+  top : 10px;
+  color : var(--navy);
+  opacity: 0.5;
+  font-size: 2rem;
+}
+.employee-quote-right{
+  position: absolute;
+  right: 10px;
+  bottom : 50px;
+  color : var(--navy);
+  opacity: 0.5;
+  font-size: 2rem;
+
+}
+.career-employee-know:hover{
+  opacity: 0.8;
 }
 .responsive-large {
   display: block;
@@ -349,6 +413,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  bottom: 0 !important;
 }
 .careers-application-container {
     margin: 40px auto;

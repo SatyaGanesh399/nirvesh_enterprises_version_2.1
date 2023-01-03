@@ -1,17 +1,18 @@
 import "./App.css";
 import HomePage from "./Components/HomePage";
-
-
-import AppScrollToTopButton from "./ReusableComponents/AppScrollToTopButton";
-import JobSearchPage from "./ScreenRoutes/JobSearchPage/JobSearchPage";
-import Payment from './Components/MobileSubsciptionsComp/PaymentSection/Payment'
+import ModalContext from './Contexts/ModalContext/SubscriptionModalContext';
+import {useState} from 'react';
 
 function App() {
+
+  const [openModal, setOpenModal] = useState(false);
+
   return (
+    <ModalContext.Provider value={{openModal, setOpenModal}}>
     <div className="App">
       <HomePage />
-      {/* <Payment /> */}
     </div>
+    </ModalContext.Provider>
   );
 }
 

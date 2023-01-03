@@ -27,9 +27,11 @@ export default function CareersCarousel({hr, employee, slides}) {
         pagination={{
           clickable: true,
         }}
+        
         autoplay={{
-            delay: 3500,
+            delay: 4500,
             disableOnInteraction: true,
+            pauseOnMouseEnter : true
           }}
           modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"

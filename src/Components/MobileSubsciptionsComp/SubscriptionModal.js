@@ -11,15 +11,21 @@ function SubscriptionModal({showItem, hideModal, show, handleModal }) {
     hideModal();
   }
 
+  const [subscription, setSubscription] = useState({});
+
+  const handlePayment = (item) =>{
+    setSubscription(item);
+  }
+
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        {showItem === '1' && <SubscriptionCard item={subscriptionData[0]} closeModal={handleClose} openPayment = {handleModal} />}
+        {showItem === '1' && <SubscriptionCard item={subscriptionData[0]}  openPayment = {handleModal} openPlan={handlePayment} />}
         {showItem === '2' && <SubscriptionCard item={subscriptionData[2]} 
-        closeModal={handleClose} openPayment = {handleModal}/>}
+         openPayment = {handleModal} openPlan={handlePayment}/>}
         {showItem === '3' && <SubscriptionCard item={subscriptionData[1]} 
-        closeModal={handleClose} openPayment = {handleModal}/>}
-        {showItem === '4' && <Payment closeModal={handleClose} />}
+         openPayment = {handleModal} openPlan={handlePayment}/>}
+        {showItem === '4' && <Payment item={subscription} />}
       </Modal>
     </>
   );

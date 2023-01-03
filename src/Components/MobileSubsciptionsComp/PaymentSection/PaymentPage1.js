@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import ModalContext from "../../../Contexts/ModalContext/SubscriptionModalContext";
 import "./Payment.css";
 
-function PaymentPage1({handleModal, forwardPayment}) {
+function PaymentPage1({forwardPayment}) {
   const [packages, setPackages] = useState({
     basic: false,
     standard: false,
@@ -21,6 +22,9 @@ function PaymentPage1({handleModal, forwardPayment}) {
   const changePayment = (paymentNumber) => {
       forwardPayment(paymentNumber)
   }
+
+  // 
+  const {setOpenModal} = useContext(ModalContext);
 
   return (
     <div className="payment-first-container">
@@ -101,7 +105,7 @@ function PaymentPage1({handleModal, forwardPayment}) {
       </div>
       <div className="payment-buttons-group">
         <button className="confirm-acceptance-button cancel-button"
-        onClick={() => console.log("checked")}>
+        onClick={() => setOpenModal(false)}>
           Cancel
         </button>
         <button className="confirm-acceptance-button confirm-button"

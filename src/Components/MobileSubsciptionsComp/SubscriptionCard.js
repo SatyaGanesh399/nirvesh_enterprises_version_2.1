@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 import { TiTick } from "react-icons/ti";
 import { TiDelete } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 import colors from "../../DefaultColors";
 
-function SubscriptionCard({ item, closeModal, openPayment }) {
+import ModalContext from '../../Contexts/ModalContext/SubscriptionModalContext';
+
+function SubscriptionCard({ item, openPayment, openPlan }) {
+const {setOpenModal} = useContext(ModalContext);
+
   const handleCloseButton = () => {
-    closeModal();
+    setOpenModal(false);
   };
 
-  const handleClick =() => openPayment();
+  const handleClick =() => {
+    openPayment();
+    openPlan(item);
+  }
+
+  
   return (
     <div className="subscription-card-container">
       <div className="subscription-title-header">

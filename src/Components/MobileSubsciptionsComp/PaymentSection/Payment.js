@@ -8,20 +8,17 @@ import PaymentPage1 from './PaymentPage1';
 import PaymentPage2 from './PaymentPage2';
 import PaymentPage3 from './PaymentPage3';
 
+
 const steps = [
   'Confirm User Authentication',
   'Make Payment',
   'Confirm Payment',
 ];
 
-export default function Payment({closeModal}) {
+export default function Payment({item}) {
 
   const [paymentCount, setPaymentCount] = React.useState(0);
   const [changePage, setChangePage] = React.useState(paymentCount);
-  
-  const modalClosure = () => {
-    closeModal();
-  }
 
   React.useEffect(()=>{
     setTimeout(() =>{
@@ -42,13 +39,15 @@ export default function Payment({closeModal}) {
       </Stepper>
       {
         paymentCount === 0 && 
-      <PaymentPage1 handleModal={modalClosure} forwardPayment={(number)=> setPaymentCount(number)} />
+      <PaymentPage1 forwardPayment={(number)=> setPaymentCount(number)} />
       }
       {paymentCount === 1 && 
-      <PaymentPage2 handleModal={modalClosure} forwardPayment={(number)=> setPaymentCount(number)} />
+      <PaymentPage2
+      plan={item}
+       forwardPayment={(number)=> setPaymentCount(number)} />
       }
       {paymentCount === 2 && 
-      <PaymentPage3 handleModal={modalClosure} forwardPayment={(number)=> setPaymentCount(number)} />
+      <PaymentPage3 forwardPayment={(number)=> setPaymentCount(number)} />
       }
     </Box>
   );

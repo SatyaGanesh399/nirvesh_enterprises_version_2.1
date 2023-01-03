@@ -70,25 +70,34 @@ const subscriptionData =[
     {
         id:'1',
         title : 'BASIC PLAN',
+        planName : "basic",
         cost: '666/month',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
-        accesable : [1, 0, 0, 0]
+        accesable : [1, 0, 0, 0],
+        plan : 666,
+        gst : 18,
     },
     {
         id:'3',
         title : 'PREMIUM PLAN',
+        planName : "premium",
         cost: '1222/month',
         description : 'Basic plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
-        accesable : [1, 1, 1, 1]
+        accesable : [1, 1, 1, 1],
+        plan : 1222,
+        gst : 18,
     },
     {
         id:'2',
         title : 'STANDARD PLAN',
+        planName : "standard",
         cost: '888/month',
-        description : ' plan includes',
+        description : 'plan includes',
         advantages : ["Heath Monitor", "24/7 Doctor Availability", "Monthly free check-up", "Free hardware service"],
-        accesable : [1, 1, 0, 0]
+        accesable : [1, 1, 0, 0],
+        plan : 888,
+        gst : 18,
     },
    
 ]

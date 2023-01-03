@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./MobileSubscription.css";
 import SubscriptionModal from "./SubscriptionModal";
 import {FaGooglePlay} from 'react-icons/fa';
@@ -7,17 +7,18 @@ import iphonex from "./Assets/iphonex.png";
 import AppButtonRound from "../../ReusableComponents/AppButtonRound";
 import colors from "../../DefaultColors";
 
+import ModalContext from "../../Contexts/ModalContext/SubscriptionModalContext";
+
 function OffersAndSubscription() {
   const [modal, setModal] = useState("0");
+  const {openModal, setOpenModal} = useContext(ModalContext);
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setOpenModal(false);
+  const handleShow = () => setOpenModal(true);
 
   const handleClick = (itemNumber) => {
     setModal(itemNumber);
-    setShow(true);
+    handleShow();
   };
 
   return (
@@ -81,7 +82,7 @@ function OffersAndSubscription() {
           <SubscriptionModal
             showItem={modal}
             handleModal={()=> setModal("4")}
-            show={show}
+            show={openModal}
             hideModal={handleClose}
           />
         </div>
